@@ -12,7 +12,7 @@
 .container > *{grid-column:2}
 header{position:absolute;top:0;left:0;right:0;z-index:20;color:#fff;border-bottom:1px solid rgba(255,255,255,.16)}
 nav{height:94px;display:grid;grid-template-columns:150px 1fr 150px;align-items:center;gap:20px}
-.nav-logo{width:105px;height:76px;object-fit:contain;filter:invert(1);mix-blend-mode:screen;justify-self:start}
+.nav-logo{position:absolute;right:7%;top:150px;width:250px;height:250px;object-fit:contain;filter:brightness(1.8) contrast(1.25);mix-blend-mode:screen;justify-self:start;animation:float-logo 6s ease-in-out infinite}
 .navlinks{display:flex;justify-content:center;gap:30px;font-size:12px;text-transform:uppercase;letter-spacing:.13em}
 .navlinks a:hover{color:#d7bd85}.navright{display:flex;justify-content:flex-end;gap:18px;font-size:12px}.cart-toggle{padding:0;border:0;background:none;color:inherit;font:inherit;cursor:pointer}.cart-toggle:hover{color:#d7bd85}
 .hero{position:relative;isolation:isolate;min-height:780px;background:linear-gradient(90deg,rgba(7,27,19,.98) 0%,rgba(7,27,19,.84) 48%,rgba(7,27,19,.28) 100%),url("https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=2200&q=88") center/cover;display:flex;align-items:center;color:#fff}
@@ -23,6 +23,8 @@ nav{height:94px;display:grid;grid-template-columns:150px 1fr 150px;align-items:c
 h1,h2,h3{font-family:"Playfair Display",serif;font-weight:500}h1{font-size:clamp(60px,7.4vw,112px);line-height:.88;letter-spacing:-.05em;margin:0 0 30px}.hero-copy{font-size:19px;line-height:1.65;color:#e6e7e0;max-width:590px}
 .hero-promise{font-family:"Playfair Display",serif;font-size:clamp(24px,3vw,34px);line-height:1.15;color:#fff;max-width:540px;margin:0 0 18px}.actions{display:flex;gap:12px;margin-top:35px;flex-wrap:wrap}.btn{padding:15px 23px;border:1px solid rgba(255,255,255,.75);font-size:11px;text-transform:uppercase;letter-spacing:.15em}.btn.gold{background:var(--gold);border-color:var(--gold);color:var(--deep)}
 .btn.gold:hover{background:var(--gold-hover);border-color:var(--gold-hover)}
+@keyframes float-logo{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+@media(prefers-reduced-motion:reduce){.nav-logo{animation:none!important}}
 .pillars{background:var(--deep);color:#fff;display:grid;grid-template-columns:repeat(5,1fr);border-bottom:1px solid rgba(255,255,255,.15)}
 .pillar{padding:28px 22px;border-right:1px solid rgba(255,255,255,.18)}.pillar:last-child{border:0}.pillar b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.13em;margin-bottom:9px;color:#dbc083}.pillar p{font-size:13px;line-height:1.55;color:#c9d0c9;margin:0}
 
@@ -58,7 +60,7 @@ h1,h2,h3{font-family:"Playfair Display",serif;font-weight:500}h1{font-size:clamp
 .wholesale .secondary-link{display:inline-block;margin-left:18px;color:#fff;font-size:11px;letter-spacing:.15em;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.55);padding-bottom:4px}
 footer{background:#091710;color:#c6cec8;padding:55px 0}.foot{display:flex;justify-content:space-between;gap:30px;border-top:1px solid rgba(255,255,255,.15);padding-top:30px;font-size:12px}
 @media(max-width:950px){nav{grid-template-columns:90px 1fr 50px}.navlinks{display:none}.navright span{display:none}.hero{min-height:720px}.pillars{grid-template-columns:1fr 1fr}.pillar:nth-child(even){border-right:0}.section-head,.sustainability .section-head,.story,.wholesale-grid{grid-template-columns:1fr;gap:30px}.story-main{height:470px}.coffee-grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.step:nth-child(even){border-right:0}.container{display:block}.container > *{grid-column:auto}}
-@media(max-width:560px){.container{padding:0 20px}nav{height:75px}.nav-logo{width:82px}.hero-content{padding-top:85px}.email-form{flex-direction:column}.email-form .btn{width:100%}h1{font-size:62px}.pillars,.coffee-grid,.steps{grid-template-columns:1fr}.pillar,.step{border-right:0;border-bottom:1px solid rgba(255,255,255,.16)}.section{padding:75px 0}.story-side{grid-template-rows:260px 260px}.foot{flex-direction:column}}
+@media(max-width:560px){.container{padding:0 20px}nav{height:75px}.nav-logo{right:15px;top:105px;width:175px;height:175px}.hero-content{padding-top:85px}.email-form{flex-direction:column}.email-form .btn{width:100%}h1{font-size:62px}.pillars,.coffee-grid,.steps{grid-template-columns:1fr}.pillar,.step{border-right:0;border-bottom:1px solid rgba(255,255,255,.16)}.section{padding:75px 0}.story-side{grid-template-rows:260px 260px}.foot{flex-direction:column}}
 </style>
 </head>
 <body>
