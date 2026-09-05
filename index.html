@@ -40,6 +40,7 @@ h1,h2,h3{font-family:"Playfair Display",serif;font-weight:500}h1{font-size:clamp
 .btn.primary{background:var(--btn-primary-bg);border-color:var(--btn-primary-bg);color:var(--btn-primary-text)}
 .btn.ghost{background:transparent;border:1px solid var(--btn-ghost-border);color:var(--btn-ghost-text)}
 .sustain-small{font-size:12px;color:var(--muted);margin-top:8px}
+.trace-modal{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:20px;background:rgba(16,41,31,.55)}.trace-modal[hidden]{display:none}.trace-modal__panel{width:min(440px,100%);padding:30px;background:var(--paper);border:1px solid var(--line);border-radius:6px;box-shadow:0 18px 45px rgba(0,0,0,.22)}.trace-modal__head{display:flex;align-items:center;justify-content:space-between;gap:20px}.trace-modal h3{margin:0;font-size:30px}.trace-modal p{margin:14px 0 22px;color:var(--muted);font-size:14px;line-height:1.5}.trace-modal input{width:100%;min-height:48px;padding:12px 14px;border:1px solid var(--line);background:#fff;color:var(--ink);font:14px "DM Sans",sans-serif}.trace-modal__actions{display:flex;justify-content:flex-end;gap:10px;margin-top:16px}.trace-close{padding:0;border:0;background:none;color:var(--ink);font-size:28px;line-height:1;cursor:pointer}
 
 @media(max-width:950px){
 	.sustain-actions{flex-direction:column;align-items:flex-start}
@@ -48,7 +49,7 @@ h1,h2,h3{font-family:"Playfair Display",serif;font-weight:500}h1{font-size:clamp
 .section{padding:120px 0;border-bottom:1px solid var(--line)}.section-head{display:grid;grid-template-columns:260px 1fr;gap:60px;margin-bottom:55px}.num{font-size:11px;letter-spacing:.18em;color:#8a6d38;text-transform:uppercase}h2{font-size:clamp(44px,5vw,72px);line-height:.98;letter-spacing:-.035em;margin:0 0 20px}.lead{font-size:18px;line-height:1.65;color:var(--muted);max-width:780px}
 .story{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}.story-main{height:600px}.story-side{display:grid;grid-template-rows:1fr 1fr;gap:22px}
 .story img,.coffee-photo img{image-rendering:auto;filter:contrast(1.08) saturate(1.02) sepia(.03);backface-visibility:hidden}
-.story-callout{margin:42px 0 0;padding:30px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.story-stat{font-family:"Playfair Display",serif;font-size:clamp(72px,9vw,130px);line-height:.8;color:var(--green);margin-bottom:18px}.story-callout p{max-width:720px;margin:0 0 16px}.story-close{font-family:"Playfair Display",serif;font-size:clamp(28px,3vw,42px);line-height:1.12;margin:38px 0 16px}.story-link{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--secondary)}
+.story-callout{margin:42px 0 0;padding:30px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.story-stat{font-family:"Playfair Display",serif;font-size:clamp(72px,9vw,130px);line-height:.8;color:var(--green);margin-bottom:18px}.story-callout p{max-width:720px;margin:0 0 16px}.story-close{font-family:"Playfair Display",serif;font-size:clamp(28px,3vw,42px);line-height:1.12;margin:38px 0 16px}.story-link{display:inline-flex;align-items:center;margin-left:8px;color:var(--green);font-size:24px;font-style:normal;line-height:1;transition:transform .2s ease,color .2s ease}.story-link:hover{color:var(--gold);transform:translateX(4px)}
 .story .hero-promise{color:var(--ink);margin-bottom:24px}
 .caption{padding:17px 0 0;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6f776f}
 .coffee-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.coffee{border:1px solid var(--line);background:#fff}.coffee-photo{height:250px}.coffee-body{padding:22px}.origin{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#8b6c35}.coffee h3{font-size:28px;margin:8px 0}.coffee p{font-size:13px;line-height:1.5;color:var(--muted);min-height:42px}.coffee-bottom{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:16px;margin-top:18px;font-size:13px}.plus{width:30px;height:30px;border:0;border-radius:50%;display:grid;place-items:center;background:var(--green);color:#fff;cursor:pointer;font:18px/1 "DM Sans",sans-serif}.plus:hover{background:var(--gold);color:var(--deep)}
@@ -58,9 +59,86 @@ h1,h2,h3{font-family:"Playfair Display",serif;font-weight:500}h1{font-size:clamp
 .quote{background:#e7e8de;padding:105px 0}.quote-text{font-family:"Playfair Display",serif;font-size:clamp(36px,5vw,68px);line-height:1.08;max-width:1000px}.quote-mark{color:#a07d3e;font-size:50px}
 .wholesale{padding:110px 0;background:var(--forest);color:#fff}.wholesale-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end}.wholesale p{color:#ccd5ce;line-height:1.7;max-width:620px}
 .wholesale .secondary-link{display:inline-block;margin-left:18px;color:#fff;font-size:11px;letter-spacing:.15em;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.55);padding-bottom:4px}
-footer{background:#091710;color:#c6cec8;padding:55px 0}.foot{display:flex;justify-content:space-between;gap:30px;border-top:1px solid rgba(255,255,255,.15);padding-top:30px;font-size:12px}
+footer{background:#091710;color:#c6cec8;padding:55px 0}.foot{display:flex;justify-content:space-between;gap:30px;border-top:1px solid rgba(255,255,255,.15);padding-top:30px;font-size:12px}.footer-map{margin-top:30px;background:var(--green);border-color:var(--green);color:#fff}.footer-map:hover{background:var(--gold);border-color:var(--gold);color:var(--deep)}
 @media(max-width:950px){nav{grid-template-columns:90px 1fr 50px}.navlinks{display:none}.navright span{display:none}.hero{min-height:720px}.pillars{grid-template-columns:1fr 1fr}.pillar:nth-child(even){border-right:0}.section-head,.sustainability .section-head,.story,.wholesale-grid{grid-template-columns:1fr;gap:30px}.story-main{height:470px}.coffee-grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.step:nth-child(even){border-right:0}.container{display:block}.container > *{grid-column:auto}}
 @media(max-width:560px){.container{padding:0 20px}nav{height:75px}.nav-logo{right:8px;top:85px;width:130px;height:130px}.hero-content{padding-top:245px}.email-form{flex-direction:column}.email-form .btn{width:100%}h1{font-size:62px}.pillars,.coffee-grid,.steps{grid-template-columns:1fr}.pillar,.step{border-right:0;border-bottom:1px solid rgba(255,255,255,.16)}.section{padding:75px 0}.story-side{grid-template-rows:260px 260px}.foot{flex-direction:column}}
+</style>
+<style>
+/* Brand polish and responsive layout refinements */
+:root{--max:1180px;--paper:#fbfaf7;--cream:#f1eee7;--ink:#1b211c;--forest:#10291f;--green:#315d3b;--gold:#c7a267;--line:#dedbd2;--muted:#697269}
+body{background:var(--paper);color:var(--ink);line-height:1.5}
+header{position:fixed;background:rgba(16,41,31,.93);border-bottom:1px solid rgba(255,255,255,.14);mix-blend-mode:normal;backdrop-filter:blur(14px)}
+nav{height:78px;grid-template-columns:110px 1fr 110px;gap:24px}
+.nav-logo{position:static;grid-column:1;width:76px;height:76px;filter:invert(1) brightness(1.4) contrast(1.2) drop-shadow(0 0 8px rgba(255,255,255,.18));animation:none}
+.navlinks{grid-column:2;gap:26px;font-size:11px;letter-spacing:.14em}
+.navright{grid-column:3;font-size:11px;letter-spacing:.08em}
+.hero{min-height:760px;background:linear-gradient(90deg,rgba(7,27,19,.97),rgba(7,27,19,.78) 52%,rgba(7,27,19,.2)),url("https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=2200&q=88") center/cover}
+.hero-content{max-width:650px;padding-top:120px}
+h1,h2,h3{letter-spacing:0}
+h1{font-size:clamp(58px,7vw,96px);line-height:.95;margin-bottom:26px}
+.hero-promise{font-size:clamp(23px,2.5vw,32px);line-height:1.2}
+.actions{gap:14px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:14px 22px;border-radius:6px;transition:background .2s ease,border-color .2s ease,color .2s ease,transform .2s ease}
+.btn:hover{transform:translateY(-2px)}
+.coffee,.sustain-card,.email-form input,.cart-drawer{border-radius:8px}
+.coffee{overflow:hidden}
+.story-main,.story-side img{border-radius:8px;overflow:hidden}
+.wholesale .secondary-link{display:inline-flex;align-items:center;justify-content:center;min-height:48px;margin-left:0;padding:14px 22px;border:1px solid rgba(255,255,255,.65);border-radius:6px;transition:background .2s ease,border-color .2s ease,transform .2s ease}
+.wholesale .secondary-link:hover{border-color:#fff;background:rgba(255,255,255,.08);transform:translateY(-2px)}
+.pillars{grid-template-columns:repeat(5,1fr);background:#172d22}
+.pillar{padding:30px 24px}
+.section{padding:104px 0}
+.section-head{grid-template-columns:220px 1fr;gap:52px;margin-bottom:48px}
+.section-head h2{max-width:820px}
+.lead{font-size:17px;line-height:1.7;color:#687269}
+.sustainability-intro{max-width:780px;margin-top:24px}.sustainability-intro p{margin:0 0 14px;font-size:15px;line-height:1.7;color:#687269}.sustainability-sources{font-size:12px!important;color:#8a8f88!important}.sustainability-sources a{color:var(--green);text-decoration:underline;text-underline-offset:3px}.commitments-label{margin:0 0 18px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#8a6d38}
+.story{gap:28px}
+.story-main{height:560px}
+.story-side{gap:28px}
+.story-callout{margin:36px 0 0;padding:28px 0}
+.story-stat{color:var(--green)}
+.coffee-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.coffee{border-color:#e1ddd3;transition:transform .2s ease,box-shadow .2s ease}
+.coffee:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(27,33,28,.1)}
+.coffee-photo{height:235px}
+.coffee-body{padding:22px 20px 20px}
+.coffee h3{font-size:27px}
+.email-capture{padding:88px 0;background:var(--cream)}
+.email-capture h2{max-width:760px}
+.email-form{margin-top:30px}
+.email-form input{min-height:48px}
+.journey{padding:92px 0;background:var(--green)}
+.quote{padding:92px 0;background:#e5e8df}
+.quote-text{max-width:900px}
+.wholesale{padding:100px 0;background:#173327}
+.wholesale-grid{gap:90px}
+footer{padding:48px 0;background:#0b1d15}
+.foot{align-items:flex-start}
+.footer-contact{display:flex;flex-direction:column;align-items:flex-end;gap:12px;text-align:right}.footer-socials{display:flex;align-items:center;gap:16px}.footer-socials a{display:inline-flex;align-items:center;gap:7px;color:#fff;transition:color .2s ease}.footer-socials a:hover{color:var(--gold)}.footer-socials svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.footer-socials .x-icon{fill:currentColor;stroke:none}.footer-email{color:#d8c28e;text-decoration:underline;text-underline-offset:3px}.footer-email:hover{color:#fff}
+@media(max-width:950px){
+	nav{grid-template-columns:80px 1fr 80px}
+	.nav-logo{width:68px;height:68px}
+	.section{padding:84px 0}
+	.section-head{grid-template-columns:180px 1fr;gap:30px}
+	.coffee-grid{gap:16px}
+}
+@media(max-width:560px){
+	nav{height:70px;grid-template-columns:60px 1fr 60px}
+	.nav-logo{width:68px;height:68px}
+	.navright{font-size:10px}
+	.hero{min-height:720px}
+	.hero-content{padding-top:170px}
+	h1{font-size:clamp(52px,16vw,72px)}
+	.section{padding:72px 0}
+	.section-head{display:block;margin-bottom:34px}
+	.section-head .num{margin-bottom:18px}
+	.story-main{height:390px}
+	.coffee-photo{height:260px}
+	.email-capture{padding:72px 0}
+	.quote{padding:72px 0}
+	.quote-text{font-size:clamp(34px,10vw,52px)}
+	.footer-contact{align-items:flex-start;text-align:left}
+}
 </style>
 </head>
 <body>
@@ -71,10 +149,8 @@ footer{background:#091710;color:#c6cec8;padding:55px 0}.foot{display:flex;justif
 </nav></div></header>
 
 <section class="hero" id="home"><div class="container"><div class="hero-content">
-<div class="eyebrow">SPECIALTY COFFEE · ROASTED IN KENYA</div>
-<h1>Exceptional Coffee.<br>Hunted at Origin.</h1>
-<p class="hero-promise">We hunt rare coffee so you don't have to.</p>
-<p class="hero-copy">Exceptional lots, thoughtfully sourced and precisely roasted in Kikuyu, Kenya — because Kenya's finest coffee should be tasted here first.</p>
+<h1>Specialty Coffee.<br>Roasted at Origin.</h1>
+<p class="hero-promise">We select rare lots that tell a story, those with character.</p>
 <div class="actions"><!-- NOTE: Shop Coffee currently scrolls to #coffee only. Do not build cart or checkout functionality in this pass. --><a class="btn gold" href="#coffee">Shop Coffee</a><a class="btn" href="#story">Our Story</a></div>
 </div></div></section>
 
@@ -82,32 +158,31 @@ footer{background:#091710;color:#c6cec8;padding:55px 0}.foot{display:flex;justif
 
 <section class="section" id="story"><div class="container">
 <div class="section-head"><div class="num">01 / Our Story</div><div><h2>Small Roastery. Bigger Mission.</h2>
-<p class="lead hero-promise">MOST ROASTERIES BUY COFFEE.<br>IMANI HUNTS IT.</p>
-<p class="lead">A decade spent roasting across various countries taught us one uncomfortable truth — the world is obsessed with Kenyan coffee. Roasters from across the world pay a premium for it. They know exactly what makes it extraordinary.</p>
-<p class="lead">Most Kenyans don't. Because they never get to taste it.</p>
-<div class="story-callout"><div class="story-stat">95%</div><p class="lead">Over 95% of Kenya's coffee leaves the country as raw green beans — roasted abroad, branded by someone else, and sold at three to five times the value. The flavour. The story. The premium. All added somewhere else.</p></div>
-<p class="lead">Imani exists to end that. We roast at origin — keeping the craft, the value and the experience here, where the coffee actually grows.</p>
-<p class="lead">By 2030, we are committed to helping cut that export figure by half.</p>
-<div class="story-close"><em>This is not a discovery story. It is a homecoming.</em></div></div></div>
+<p class="lead">Imani is a micro-roastery in Kikuyu, Kenya.</p>
+<p class="lead">Built from a decade in the coffee industry; brewing, roasting and sourcing coffee across different countries. We have seen the world fall for Kenyan coffee. Priced at a premium at different destinations, with value added abroad. Imani was founded on a simple conviction: Kenyan coffee branding and value addition should happen at origin.</p>
+<p class="lead"><em>Read about our sustainability action plan<a class="story-link" href="#sustainability" aria-label="Read about our sustainability action plan">&rarr;</a></em></p>
+<p class="lead">Through craft learned across the specialty industry, we bring art and science to modulate our roast. Roasted in small batches to iterate profiles and amplify the hard work of the producers. Each coffee bean has a character; our mission is to bring out the best from every lot we choose.</p>
+<div class="story-close"><em>This is not a discovery story.<br>It is a homecoming.</em></div></div></div>
 <div class="story"><div><div class="story-main"><img src="https://res.cloudinary.com/u7elvwmv/image/upload/f_auto,q_auto/mike_in_dryingbed" alt="Coffee drying beds at origin"></div><div class="caption">From origin to cup · Nairobi, Kenya</div></div>
 <div class="story-side"><img src="https://res.cloudinary.com/u7elvwmv/image/upload/f_auto,q_auto/mike_with_cherry" alt="Harvesting coffee cherries at a Kenyan farm"><img src="https://res.cloudinary.com/u7elvwmv/image/upload/f_auto,q_auto/mike_roasting" alt="Roasting coffee in Nairobi"></div></div>
 </div></section>
 
 <section class="section" id="coffee"><div class="container">
-<div class="section-head"><div class="num">02 / Our Coffees</div><div><h2>COFFEES WITH CHARACTER.</h2><p class="lead">Seasonal lots selected for sweetness, clarity and distinctive origin character.</p></div></div>
+<div class="section-head"><div class="num">02 / Our Coffees</div><div><h2>COFFEE BEANS.</h2><p class="lead">Seasonal lots selected for sweetness, clarity and distinctive origin character.</p></div></div>
 <div class="coffee-grid">
 <article class="coffee"><div class="coffee-photo"><img src="https://i.postimg.cc/9DgdBRWh/Whats-App-Image-2026-08-28-at-13-42-24.jpg" alt="Kenya coffee"></div><div class="coffee-body"><div class="origin">Kenya · Kirinyaga</div><h3>Kenya AA</h3><p>Blackcurrant · Citrus · Brown Sugar<br>Washed · SL28 · SL34</p><div class="coffee-bottom"><span>KSh 1,250 / 250g</span><button class="plus" type="button" aria-label="Add Kenya AA to cart">+</button></div></div></article>
 <article class="coffee"><div class="coffee-photo"><img src="https://i.postimg.cc/9DgdBRWH/Whats-App-Image-2026-08-28-at-13-42-25.jpg" alt="Coffee landscape"></div><div class="coffee-body"><div class="origin">Kenya · Nyeri</div><h3>Kenya AB</h3><p>Raisin · Caramel · Orange<br>Washed · SL28 · Ruiru 11</p><div class="coffee-bottom"><span>KSh 1,150 / 250g</span><button class="plus" type="button" aria-label="Add Kenya AB to cart">+</button></div></div></article>
-<article class="coffee"><div class="coffee-photo"><img src="https://i.postimg.cc/v42rvgGp/Whats-App-Image-2026-08-28-at-13-42-25-(1).jpg" alt="Coffee drying"></div><div class="coffee-body"><div class="origin">Ethiopia · Guji</div><h3>Guji Natural</h3><p>Floral · Peach · Honey<br>Natural · Heirloom</p><div class="coffee-bottom"><span>KSh 1,250 / 250g</span><button class="plus" type="button" aria-label="Add Guji Natural to cart">+</button></div></div></article>
-<article class="coffee"><div class="coffee-photo"><img src="https://i.postimg.cc/Bj7TCLJk/Whats-App-Image-2026-08-28-at-13-42-25-(2).jpg" alt="Uganda coffee"></div><div class="coffee-body"><div class="origin">Uganda · Rwenzori</div><h3>Uganda Drugar</h3><p>Dark Chocolate · Nuts · Caramel<br>Washed · SL14 · SL28</p><div class="coffee-bottom"><span>KSh 1,100 / 250g</span><button class="plus" type="button" aria-label="Add Uganda Drugar to cart">+</button></div></div></article>
+<article class="coffee"><div class="coffee-photo"><img src="https://i.postimg.cc/v42rvgGp/Whats-App-Image-2026-08-28-at-13-42-25-(1).jpg" alt="Meru coffee"></div><div class="coffee-body"><div class="origin">Kenya · Meru</div><h3>Meru</h3><p>Blackcurrant · Citrus · Brown Sugar<br>Washed · SL28 · SL34</p><div class="coffee-bottom"><span>KSh 1,250 / 250g</span><button class="plus" type="button" aria-label="Add Meru to cart">+</button></div></div></article>
+<article class="coffee"><div class="coffee-photo"><img src="https://i.postimg.cc/Bj7TCLJk/Whats-App-Image-2026-08-28-at-13-42-25-(2).jpg" alt="Meru Peaberry coffee"></div><div class="coffee-body"><div class="origin">Kenya · Meru</div><h3>Meru Peaberry</h3><p>Raisin · Caramel · Orange<br>Washed · Peaberry</p><div class="coffee-bottom"><span>KSh 1,350 / 250g</span><button class="plus" type="button" aria-label="Add Meru Peaberry to cart">+</button></div></div></article>
+<article class="coffee"><div class="coffee-photo"><img src="https://i.postimg.cc/9DgdBRWh/Whats-App-Image-2026-08-28-at-13-42-25.jpg" alt="Nyeri AA Fruit Infused coffee"></div><div class="coffee-body"><div class="origin">Kenya · Nyeri</div><h3>Nyeri AA Fruit Infused</h3><p>Berry · Tropical Fruit · Honey<br>Fruit Infused · AA</p><div class="coffee-bottom"><span>KSh 1,450 / 250g</span><button class="plus" type="button" aria-label="Add Nyeri AA Fruit Infused to cart">+</button></div></div></article>
 </div></div></section>
 
 <section class="email-capture" aria-labelledby="email-heading"><div class="container"><div><h2 id="email-heading">GET FIRST ACCESS TO NEW LOTS</h2><p class="lead">Be the first to hear about exceptional new coffees, seasonal releases and what we're discovering at origin.</p><p class="lead">Join the Imani community and stay close to the journey — including our tree-planting programme and one free coffee training seat sponsored every month.</p><form class="email-form"><label for="email">Your email address</label><input id="email" name="email" type="email" placeholder="Your email address" autocomplete="email" required><button class="btn gold" type="submit">KEEP ME IN THE LOOP</button></form><!-- NOTE: Wire this form to an email service such as Mailchimp, ConvertKit, Brevo or another chosen provider before launch. --></div></div></section>
 
 <section class="section sustainability" id="sustainability"><div class="container">
-	<div class="section-head"><div class="num">03 / Sustainability</div><div><h2>COFFEE SHOULD LEAVE MORE BEHIND.</h2><p class="lead">We believe a coffee company should create value beyond the cup.</p></div></div>
+	<div class="section-head"><div class="num">03 / Sustainability</div><div><h2>COFFEE SHOULD LEAVE MORE BEHIND.</h2><p class="lead">We believe a coffee company should create value beyond the cup.</p><div class="sustainability-intro"><p>Domestic coffee consumption stands at just 3% of Kenya's production. The other 97% is exported, mostly as raw green beans, so the craft, value and story are added somewhere else.</p><p>Imani exists to change that. We roast at origin, keeping more value where the coffee grows. As Kenya works toward tripling national coffee output to 150,000 metric tonnes by 2028, our work supports a stronger local coffee economy through roasting, training and value addition.</p><p class="sustainability-sources"><a href="https://alliancebioversityciat.org/stories/regenerative-agriculture-new-value-proposition-kenya-coffee-sector" target="_blank" rel="noopener">Alliance Bioversity International - CIAT</a><span aria-hidden="true"> · </span><a href="https://mountkenyatimes.co.ke/coffee-revival-gains-momentum-as-kenya-targets-150000-tonnes-by-2028/" target="_blank" rel="noopener">Mt Kenya Times</a><span aria-hidden="true"> · </span><a href="https://www.the-star.co.ke/news/2026-03-31-kenya-banks-on-new-law-training-and-research-to-revive-her-coffee" target="_blank" rel="noopener">The Star</a></p></div></div></div>
 
-	<div class="sustain-grid">
+	<p class="commitments-label">Our three commitments:</p><div class="sustain-grid">
 		<div class="sustain-card"><div class="icon">🤝</div><h4>PEOPLE</h4><b>BUILD KNOWLEDGE.</b><p>One free coffee training seat sponsored every month — open to farmers, producers and the public.</p></div>
 		<div class="sustain-card"><div class="icon">🌱</div><h4>PLANET</h4><b>PLANT WHAT WE ROAST.</b><p>KSh 5 from every Imani bag supports the Imani Tree Programme.</p></div>
 		<div class="sustain-card"><div class="icon">☕</div><h4>VALUE</h4><b>KEEP MORE VALUE AT ORIGIN.</b><p>Fair prices to producers. More coffee value kept in Kenya. A business built for the long term.</p></div>
@@ -115,7 +190,7 @@ footer{background:#091710;color:#c6cec8;padding:55px 0}.foot{display:flex;justif
 
 	<div class="sustain-tag">Small actions. Compounding impact.</div>
 
-	<div class="sustain-actions"><a class="btn primary" href="https://wa.me/254704604260?text=Hi%2C%20I%20want%20to%20adopt%20a%20tree" target="_blank" rel="noopener">Adopt a Tree</a><a class="btn ghost" href="#story">Trace your coffee</a>
+	<div class="sustain-actions"><a class="btn primary" href="https://wa.me/254704604260?text=Hi%2C%20I%20want%20to%20adopt%20a%20tree" target="_blank" rel="noopener">Adopt a Tree</a><button class="btn ghost" id="trace-coffee" type="button">Trace your coffee</button>
 	<div class="sustain-small">KSh 5 from every Imani bag goes directly to the Imani Tree Programme.</div></div>
 </div></section>
 
@@ -127,9 +202,10 @@ footer{background:#091710;color:#c6cec8;padding:55px 0}.foot{display:flex;justif
 <p class="lead"><em>MOQ 5kg · Nairobi delivery bi-weekly</em></p>
 <div class="actions"><a class="btn gold" href="https://wa.me/254704604260" target="_blank" rel="noopener">START A CONVERSATION</a><a class="secondary-link" href="https://wa.me/254704604260" target="_blank" rel="noopener">BOOK A CUPPING</a></div></div></div></div></section>
 
-<footer id="contact"><div class="container"><div class="foot"><div><strong>IMANI COFFEE CO.</strong><br><span>Rooted in character · Nairobi, Kenya</span></div><div>Instagram · WhatsApp · Email<br>© 2026 Imani Coffee Co.</div></div></div></footer>
+<footer id="contact"><div class="container"><div class="foot"><div><strong>IMANI COFFEE CO.</strong><br><span>Rooted in character · Nairobi, Kenya</span></div><div class="footer-contact"><div class="footer-socials"><a href="https://www.instagram.com/getimanicoffee?igsi=Mm10eTdoeGRzZWw=" target="_blank" rel="noopener" aria-label="Follow Imani Coffee on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg><span>Instagram</span></a><a href="https://x.com/Get_ImaniCoffee" target="_blank" rel="noopener" aria-label="Follow Imani Coffee on X"><svg class="x-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-6.4L6.47 22H3.36l7.24-8.28L2.8 2h6.4l4.42 5.84L18.9 2Zm-1.1 17.8h1.73L8.3 4.07H6.44L17.8 19.8Z"></path></svg><span>X</span></a></div><a class="footer-email" href="mailto:getimanicoffee@gmail.com">getimanicoffee@gmail.com</a><span>© 2026 Imani Coffee Co.</span></div></div><a class="btn footer-map" href="https://maps.app.goo.gl/su8LmxajzhurJp2w7?g_st=ac" target="_blank" rel="noopener">Find us on map</a></div></footer>
 
 <div class="cart-backdrop" id="cart-backdrop"></div><aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart" aria-hidden="true"><div class="cart-head"><h2>Your Cart</h2><button class="cart-close" type="button" aria-label="Close cart">&times;</button></div><div class="cart-items" id="cart-items"></div><div class="cart-footer"><div class="cart-total"><span>Total</span><strong id="cart-total">KSh 0</strong></div><p class="cart-note">Ordering is not connected yet. WhatsApp Imani to complete your purchase.</p></div></aside>
+<div class="trace-modal" id="trace-modal" hidden><form class="trace-modal__panel" id="trace-form"><div class="trace-modal__head"><h3>Trace your coffee</h3><button class="trace-close" type="button" aria-label="Close trace form">&times;</button></div><p>Enter the trace number printed on your coffee bag to find it on the map.</p><label for="trace-number">Coffee bag trace number</label><input id="trace-number" name="trace-number" type="text" autocomplete="off" required><div class="trace-modal__actions"><button class="btn ghost trace-close" type="button">Cancel</button><button class="btn primary" type="submit">Open map</button></div></form></div>
 
 <script>
 const cartKey='imaniCoffeeCart';
@@ -141,6 +217,7 @@ function setCartOpen(open){cartDrawer.classList.toggle('open',open);cartBackdrop
 document.querySelectorAll('.coffee').forEach((card,index)=>{const button=card.querySelector('.plus');button.addEventListener('click',()=>{const priceText=card.querySelector('.coffee-bottom span').textContent;const item={id:index,name:card.querySelector('h3').textContent.trim(),origin:card.querySelector('.origin').textContent.trim(),price:Number((priceText.match(/[\d,]+/)||['0'])[0].replace(/,/g,''))};const existing=cart.find(product=>product.id===item.id);if(existing)existing.quantity+=1;else cart.push({...item,quantity:1});renderCart();setCartOpen(true);});});
 document.querySelector('.cart-toggle').addEventListener('click',()=>setCartOpen(true));document.querySelector('.cart-close').addEventListener('click',()=>setCartOpen(false));cartBackdrop.addEventListener('click',()=>setCartOpen(false));
 cartItems.addEventListener('click',event=>{const button=event.target.closest('button[data-action]');if(!button)return;const item=cart.find(product=>product.id===Number(button.dataset.id));if(!item)return;if(button.dataset.action==='increase')item.quantity+=1;if(button.dataset.action==='decrease')item.quantity-=1;if(button.dataset.action==='remove'||item.quantity<1)cart=cart.filter(product=>product.id!==item.id);renderCart();});
+const traceModal=document.getElementById('trace-modal'),traceForm=document.getElementById('trace-form'),traceNumber=document.getElementById('trace-number');function closeTraceModal(){traceModal.hidden=true;}document.getElementById('trace-coffee').addEventListener('click',()=>{traceModal.hidden=false;traceNumber.focus();});document.querySelectorAll('.trace-close').forEach(button=>button.addEventListener('click',closeTraceModal));traceModal.addEventListener('click',event=>{if(event.target===traceModal)closeTraceModal();});traceForm.addEventListener('submit',event=>{event.preventDefault();const bagNumber=traceNumber.value.trim();if(!bagNumber){traceNumber.focus();return;}const mapQuery=encodeURIComponent(`Imani Coffee Co Kikuyu Kenya coffee trace ${bagNumber}`);window.location.assign(`https://www.google.com/maps/search/?api=1&query=${mapQuery}`);});
 document.addEventListener('keydown',event=>{if(event.key==='Escape')setCartOpen(false);});renderCart();
 </script>
 </body></html>
