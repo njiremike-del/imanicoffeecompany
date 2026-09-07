@@ -240,4 +240,4 @@ cartItems.addEventListener('click',event=>{const button=event.target.closest('bu
 const traceModal=document.getElementById('trace-modal'),traceForm=document.getElementById('trace-form'),traceNumber=document.getElementById('trace-number');function closeTraceModal(){traceModal.hidden=true;}document.getElementById('trace-coffee').addEventListener('click',()=>{traceModal.hidden=false;traceNumber.focus();});document.querySelectorAll('.trace-close').forEach(button=>button.addEventListener('click',closeTraceModal));traceModal.addEventListener('click',event=>{if(event.target===traceModal)closeTraceModal();});traceForm.addEventListener('submit',event=>{event.preventDefault();const bagNumber=traceNumber.value.trim();if(!bagNumber){traceNumber.focus();return;}const mapQuery=encodeURIComponent(`Imani Coffee Co Kikuyu Kenya coffee trace ${bagNumber}`);window.location.assign(`https://www.google.com/maps/search/?api=1&query=${mapQuery}`);});
 document.addEventListener('keydown',event=>{if(event.key==='Escape'){setCartOpen(false);closeOptionsModal();}});renderCart();
 </script>
-</body></html>
+</body></html><!-- Force rebuild -->
