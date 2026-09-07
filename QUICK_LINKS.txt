@@ -1,0 +1,83 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                   IMANI COFFEE CO. - QUICK REFERENCE                       ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+🔗 LIVE WEBSITE LINKS:
+
+1. GitHub Pages (Immediate):
+   https://njiremike-del.github.io/imanicoffeecompany/
+
+2. Custom Domain (After DNS setup):
+   https://getimanicoffee.com
+
+3. GitHub Repository:
+   https://github.com/njiremike-del/imanicoffeecompany
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📱 CONTACT LINKS:
+
+WhatsApp:
+https://wa.me/254704604260
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚙️  SETUP CHECKLIST:
+
+□ Enable GitHub Pages (Settings → Pages)
+□ Select main branch as source
+□ Wait for deployment (usually < 1 minute)
+□ Test website at GitHub Pages URL
+□ (Optional) Buy getimanicoffee.com domain
+□ (Optional) Connect custom domain to GitHub Pages
+□ Connect subscription form to email service
+□ Share on social media
+□ Test all features (cart, checkout, tracing)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 WEBSITE FEATURES:
+
+✅ Premium responsive design
+✅ 4 specialty coffee products
+✅ Size/grind selection (Whole Bean / Ground)
+✅ Shopping cart with real-time updates
+✅ WhatsApp checkout integration
+✅ Email subscription section
+✅ Coffee tracing feature
+✅ Sustainability information
+✅ Wholesale inquiries
+✅ Mobile-optimized
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💰 COFFEE PRICING:
+
+Kenya AA:     KSh 450 (100g) | KSh 1,250 (250g) | KSh 4,200 (1kg)
+Kenya AB:     KSh 410 (100g) | KSh 1,150 (250g) | KSh 3,900 (1kg)
+Meru:         KSh 450 (100g) | KSh 1,250 (250g) | KSh 4,200 (1kg)
+Meru Peaberry: KSh 485 (100g) | KSh 1,350 (250g) | KSh 4,550 (1kg)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎨 BRAND COLORS:
+
+Primary Green:   #2D5A1B (dark green)
+Secondary Green: #315D3B (medium green)
+Gold Accent:     #C8A97A (warm gold)
+Cream:           #F9F5EE (soft cream)
+Deep Brown:      #1A1208 (dark brown)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📝 NEXT STEPS:
+
+1. Go to: https://github.com/njiremike-del/imanicoffeecompany/settings/pages
+2. Enable GitHub Pages from main branch
+3. Website live in < 1 minute
+4. Share GitHub Pages link immediately
+5. (Optional) Set up custom domain for professional URL
+
+════════════════════════════════════════════════════════════════════════════════
+                    Website Ready for Production! 🚀
+════════════════════════════════════════════════════════════════════════════════
