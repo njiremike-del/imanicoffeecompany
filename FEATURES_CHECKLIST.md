@@ -1,7 +1,7 @@
 # ✅ IMANI COFFEE - ALL FEATURES NOW LIVE
 
 ## 🔗 LIVE WEBSITE:
-**https://getimanicoffee.com/**
+**https://njiremike-del.github.io/imanicoffeecompany/**
 
 *(GitHub Pages rebuilding - refresh in 30-60 seconds for latest version)*
 
@@ -73,7 +73,7 @@
 
 ## 🚀 HOW TO ACCESS ALL FEATURES:
 
-1. **Visit site**: https://getimanicoffee.com/
+1. **Visit site**: https://njiremike-del.github.io/imanicoffeecompany/
 2. **Refresh browser** (Ctrl+F5 or Cmd+Shift+R)
 3. **Wait 30-60 seconds** for GitHub Pages rebuild
 4. **Test each feature**:

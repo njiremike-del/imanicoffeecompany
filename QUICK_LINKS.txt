@@ -5,7 +5,7 @@
 🔗 LIVE WEBSITE LINKS:
 
 1. GitHub Pages (Immediate):
-   https://getimanicoffee.com/
+   https://njiremike-del.github.io/imanicoffeecompany/
 
 2. Custom Domain (After DNS setup):
    https://getimanicoffee.com
