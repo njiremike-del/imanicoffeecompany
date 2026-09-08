@@ -2,7 +2,7 @@
 
 ## Your GitHub Pages URL Will Be:
 ```
-https://njiremike-del.github.io/imanicoffeecompany/
+https://getimanicoffee.com/
 ```
 
 ## ✅ Enable GitHub Pages (3 Steps)
@@ -22,7 +22,7 @@ https://njiremike-del.github.io/imanicoffeecompany/
 ### Step 3: Wait for Deployment
 - GitHub will build your site (usually < 1 minute)
 - You'll see a green checkmark when live
-- Visit: https://njiremike-del.github.io/imanicoffeecompany/
+- Visit: https://getimanicoffee.com/
 
 ---
 
@@ -72,7 +72,7 @@ njiremike-del.github.io
 
 **GitHub Pages Link** (Available immediately):
 ```
-https://njiremike-del.github.io/imanicoffeecompany/
+https://getimanicoffee.com/
 ```
 
 **Custom Domain** (After DNS setup):

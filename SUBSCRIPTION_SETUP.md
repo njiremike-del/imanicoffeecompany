@@ -6,7 +6,7 @@ The subscription form is now connected to **getimanicoffee@gmail.com** using **F
 
 ### **Live URL:**
 ```
-https://njiremike-del.github.io/imanicoffeecompany/
+https://getimanicoffee.com/
 ```
 
 ---
@@ -25,7 +25,7 @@ https://njiremike-del.github.io/imanicoffeecompany/
 ## ✅ FIRST-TIME SETUP (One-Time):
 
 ### **Step 1: First Submission**
-- Visit: https://njiremike-del.github.io/imanicoffeecompany/
+- Visit: https://getimanicoffee.com/
 - Scroll to "SUBSCRIBE TO OUR LOT ALERTS" section
 - Enter an email (can be getimanicoffee@gmail.com for testing)
 - Click "SUBSCRIBE"
@@ -108,7 +108,7 @@ Body:
 
 ## 🔗 LIVE FORM URL:
 ```
-https://njiremike-del.github.io/imanicoffeecompany/#subscribe
+https://getimanicoffee.com/#subscribe
 ```
 
 **Ready to start collecting subscribers! 🎉**
