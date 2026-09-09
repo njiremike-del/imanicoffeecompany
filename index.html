@@ -47,6 +47,26 @@ h1,h2,h3{font-family:"Playfair Display",serif;font-weight:500}h1{font-size:clamp
 .sustain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .sustain-card{background:#fff;border:1px solid var(--line);padding:26px;text-align:center;border-radius:6px}
 .sustain-card .icon{font-size:28px;margin-bottom:12px}
+.brew-cards{grid-template-columns:repeat(4,1fr);margin-top:18px}
+.brew-cards .sustain-card{text-align:left}
+.brew-cards .sustain-card h4{font-size:12px;letter-spacing:.1em;color:#8a6d38;margin:0 0 10px}
+.brew-cards .sustain-card p{color:var(--muted);font-size:13px;line-height:1.6;margin:0}
+.brew-group{margin-bottom:44px}
+.brew-group h3{font-family:"Playfair Display",serif;font-size:26px;margin:0 0 14px}
+.brew-steps{margin:0;padding-left:22px;color:var(--muted);font-size:15px;line-height:1.7}
+.brew-steps li{margin-bottom:8px}
+.brew-closing{color:var(--muted);font-size:14px;font-style:italic;margin:16px 0 0}
+.brew-note{border-top:1px solid var(--line);padding-top:24px}
+.glossary,.faq details{margin-top:26px;border:1px solid var(--line);border-radius:6px;padding:18px 22px;background:#fff}
+.glossary summary,.faq summary{cursor:pointer;font-weight:600;list-style:none;position:relative;padding-left:22px}
+.glossary summary::-webkit-details-marker,.faq summary::-webkit-details-marker{display:none}
+.glossary summary::before,.faq summary::before{content:'+';position:absolute;left:0;color:var(--gold);font-weight:700}
+.glossary[open] summary::before,.faq details[open] summary::before{content:'−'}
+.glossary-body,.faq-body{margin-top:16px;color:var(--muted);font-size:14px;line-height:1.7}
+.glossary-body p,.faq-body p{margin:0 0 14px}
+.glossary-body p:last-child,.faq-body p:last-child{margin-bottom:0}
+.faq{margin-top:26px}
+.faq details+details{margin-top:12px}
 .sustain-card h4{margin:6px 0 6px;font-family:"Playfair Display",serif}.sustain-card b{display:block;margin-bottom:10px;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--secondary)}
 .sustain-card p{color:var(--muted);line-height:1.5;font-size:15px;margin:0}
 .sustain-tag{margin-top:20px;font-size:14px;color:var(--muted)}
@@ -59,6 +79,32 @@ h1,h2,h3{font-family:"Playfair Display",serif;font-weight:500}h1{font-size:clamp
 .btn.ghost{background:transparent;border:1px solid var(--btn-ghost-border);color:var(--btn-ghost-text)}
 .sustain-small{font-size:12px;color:var(--muted);margin-top:8px}
 .trace-modal{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:20px;background:rgba(16,41,31,.55)}.trace-modal[hidden]{display:none}.trace-modal__panel{width:min(440px,100%);padding:30px;background:var(--paper);border:1px solid var(--line);border-radius:6px;box-shadow:0 18px 45px rgba(0,0,0,.22)}.trace-modal__head{display:flex;align-items:center;justify-content:space-between;gap:20px}.trace-modal h3{margin:0;font-size:30px}.trace-modal p{margin:14px 0 22px;color:var(--muted);font-size:14px;line-height:1.5}.trace-modal input{width:100%;min-height:48px;padding:12px 14px;border:1px solid var(--line);background:#fff;color:var(--ink);font:14px "DM Sans",sans-serif}.trace-modal__actions{display:flex;justify-content:flex-end;gap:10px;margin-top:16px}.trace-close{padding:0;border:0;background:none;color:var(--ink);font-size:28px;line-height:1;cursor:pointer}
+/* --- PREMIUM OPTIONS MODAL --- */
+#options-modal .trace-modal__panel{width:min(480px,100%)}
+.opt-legend{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--secondary);margin:0 0 14px;display:block;font-weight:600}
+.opt-fieldset{border:none;padding:0;margin:0}
+.opt-fieldset+.opt-fieldset{margin-top:28px}
+.opt-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.opt-grid.opt-grid--size{grid-template-columns:repeat(3,1fr)}
+.opt-card{position:relative}
+.opt-card input{position:absolute;opacity:0;width:1px;height:1px}
+.opt-card label{display:flex;flex-direction:column;gap:2px;padding:14px 16px;border:1px solid var(--line);border-radius:8px;background:#fff;cursor:pointer;transition:border-color .18s ease,box-shadow .18s ease,background .18s ease;min-height:100%}
+.opt-card label .opt-name{font-size:14px;font-weight:600;color:var(--ink)}
+.opt-card label .opt-detail{font-size:11.5px;color:var(--muted)}
+.opt-card label:hover{border-color:var(--gold)}
+.opt-card input:checked+label{border-color:var(--gold);background:linear-gradient(0deg,rgba(200,169,122,.09),rgba(200,169,122,.09));box-shadow:0 0 0 1px var(--gold),0 8px 18px rgba(200,169,122,.18)}
+.opt-card input:checked+label::after{content:'✓';position:absolute;top:10px;right:12px;width:18px;height:18px;border-radius:50%;background:var(--gold);color:var(--deep);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.opt-card input:focus-visible+label{outline:2px solid var(--gold);outline-offset:2px}
+.opt-grid--size .opt-card label{align-items:center;text-align:center}
+.opt-price-band{margin-top:26px;padding:16px 18px;background:var(--deep);border-radius:8px;display:flex;align-items:center;justify-content:space-between}
+.opt-price-band span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#cbb98a}
+.opt-price-band strong{font-family:"Playfair Display",serif;font-size:24px;color:#fff;font-weight:600}
+#options-modal .trace-modal__actions{margin-top:24px}
+#options-cancel{min-height:48px;padding:0 22px;border-radius:6px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;font-size:13px;transition:border-color .18s ease}
+#options-cancel:hover{border-color:var(--gold)}
+#options-add{min-height:48px;padding:0 26px;border-radius:6px;border:0;background:var(--deep);color:#fff;cursor:pointer;font-size:13px;letter-spacing:.04em;transition:background .18s ease,transform .18s ease}
+#options-add:hover{background:#000;transform:translateY(-1px)}
+@media(max-width:480px){.opt-grid{grid-template-columns:1fr}.opt-grid.opt-grid--size{grid-template-columns:repeat(3,1fr)}}
 
 @media(max-width:950px){
 	.sustain-actions{flex-direction:column;align-items:flex-start}
@@ -70,16 +116,85 @@ h1,h2,h3{font-family:"Playfair Display",serif;font-weight:500}h1{font-size:clamp
 .story-callout{margin:42px 0 0;padding:30px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.story-stat{font-family:"Playfair Display",serif;font-size:clamp(72px,9vw,130px);line-height:.8;color:var(--green);margin-bottom:18px}.story-callout p{max-width:720px;margin:0 0 16px}.story-close{font-family:"Playfair Display",serif;font-size:clamp(28px,3vw,42px);line-height:1.12;margin:38px 0 16px}.lead em{display:inline-flex;align-items:center}.story-link{display:inline-flex;align-items:center;margin-left:8px;color:var(--green);font-size:24px;font-style:normal;line-height:1;cursor:pointer;transition:transform .2s ease,color .2s ease}.story-link:hover{color:var(--gold);transform:translateX(4px)}
 .story .hero-promise{color:var(--ink);margin-bottom:24px}
 .caption{padding:17px 0 0;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6f776f}
-.coffee-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.coffee{border:1px solid var(--line);background:#fff}.coffee-photo{height:250px}.coffee-body{padding:22px}.origin{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#8b6c35}.coffee h3{font-size:28px;margin:8px 0}.coffee p{font-size:13px;line-height:1.5;color:var(--muted);min-height:42px}.coffee-bottom{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:16px;margin-top:18px;font-size:13px}.plus{width:30px;height:30px;border:0;border-radius:50%;display:grid;place-items:center;background:var(--green);color:#fff;cursor:pointer;font:18px/1 "DM Sans",sans-serif}.plus:hover{background:var(--gold);color:var(--deep)}
+.coffee-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.coffee{border:1px solid var(--line);background:#fff}.coffee-photo{height:250px}.coffee-body{padding:22px}.origin{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#8b6c35}.coffee h3{font-size:28px;margin:8px 0}.coffee p{font-size:13px;line-height:1.5;color:var(--muted);min-height:42px}.coffee p.roast-info{font-size:11px;min-height:0;margin-top:-4px}.coffee-bottom{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:16px;margin-top:18px;font-size:13px}.plus{width:30px;height:30px;border:0;border-radius:50%;display:grid;place-items:center;background:var(--green);color:#fff;cursor:pointer;font:18px/1 "DM Sans",sans-serif}.plus:hover{background:var(--gold);color:var(--deep)}
 .cart-drawer{position:fixed;inset:0 0 0 auto;z-index:40;width:min(390px,100%);padding:28px;background:var(--cream);box-shadow:-12px 0 35px rgba(0,0,0,.2);transform:translateX(100%);transition:transform .25s ease;display:flex;flex-direction:column}.cart-drawer.open{transform:translateX(0)}.cart-backdrop{position:fixed;inset:0;z-index:39;background:rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:opacity .25s ease}.cart-backdrop.open{opacity:1;pointer-events:auto}.cart-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:18px}.cart-head h2{font-size:34px;margin:0}.cart-close{border:0;background:none;color:var(--ink);font-size:28px;cursor:pointer}.cart-items{flex:1;overflow:auto;padding:18px 0}.cart-item{display:grid;grid-template-columns:1fr auto;gap:10px;padding:16px 0;border-bottom:1px solid var(--line)}.cart-item h3{font-size:20px;margin:0 0 5px}.cart-item p{font-size:12px;color:var(--muted);margin:0}.cart-controls{display:flex;align-items:center;gap:10px;margin-top:12px}.cart-controls button{width:26px;height:26px;border:1px solid var(--line);background:#fff;cursor:pointer}.cart-remove{border:0!important;background:none!important;color:var(--secondary);font-size:11px;text-decoration:underline;width:auto!important}.cart-price{font-size:13px}.cart-empty{color:var(--muted);font-size:14px}.cart-footer{border-top:1px solid var(--line);padding-top:20px}.cart-total{display:flex;justify-content:space-between;font-family:"Playfair Display",serif;font-size:24px;margin-bottom:16px}.cart-note{font-size:12px;color:var(--muted);margin:0}
+
+/* --- CHECKOUT MODAL --- */
+.checkout-modal{position:fixed;inset:0;z-index:55;display:grid;place-items:center;padding:20px;background:rgba(16,20,17,.6)}.checkout-modal[hidden]{display:none}
+.checkout-panel{width:min(460px,100%);max-height:min(680px,92vh);overflow-y:auto;background:#fff;border-radius:10px;box-shadow:0 24px 60px rgba(0,0,0,.28);padding:30px}
+.checkout-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.checkout-head h3{margin:0;font-size:26px}
+.checkout-close{border:0;background:none;color:var(--ink);font-size:26px;line-height:1;cursor:pointer;padding:2px}
+.checkout-steps{display:flex;gap:6px;margin:14px 0 22px}
+.checkout-steps span{flex:1;height:3px;border-radius:3px;background:var(--line)}
+.checkout-steps span.active{background:var(--green)}
+.checkout-step{display:none}
+.checkout-step.active{display:block}
+.checkout-summary-list{max-height:220px;overflow-y:auto;margin-bottom:14px;border:1px solid var(--line);border-radius:8px}
+.checkout-summary-item{display:flex;justify-content:space-between;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line);font-size:13px}
+.checkout-summary-item:last-child{border-bottom:0}
+.checkout-summary-item span.name{color:var(--ink);font-weight:600;display:block}
+.checkout-summary-item span.meta{color:var(--muted);font-size:12px}
+.checkout-subtotal{display:flex;justify-content:space-between;font-size:18px;font-family:"Playfair Display",serif;padding-top:14px;border-top:1px solid var(--line);margin-bottom:20px}
+.pay-methods{display:grid;gap:10px;margin-bottom:20px}
+.pay-method{position:relative;border:1.5px solid var(--line);border-radius:8px;padding:14px 16px;cursor:pointer;display:flex;align-items:flex-start;gap:12px;transition:border-color .15s ease,background .15s ease}
+.pay-method:hover{border-color:var(--gold)}
+.pay-method input{position:absolute;opacity:0;width:1px;height:1px}
+.pay-method input:checked~.pay-method-body{color:var(--ink)}
+.pay-method:has(input:checked){border-color:var(--green);background:#f2f7f0}
+.pay-method input:focus-visible~.pay-method-body{outline:2px solid var(--gold);outline-offset:2px}
+.pay-method-radio{width:18px;height:18px;border-radius:50%;border:2px solid var(--line);flex:0 0 auto;margin-top:2px;display:grid;place-items:center}
+.pay-method:has(input:checked) .pay-method-radio{border-color:var(--green)}
+.pay-method:has(input:checked) .pay-method-radio::after{content:"";width:9px;height:9px;border-radius:50%;background:var(--green)}
+.pay-method-body b{display:block;font-size:14px;margin-bottom:2px}
+.pay-method-body p{margin:0;font-size:12px;color:var(--muted)}
+.pay-method-badge{font-size:9px;letter-spacing:.1em;text-transform:uppercase;background:#25D366;color:#fff;padding:3px 8px;border-radius:100px;margin-left:8px;font-weight:600}
+.pay-fields{margin-top:6px}
+.pay-fields[hidden]{display:none}
+.field-group{margin-bottom:14px}
+.field-group label{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.field-group input{width:100%;min-height:48px;padding:12px 14px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink);font:14px "DM Sans",sans-serif}
+.field-group input:focus-visible{outline:none;box-shadow:0 0 0 3px rgba(200,169,122,.45),0 0 0 1px var(--gold)}
+.field-error{display:none;color:#b3261e;font-size:12px;margin-top:6px}
+.field-error.show{display:block}
+.field-group input[aria-invalid="true"]{border-color:#b3261e}
+.card-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.checkout-actions{display:flex;gap:10px;margin-top:8px}
+.checkout-actions .btn{flex:1;justify-content:center}
+.checkout-actions .btn-back{flex:0 0 auto;padding-left:16px;padding-right:16px}
+.checkout-processing{text-align:center;padding:20px 0}
+.spinner{width:56px;height:56px;border-radius:50%;border:4px solid var(--line);border-top-color:var(--green);margin:0 auto 22px;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.spinner{animation:none;border-top-color:var(--line);border-right-color:var(--green)}}
+.checkout-processing h4{margin:0 0 10px;font-size:20px}
+.checkout-processing p{color:var(--muted);font-size:14px;line-height:1.6;max-width:340px;margin:0 auto}
+.checkout-processing .btn{margin-top:22px}
+.checkout-success{text-align:center;padding:14px 0}
+.success-icon{width:64px;height:64px;border-radius:50%;background:#e4f4e6;color:#1f8a3b;display:grid;place-items:center;margin:0 auto 20px;font-size:30px}
+.checkout-success h4{margin:0 0 8px;font-size:24px;font-family:"Playfair Display",serif}
+.checkout-success p{color:var(--muted);font-size:14px;margin:0 0 4px}
+.checkout-order-id{display:inline-block;margin:12px 0 0;padding:8px 14px;border-radius:6px;background:var(--cream);font-size:13px;letter-spacing:.04em;color:var(--ink)}
+.checkout-fail{display:none;background:#fdecea;color:#b3261e;font-size:13px;padding:12px 14px;border-radius:6px;margin-top:12px}
+.checkout-fail.show{display:block}
+
 .email-capture{padding:82px 0;background:var(--cream);border-bottom:1px solid var(--line)}.email-capture h2{max-width:700px}.email-capture .lead{max-width:680px}.email-form{display:flex;gap:12px;max-width:700px;margin-top:28px}.email-form label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.email-form input{flex:1;min-width:0;padding:15px 16px;border:1px solid var(--line);background:#fff;color:var(--ink);font:14px "DM Sans",sans-serif}.email-form .btn{cursor:pointer}
 .journey{background:var(--green);color:#fff;padding:100px 0}.journey .section-head{margin-bottom:45px}.journey .lead{color:#ccd6cf}.steps{display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid rgba(255,255,255,.22);border-bottom:1px solid rgba(255,255,255,.22)}.step{padding:27px 18px;border-right:1px solid rgba(255,255,255,.22)}.step:last-child{border:0}.step span{color:#d2b774;font-size:11px;letter-spacing:.14em}.step b{display:block;font-family:"Playfair Display",serif;font-size:22px;margin:10px 0 7px}.step p{font-size:12px;line-height:1.5;color:#cbd4cd}
 .quote{background:#e7e8de;padding:105px 0}.quote-text{font-family:"Playfair Display",serif;font-size:clamp(36px,5vw,68px);line-height:1.08;max-width:1000px}.quote-mark{color:#a07d3e;font-size:50px}
 .wholesale{padding:110px 0;background:var(--forest);color:#fff}.wholesale-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end}.wholesale p{color:#ccd5ce;line-height:1.7;max-width:620px}
+.wholesale .num{color:#d2b774}
+.wholesale-services{grid-template-columns:1fr 1fr;margin:32px 0;gap:16px}
+.wholesale-services .sustain-card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18);text-align:left;color:#fff}
+.wholesale-services .sustain-card h4{font-size:12px;letter-spacing:.1em;color:#d2b774;margin:0 0 8px}
+.wholesale-services .sustain-card p{color:#ccd5ce;max-width:none}
+.wholesale-pricing{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 32px;margin-bottom:28px;padding:20px 0;border-top:1px solid rgba(255,255,255,.22);border-bottom:1px solid rgba(255,255,255,.22)}
+.wholesale-pricing div{display:flex;flex-direction:column;gap:4px}
+.wholesale-pricing span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#9fae9d}
+.wholesale-pricing b{font-family:"Playfair Display",serif;font-size:20px;font-weight:600}
 .wholesale .secondary-link{display:inline-block;margin-left:18px;color:#fff;font-size:11px;letter-spacing:.15em;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.55);padding-bottom:4px}
+.wholesale-pricing-note{font-size:12px;color:#9fae9d;margin:-16px 0 24px}
 footer{background:#091710;color:#c6cec8;padding:55px 0}.foot{display:flex;justify-content:space-between;gap:30px;border-top:1px solid rgba(255,255,255,.15);padding-top:30px;font-size:12px}.footer-map{margin-top:30px;background:var(--green);border-color:var(--green);color:#fff}.footer-map:hover{background:var(--gold);border-color:var(--gold);color:var(--deep)}
-@media(max-width:950px){nav{grid-template-columns:90px 1fr 50px}.navlinks{display:none}.navright span{display:none}.hero{min-height:720px}.pillars{grid-template-columns:1fr 1fr}.pillar:nth-child(even){border-right:0}.section-head,.sustainability .section-head,.story,.wholesale-grid{grid-template-columns:1fr;gap:30px}.story-main{height:470px}.coffee-grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.step:nth-child(even){border-right:0}.container{display:block}.container > *{grid-column:auto}}
-@media(max-width:560px){.container{padding:0 20px}nav{height:75px}.nav-logo{right:8px;top:85px;width:130px;height:130px}.hero-content{padding-top:245px}.email-form{flex-direction:column}.email-form .btn{width:100%}h1{font-size:62px}.pillars,.coffee-grid,.steps{grid-template-columns:1fr}.pillar,.step{border-right:0;border-bottom:1px solid rgba(255,255,255,.16)}.section{padding:75px 0}.story-side{grid-template-rows:260px 260px}.foot{flex-direction:column}}
+@media(max-width:950px){nav{grid-template-columns:90px 1fr 50px}.navlinks{display:none}.navright span{display:none}.hero{min-height:720px}.pillars{grid-template-columns:1fr 1fr}.pillar:nth-child(even){border-right:0}.section-head,.sustainability .section-head,.story,.wholesale-grid{grid-template-columns:1fr;gap:30px}.story-main{height:470px}.coffee-grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.step:nth-child(even){border-right:0}.container{display:block}.container > *{grid-column:auto}.wholesale-services{grid-template-columns:1fr}.wholesale-pricing{grid-template-columns:1fr}.brew-cards{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.container{padding:0 20px}nav{height:75px}.nav-logo{right:8px;top:85px;width:130px;height:130px}.hero-content{padding-top:245px}.email-form{flex-direction:column}.email-form .btn{width:100%}h1{font-size:62px}.pillars,.coffee-grid,.steps{grid-template-columns:1fr}.pillar,.step{border-right:0;border-bottom:1px solid rgba(255,255,255,.16)}.section{padding:75px 0}.story-side{grid-template-rows:260px 260px}.foot{flex-direction:column}.brew-cards{grid-template-columns:1fr}}
 
 /* --- SUBSCRIPTION SECTION --- */
 .subscription{background:var(--cream);padding:140px 0}
@@ -232,24 +347,65 @@ footer{padding:48px 0;background:#0b1d15}
 <section class="section" id="coffee"><div class="container">
 <div class="section-head"><div class="num">01 / Our Coffees</div><div><h2>COFFEE BEANS.</h2><p class="lead">Seasonal lots selected for sweetness, clarity and distinctive origin.</p></div></div>
 <div class="coffee-grid">
-<article class="coffee" data-product='{"name":"Kenya AA","origin":"Kenya · Kirinyaga","prices":{"whole":{"100g":450,"250g":1250,"1kg":4200},"ground":{"100g":480,"250g":1300,"1kg":4400}}}'><div class="coffee-photo"><img src="https://i.postimg.cc/9DgdBRWh/Whats-App-Image-2026-08-28-at-13-42-24.jpg" alt="Kenya coffee"></div><div class="coffee-body"><div class="origin">Kenya · Kirinyaga</div><h3>Kenya AA</h3><p>Blackcurrant · Citrus · Brown Sugar<br>Washed · SL28 · SL34</p><div class="coffee-bottom"><span>KSh 1,250 / 250g</span><button class="plus" type="button" aria-label="Add Kenya AA to cart">+</button></div></div></article>
-<article class="coffee" data-product='{"name":"Kenya AB","origin":"Kenya · Nyeri","prices":{"whole":{"100g":410,"250g":1150,"1kg":3900},"ground":{"100g":440,"250g":1200,"1kg":4100}}}'><div class="coffee-photo"><img src="https://i.postimg.cc/9DgdBRWH/Whats-App-Image-2026-08-28-at-13-42-25.jpg" alt="Coffee landscape"></div><div class="coffee-body"><div class="origin">Kenya · Nyeri</div><h3>Kenya AB</h3><p>Raisin · Caramel · Orange<br>Washed · SL28 · Ruiru 11</p><div class="coffee-bottom"><span>KSh 1,150 / 250g</span><button class="plus" type="button" aria-label="Add Kenya AB to cart">+</button></div></div></article>
-<article class="coffee" data-product='{"name":"Meru","origin":"Kenya · Meru","prices":{"whole":{"100g":450,"250g":1250,"1kg":4200},"ground":{"100g":480,"250g":1300,"1kg":4400}}}'><div class="coffee-photo"><img src="https://i.postimg.cc/v42rvgGp/Whats-App-Image-2026-08-28-at-13-42-25-(1).jpg" alt="Meru coffee"></div><div class="coffee-body"><div class="origin">Kenya · Meru</div><h3>Meru</h3><p>Blackcurrant · Citrus · Brown Sugar<br>Washed · SL28 · SL34</p><div class="coffee-bottom"><span>KSh 1,250 / 250g</span><button class="plus" type="button" aria-label="Add Meru to cart">+</button></div></div></article>
-<article class="coffee" data-product='{"name":"Meru Peaberry","origin":"Kenya · Meru","prices":{"whole":{"100g":485,"250g":1350,"1kg":4550},"ground":{"100g":515,"250g":1400,"1kg":4750}}}'><div class="coffee-photo"><img src="https://i.postimg.cc/Bj7TCLJk/Whats-App-Image-2026-08-28-at-13-42-25-(2).jpg" alt="Meru Peaberry coffee"></div><div class="coffee-body"><div class="origin">Kenya · Meru</div><h3>Meru Peaberry</h3><p>Raisin · Caramel · Orange<br>Washed · Peaberry</p><div class="coffee-bottom"><span>KSh 1,350 / 250g</span><button class="plus" type="button" aria-label="Add Meru Peaberry to cart">+</button></div></div></article>
-<article class="coffee"><div class="coffee-photo"><img src="https://i.postimg.cc/9DgdBRWh/Whats-App-Image-2026-08-28-at-13-42-25.jpg" alt="Nyeri AA Fruit Infused coffee"></div><div class="coffee-body"><div class="origin">Kenya · Nyeri</div><h3>Nyeri AA Fruit Infused</h3><p>Berry · Tropical Fruit · Honey<br>Fruit Infused · AA</p><div class="coffee-bottom"><span>KSh 1,450 / 250g</span><button class="plus" type="button" aria-label="Add Nyeri AA Fruit Infused to cart">+</button></div></div></article>
-</div></div></section>
+<article class="coffee" data-product='{"name":"Kenya AA","origin":"Kenya · Kirinyaga","prices":{"whole":{"100g":450,"250g":1250,"1kg":4200},"ground":{"100g":480,"250g":1300,"1kg":4400}}}'><div class="coffee-photo"><img src="https://i.postimg.cc/9DgdBRWh/Whats-App-Image-2026-08-28-at-13-42-24.jpg" alt="Kenya coffee"></div><div class="coffee-body"><div class="origin">Kenya · Kirinyaga</div><h3>Kenya AA</h3><p>Blackcurrant · Citrus · Brown Sugar<br>Washed · SL28 · SL34</p><p class="roast-info">Roasted <span class="roast-date"></span> · Best 7–21 days from roast</p><div class="coffee-bottom"><span>KSh 1,250 / 250g</span><button class="plus" type="button" aria-label="Add Kenya AA to cart">+</button></div></div></article>
+<article class="coffee" data-product='{"name":"Kenya AB","origin":"Kenya · Nyeri","prices":{"whole":{"100g":410,"250g":1150,"1kg":3900},"ground":{"100g":440,"250g":1200,"1kg":4100}}}'><div class="coffee-photo"><img src="https://i.postimg.cc/9DgdBRWH/Whats-App-Image-2026-08-28-at-13-42-25.jpg" alt="Coffee landscape"></div><div class="coffee-body"><div class="origin">Kenya · Nyeri</div><h3>Kenya AB</h3><p>Raisin · Caramel · Orange<br>Washed · SL28 · Ruiru 11</p><p class="roast-info">Roasted <span class="roast-date"></span> · Best 7–21 days from roast</p><div class="coffee-bottom"><span>KSh 1,150 / 250g</span><button class="plus" type="button" aria-label="Add Kenya AB to cart">+</button></div></div></article>
+<article class="coffee" data-product='{"name":"Meru","origin":"Kenya · Meru","prices":{"whole":{"100g":450,"250g":1250,"1kg":4200},"ground":{"100g":480,"250g":1300,"1kg":4400}}}'><div class="coffee-photo"><img src="https://i.postimg.cc/v42rvgGp/Whats-App-Image-2026-08-28-at-13-42-25-(1).jpg" alt="Meru coffee"></div><div class="coffee-body"><div class="origin">Kenya · Meru</div><h3>Meru</h3><p>Blackcurrant · Citrus · Brown Sugar<br>Washed · SL28 · SL34</p><p class="roast-info">Roasted <span class="roast-date"></span> · Best 7–21 days from roast</p><div class="coffee-bottom"><span>KSh 1,250 / 250g</span><button class="plus" type="button" aria-label="Add Meru to cart">+</button></div></div></article>
+<article class="coffee" data-product='{"name":"Meru Peaberry","origin":"Kenya · Meru","prices":{"whole":{"100g":485,"250g":1350,"1kg":4550},"ground":{"100g":515,"250g":1400,"1kg":4750}}}'><div class="coffee-photo"><img src="https://i.postimg.cc/Bj7TCLJk/Whats-App-Image-2026-08-28-at-13-42-25-(2).jpg" alt="Meru Peaberry coffee"></div><div class="coffee-body"><div class="origin">Kenya · Meru</div><h3>Meru Peaberry</h3><p>Raisin · Caramel · Orange<br>Washed · Peaberry</p><p class="roast-info">Roasted <span class="roast-date"></span> · Best 7–21 days from roast</p><div class="coffee-bottom"><span>KSh 1,350 / 250g</span><button class="plus" type="button" aria-label="Add Meru Peaberry to cart">+</button></div></div></article>
+<article class="coffee"><div class="coffee-photo"><img src="https://i.postimg.cc/9DgdBRWh/Whats-App-Image-2026-08-28-at-13-42-25.jpg" alt="Nyeri AA Fruit Infused coffee"></div><div class="coffee-body"><div class="origin">Kenya · Nyeri</div><h3>Nyeri AA Fruit Infused</h3><p>Berry · Tropical Fruit · Honey<br>Fruit Infused · AA</p><p class="roast-info">Roasted <span class="roast-date"></span> · Best 7–21 days from roast</p><div class="coffee-bottom"><span>KSh 1,450 / 250g</span><button class="plus" type="button" aria-label="Add Nyeri AA Fruit Infused to cart">+</button></div></div></article>
+</div>
+<details class="glossary">
+<summary>What do AA, washed and SL28 mean?</summary>
+<div class="glossary-body">
+<p><strong>AA, AB, PB</strong> — These are bean sizes, not quality scores. AA beans are the largest, AB slightly smaller, PB (peaberry) is a single round bean that forms when only one seed develops inside the cherry instead of two. A grade tells you the size of the bean and nothing about how it tastes. We grade our lots by cupping them.</p>
+<p><strong>Washed</strong> — The cherry is pulped, fermented and washed before drying. It is Kenya's traditional method and it is why Kenyan coffee tastes so clean and bright.</p>
+<p><strong>SL28 and SL34</strong> — Varieties selected in Kenya in the 1930s and still among the most prized in the world. SL28 is where the blackcurrant note comes from. SL34 brings more body.</p>
+<p><strong>Ruiru 11 and Batian</strong> — Disease-resistant varieties developed by Kenyan research institutions. They let farmers keep producing where leaf rust and berry disease would otherwise wipe out a crop.</p>
+</div>
+</details>
+</div></section>
+
+<!-- BREW GUIDE SECTION -->
+<section class="section brew-guide" id="brew-guide"><div class="container">
+<div class="section-head"><div class="num">02 / Brewing</div><div><h2>HOW TO BREW IT.</h2><p class="lead">Kenyan coffee is bright and fruity. It rewards a clean brew and a little patience. Here is how to get the best from your bag, whether or not you own equipment.</p></div></div>
+
+<div class="brew-group">
+<h3>No equipment? Start here.</h3>
+<p class="lead">You need boiled water, a spoon, two mugs and a sieve. Ask us for a coarse grind when you order.</p>
+<ol class="brew-steps">
+<li>Add two heaped teaspoons of coarse ground coffee to a mug.</li>
+<li>Pour in hot water — just off the boil, about 30 seconds after it stops bubbling.</li>
+<li>Stir once and leave it for four minutes. A crust will form on top.</li>
+<li>Break the crust with a spoon, skim off what floats, then pour through a sieve into your second mug.</li>
+</ol>
+<p class="brew-closing">That is the same method professional cuppers use to taste coffee. It costs nothing and it works.</p>
+</div>
+
+<div class="brew-group">
+<h3>With equipment</h3>
+<div class="sustain-grid brew-cards">
+<div class="sustain-card"><h4>FRENCH PRESS</h4><p>Coarse grind, like sea salt.<br>60g coffee per litre of water. Four minutes, then press slowly. Pour it all out straight away so it does not keep brewing.</p></div>
+<div class="sustain-card"><h4>POUR-OVER / V60</h4><p>Medium grind, like table salt.<br>15g coffee to 250ml water. Wet the grounds with 50ml, wait 30 seconds for the bloom, then pour the rest in slow circles. Aim to finish between 2:30 and 3:00. This is the method that shows Kenyan acidity best.</p></div>
+<div class="sustain-card"><h4>MOKA POT</h4><p>Fine-medium grind.<br>Fill the basket level and do not tamp. Use hot water in the base. Take it off the heat as soon as it starts to gurgle.</p></div>
+<div class="sustain-card"><h4>ESPRESSO</h4><p>Fine grind.<br>18g in, 36g out, in 25–30 seconds. Kenyan coffee is dense, so start coarser than you think and tighten from there.</p></div>
+</div>
+</div>
+
+<p class="brew-closing brew-note">Water just off the boil, around 93–96°C. Grind just before you brew if you can. Store the bag sealed, somewhere cool and dark — not the fridge.</p>
+</div></section>
 
 <!-- DELIVERY INFO BAND -->
 <section class="delivery-band" id="delivery"><div class="delivery-inner">
-<div class="delivery-item"><strong>Delivery:</strong> Countrywide. Nairobi door-to-door, or collect from a Pickup Mtaani agent near you anywhere in Kenya.</div>
+<div class="delivery-item"><strong>Delivery areas:</strong> Nairobi and Kiambu door-to-door. Countrywide to your nearest Pickup Mtaani agent.</div>
+<div class="delivery-item"><strong>Nairobi &amp; Kiambu:</strong> 24–48 hours</div>
+<div class="delivery-item"><strong>Countrywide:</strong> Up to 4 days, to your nearest Pickup Mtaani agent</div>
 <div class="delivery-item"><strong>Delivery cost:</strong> From KSh 120 to an agent point · KSh 250–350 door-to-door in Nairobi · Free on orders over KSh 2,500</div>
-<div class="delivery-item"><strong>Order to doorstep:</strong> Roasted to order. Dispatched within 48 hours, delivered in 1–3 business days.</div>
+<div class="delivery-item"><strong>Lead time:</strong> Roasted to order, dispatched within 48 hours</div>
 </div></section>
 
 <!-- SUBSCRIPTION SECTION -->
 <section class="section subscription" id="subscription" aria-labelledby="sub-heading"><div class="container">
 <div class="sub-inner">
-<div class="num">02 / Subscription</div>
+<div class="num">03 / Subscription</div>
 <h2 id="sub-heading">ROASTED FOR YOU.<br>NOT FOR STOCK.</h2>
 <p class="lead sub-lead">Most coffee you buy was roasted for a shelf. Yours is roasted on our sample roaster &mdash; a single small batch, timed to your delivery, never sitting waiting for a buyer.</p>
 <p class="lead">Choose your size. We roast and deliver every two weeks. You save 15% on every bag, and you can pause or cancel whenever you like.</p>
@@ -273,7 +429,7 @@ footer{padding:48px 0;background:#0b1d15}
 </div></div></section>
 
 <section class="section" id="story"><div class="container">
-<div class="section-head"><div class="num">03 / Our Story</div><div><h2>Small Roastery. Bigger Mission.</h2>
+<div class="section-head"><div class="num">04 / Our Story</div><div><h2>Small Roastery. Bigger Mission.</h2>
 <p class="lead">Imani is a micro-roastery in Kikuyu, Kiambu County, Kenya.</p>
 <p class="lead">Built from a decade in the coffee industry; brewing, roasting and sourcing coffee across different countries. We have seen the world fall for Kenyan coffee.</p>
 <p class="lead">Priced at a premium at different destinations, with value added abroad. Imani was founded on a simple conviction: Kenyan coffee branding and value addition should happen at origin.</p>
@@ -284,7 +440,7 @@ footer{padding:48px 0;background:#0b1d15}
 </div></section>
 
 <section class="section sustainability" id="sustainability"><div class="container">
-	<div class="section-head"><div class="num">04 / Sustainability</div><div><h2>COFFEE SHOULD LEAVE MORE BEHIND.</h2><p class="lead">We believe a coffee company should create value beyond the cup.</p><div class="sustainability-intro"><p>Kenya exports almost all of its coffee raw. Of roughly 940,000 bags leaving the country this season, about 900,000 go as unroasted green beans, and only 30,000 as roasted coffee. That's about 95% of our exports leaving as a raw commodity, and about 3% leaving as finished coffee.</p><p>Imani exists to change that. We roast at origin, keeping more value where the coffee grows. As Kenya works toward tripling national coffee output to 150,000 metric tonnes by 2028, our work supports a stronger local coffee economy through roasting, training and value addition.</p><p class="sustainability-sources"><span>USDA Foreign Agricultural Service, Kenya Coffee Annual Report 2026/27</span><span aria-hidden="true"> · </span><span>Kenya News Agency, 26 May 2025</span><span aria-hidden="true"> · </span><a href="https://mountkenyatimes.co.ke/coffee-revival-gains-momentum-as-kenya-targets-150000-tonnes-by-2028/" target="_blank" rel="noopener">Mt Kenya Times</a><span aria-hidden="true"> · </span><a href="https://www.the-star.co.ke/news/2026-03-31-kenya-banks-on-new-law-training-and-research-to-revive-her-coffee" target="_blank" rel="noopener">The Star</a><span aria-hidden="true"> · </span><a href="Imani_Sustainability_Action_Plan.pdf" target="_blank" rel="noopener">Full Sustainability Action Plan</a></p></div></div></div>
+	<div class="section-head"><div class="num">05 / Sustainability</div><div><h2>COFFEE SHOULD LEAVE MORE BEHIND.</h2><p class="lead">We believe a coffee company should create value beyond the cup.</p><div class="sustainability-intro"><p>Kenya exports almost all of its coffee raw. Of roughly 940,000 bags leaving the country this season, about 900,000 go as unroasted green beans, and only 30,000 as roasted coffee. That's about 95% of our exports leaving as a raw commodity, and about 3% leaving as finished coffee.</p><p>Imani exists to change that. We roast at origin, keeping more value where the coffee grows. As Kenya works toward tripling national coffee output to 150,000 metric tonnes by 2028, our work supports a stronger local coffee economy through roasting, training and value addition.</p><p class="sustainability-sources"><span>USDA Foreign Agricultural Service, Kenya Coffee Annual Report 2026/27</span><span aria-hidden="true"> · </span><span>Kenya News Agency, 26 May 2025</span><span aria-hidden="true"> · </span><a href="https://mountkenyatimes.co.ke/coffee-revival-gains-momentum-as-kenya-targets-150000-tonnes-by-2028/" target="_blank" rel="noopener">Mt Kenya Times</a><span aria-hidden="true"> · </span><a href="https://www.the-star.co.ke/news/2026-03-31-kenya-banks-on-new-law-training-and-research-to-revive-her-coffee" target="_blank" rel="noopener">The Star</a><span aria-hidden="true"> · </span><a href="Imani_Sustainability_Action_Plan.pdf" target="_blank" rel="noopener">Full Sustainability Action Plan</a></p></div></div></div>
 
 	<p class="commitments-label">Our three commitments:</p><div class="sustain-grid">
 		<div class="sustain-card"><div class="icon">🤝</div><h4>PEOPLE</h4><b>BUILD KNOWLEDGE.</b><p>One free coffee training seat sponsored every month — open to farmers, producers and the public.</p></div>
@@ -298,45 +454,271 @@ footer{padding:48px 0;background:#0b1d15}
 	<div class="sustain-small">KSh 5 from every Imani bag goes directly to the Imani Tree Programme.</div></div>
 </div></section>
 
-<section class="wholesale" id="wholesale"><div class="container"><div class="wholesale-grid"><div><div class="eyebrow">WHOLESALE &amp; PARTNERSHIPS</div><h2>YOUR COFFEE.<br>YOUR BRAND.<br>OUR CRAFT.</h2></div><div><p class="lead">We work with cafés, restaurants, hotels and businesses that take coffee seriously.</p>
+<section class="wholesale" id="wholesale"><div class="container"><div class="wholesale-grid"><div><div class="num">06 / Wholesale</div><div class="eyebrow">WHOLESALE &amp; PARTNERSHIPS</div><h2>YOUR COFFEE.<br>YOUR BRAND.<br>OUR CRAFT.</h2></div><div><p class="lead">We work with cafés, restaurants, hotels and businesses that take coffee seriously.</p>
 <p class="lead">From bespoke roast profiles and custom blends to white-label coffee carrying your brand, we build coffee programs around the way you want your coffee to taste and perform.</p>
 <p class="lead">Every wholesale relationship starts with a conversation — and, where appropriate, a cupping session.</p>
-<p class="lead"><em>MOQ 5kg · Nairobi delivery bi-weekly</em></p>
-<div class="actions"><a class="btn gold" href="https://wa.me/254704604260" target="_blank" rel="noopener">START A CONVERSATION</a><a class="secondary-link" href="https://wa.me/254704604260" target="_blank" rel="noopener">BOOK A CUPPING</a></div></div></div></div></section>
+<div class="sustain-grid wholesale-services">
+	<div class="sustain-card"><h4>CUSTOM ROAST PROFILES</h4><p>We profile to your brew method and your machine, then hold that profile batch to batch.</p></div>
+	<div class="sustain-card"><h4>WHITE LABEL</h4><p>Your brand on the bag, our coffee inside. Minimum order applies.</p></div>
+	<div class="sustain-card"><h4>MENU DEVELOPMENT</h4><p>Espresso, filter and signature drinks built around how your café actually serves.</p></div>
+	<div class="sustain-card"><h4>TEAM TRAINING</h4><p>Dialling in, extraction and consistency, taught on your equipment.</p></div>
+</div>
+<div class="wholesale-pricing">
+	<div><span>Minimum order</span><b>5kg</b></div>
+	<div><span>Wholesale from</span><b>KSh 3,500 per kg</b></div>
+	<div><span>Delivery</span><b>Bi-weekly within Nairobi and Kiambu</b></div>
+	<div><span>Lead time</span><b>Roasted to order, dispatched within 48 hours</b></div>
+</div>
+<p class="wholesale-pricing-note">Pricing reviewed quarterly. Contact us for current rates on your volume.</p>
+<div class="actions"><a class="btn gold" href="https://wa.me/254704604260?text=Hi%2C%20I%20run%20a%20cafe%20and%20I%27d%20like%20to%20talk%20about%20wholesale%20coffee.%20My%20rough%20monthly%20volume%20is%3A" target="_blank" rel="noopener">START A CONVERSATION</a><a class="secondary-link" href="https://wa.me/254704604260" target="_blank" rel="noopener">BOOK A CUPPING</a></div></div></div></div></section>
 
-<section class="quote" id="journal"><div class="container"><div class="quote-mark">“</div><div class="quote-text">Character. Trust. Transparency. Consistency.</div></div></section>
+<section class="quote" id="journal"><div class="container"><div class="quote-mark">"</div><div class="quote-text">Character. Trust. Transparency. Consistency.</div></div></section>
 
 <section class="email-capture" id="subscribe" aria-labelledby="email-heading"><div class="container"><div><h2 id="email-heading">NOT READY TO SUBSCRIBE?</h2><p class="lead">Join our lot alerts and get early access, exclusive pricing on new releases, and updates on our tree-planting programme and community events.</p><form class="email-form" action="https://formspree.io/f/xkkkdqvy" method="POST"><label for="email">Your email address</label><input id="email" name="email" type="email" placeholder="Your email address" autocomplete="email" required><button class="btn gold" type="submit">SUBSCRIBE</button></form><!-- Formspree handles email delivery to getimanicoffee@gmail.com --></div></div></section>
 
+<section class="section" id="faq"><div class="container">
+<div class="section-head"><div class="num">07 / FAQ</div><div><h2>QUESTIONS.</h2></div></div>
+<div class="faq">
+<details><summary>Do you deliver outside Nairobi?</summary><div class="faq-body"><p>Yes. We deliver door-to-door in Nairobi and Kiambu, and countrywide to your nearest Pickup Mtaani agent.</p></div></details>
+<details><summary>How much is delivery?</summary><div class="faq-body"><p>From KSh 120 to a Pickup Mtaani agent point, or KSh 250–350 door-to-door in Nairobi. Free on orders over KSh 2,500.</p></div></details>
+<details><summary>How long does delivery take?</summary><div class="faq-body"><p>24–48 hours within Nairobi and Kiambu. Up to 4 days countrywide, to your nearest Pickup Mtaani agent.</p></div></details>
+<details><summary>Can I collect instead of paying delivery?</summary><div class="faq-body"><p>Yes — see "Find us on map" below and arrange with us on WhatsApp to collect.</p></div></details>
+<details><summary>How fresh is the coffee?</summary><div class="faq-body"><p>We roast to order in small batches. Your bag is roasted after you order it, not pulled off a shelf.</p></div></details>
+<details><summary>What if I do not own a grinder?</summary><div class="faq-body"><p>Tell us your brew method at checkout and we grind it for you. Ground coffee is best used within two weeks.</p></div></details>
+<details><summary>Do you sell green coffee?</summary><div class="faq-body"><p>Yes.</p></div></details>
+</div>
+</div></section>
+
 <footer id="contact"><div class="container"><div class="foot"><div><strong>IMANI COFFEE CO.</strong><br><span>Rooted at origin · Kikuyu, Kiambu County, Kenya</span></div><div class="footer-contact"><div class="footer-socials"><a href="https://www.instagram.com/getimanicoffee?igsi=Mm10eTdoeGRzZWw=" target="_blank" rel="noopener" aria-label="Follow Imani Coffee on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg><span>Instagram</span></a><a href="https://x.com/Get_ImaniCoffee" target="_blank" rel="noopener" aria-label="Follow Imani Coffee on X"><svg class="x-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-6.4L6.47 22H3.36l7.24-8.28L2.8 2h6.4l4.42 5.84L18.9 2Zm-1.1 17.8h1.73L8.3 4.07H6.44L17.8 19.8Z"></path></svg><span>X</span></a></div><a class="footer-email" href="mailto:getimanicoffee@gmail.com">getimanicoffee@gmail.com</a><span>© 2026 Imani Coffee Co.</span></div></div><a class="btn footer-map" href="https://maps.app.goo.gl/su8LmxajzhurJp2w7?g_st=ac" target="_blank" rel="noopener">Find us on map</a></div></footer>
 
-<div class="cart-backdrop" id="cart-backdrop"></div><aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart" aria-hidden="true"><div class="cart-head"><h2>Your Cart</h2><button class="cart-close" type="button" aria-label="Close cart">&times;</button></div><div class="cart-items" id="cart-items"></div><div class="cart-footer"><div class="cart-total"><span>Total</span><strong id="cart-total">KSh 0</strong></div><button id="checkout-btn" type="button" style="width:100%;padding:12px 16px;background:#25D366;color:#fff;border:0;border-radius:6px;font-weight:600;cursor:pointer;margin-top:16px">Checkout via WhatsApp</button></div></aside>
+<div class="cart-backdrop" id="cart-backdrop"></div><aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart" aria-hidden="true"><div class="cart-head"><h2>Your Cart</h2><button class="cart-close" type="button" aria-label="Close cart">&times;</button></div><div class="cart-items" id="cart-items"></div><div class="cart-footer"><div class="cart-total"><span>Subtotal</span><strong id="cart-total">KSh 0</strong></div><p class="cart-note">Taxes and delivery calculated at checkout.</p><button id="checkout-btn" type="button" class="btn primary" style="width:100%;justify-content:center;margin-top:10px">Checkout</button></div></aside>
+
+<div class="checkout-modal" id="checkout-modal" hidden role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+<div class="checkout-panel">
+<div class="checkout-head"><h3 id="checkout-title">Checkout</h3><button class="checkout-close" type="button" aria-label="Close checkout">&times;</button></div>
+<div class="checkout-steps" aria-hidden="true"><span class="active" data-step-indicator="1"></span><span data-step-indicator="2"></span><span data-step-indicator="3"></span></div>
+
+<div class="checkout-step active" data-step="1">
+  <div class="checkout-summary-list" id="checkout-summary-list"></div>
+  <div class="checkout-subtotal"><span>Subtotal</span><strong id="checkout-subtotal">KSh 0</strong></div>
+  <div class="checkout-actions"><button type="button" class="btn primary" id="to-payment-step" style="width:100%;justify-content:center">Continue to Payment</button></div>
+</div>
+
+<div class="checkout-step" data-step="2">
+  <p class="lead" style="font-size:13px;margin:0 0 16px">Choose how you'd like to pay. M-Pesa Express sends a PIN prompt straight to your phone.</p>
+  <div class="pay-methods" role="radiogroup" aria-label="Payment method">
+    <label class="pay-method"><input type="radio" name="pay-method" value="mpesa" checked><span class="pay-method-radio"></span><span class="pay-method-body"><b>M-Pesa Express (STK Push)<span class="pay-method-badge">Recommended</span></b><p>Pay instantly with the M-Pesa PIN prompt on your phone.</p></span></label>
+    <label class="pay-method"><input type="radio" name="pay-method" value="card"><span class="pay-method-radio"></span><span class="pay-method-body"><b>Credit / Debit Card</b><p>Visa, Mastercard — pay securely online.</p></span></label>
+  </div>
+
+  <form id="mpesa-fields" class="pay-fields">
+    <div class="field-group">
+      <label for="mpesa-phone">M-Pesa phone number</label>
+      <input id="mpesa-phone" name="mpesa-phone" type="tel" inputmode="tel" placeholder="07XX XXX XXX or +2547XX XXX XXX" autocomplete="tel" required aria-describedby="mpesa-phone-error">
+      <p class="field-error" id="mpesa-phone-error">Enter a valid Kenyan number, e.g. 0712345678 or +254712345678.</p>
+    </div>
+  </form>
+
+  <form id="card-fields" class="pay-fields" hidden>
+    <div class="field-group"><label for="card-number">Card number</label><input id="card-number" name="card-number" type="text" inputmode="numeric" autocomplete="cc-number" placeholder="1234 1234 1234 1234" required aria-describedby="card-number-error"><p class="field-error" id="card-number-error">Enter a valid 16-digit card number.</p></div>
+    <div class="card-row">
+      <div class="field-group"><label for="card-expiry">Expiry</label><input id="card-expiry" name="card-expiry" type="text" autocomplete="cc-exp" placeholder="MM/YY" required aria-describedby="card-expiry-error"><p class="field-error" id="card-expiry-error">Enter a valid expiry date.</p></div>
+      <div class="field-group"><label for="card-cvc">CVC</label><input id="card-cvc" name="card-cvc" type="text" inputmode="numeric" autocomplete="cc-csc" placeholder="123" required aria-describedby="card-cvc-error"><p class="field-error" id="card-cvc-error">Enter a valid 3-digit CVC.</p></div>
+    </div>
+  </form>
+
+  <div class="checkout-actions">
+    <button type="button" class="btn ghost btn-back" id="back-to-cart-step">Back</button>
+    <button type="button" class="btn primary" id="submit-payment" style="justify-content:center">Pay Now</button>
+  </div>
+</div>
+
+<div class="checkout-step" data-step="3">
+  <div class="checkout-processing" id="checkout-processing">
+    <div class="spinner" role="status" aria-live="polite"></div>
+    <h4 id="processing-title">Check your phone</h4>
+    <p id="processing-message">We've sent an M-Pesa PIN prompt to your phone. Enter your M-Pesa PIN to complete payment.</p>
+    <button type="button" class="btn ghost" id="cancel-payment">Cancel payment</button>
+  </div>
+  <div class="checkout-success" id="checkout-success" hidden>
+    <div class="success-icon" aria-hidden="true">✓</div>
+    <h4>Payment received</h4>
+    <p>Thank you! Your order has been confirmed.</p>
+    <p>A confirmation will be sent to your phone shortly.</p>
+    <span class="checkout-order-id" id="order-id-display"></span>
+    <div class="checkout-actions" style="margin-top:24px"><button type="button" class="btn primary" id="checkout-done" style="width:100%;justify-content:center">Done</button></div>
+  </div>
+  <div class="checkout-fail" id="checkout-fail" role="alert"></div>
+</div>
+
+</div>
+</div>
+
 <div class="trace-modal" id="trace-modal" hidden><form class="trace-modal__panel" id="trace-form"><div class="trace-modal__head"><h3>Trace your coffee</h3><button class="trace-close" type="button" aria-label="Close trace form">&times;</button></div><p>Enter the trace number printed on your coffee bag to find it on the map.</p><label for="trace-number">Coffee bag trace number</label><input id="trace-number" name="trace-number" type="text" autocomplete="off" required><div class="trace-modal__actions"><button class="btn ghost trace-close" type="button">Cancel</button><button class="btn primary" type="submit">Open map</button></div></form></div>
 
-<div id="options-modal" class="trace-modal" hidden><div class="trace-modal__panel"><div class="trace-modal__head"><h3 id="options-title">Select Options</h3><button class="trace-close" type="button" aria-label="Close options">×</button></div><p>Choose your preferred grind and size:</p><div id="options-content" style="display:grid;gap:16px"><fieldset style="border:none;padding:0;margin:0"><legend style="font-weight:600;margin-bottom:8px">Grind Type</legend><label style="display:flex;gap:8px;cursor:pointer"><input type="radio" name="grind" value="whole" checked> Whole Bean</label><label style="display:flex;gap:8px;cursor:pointer"><input type="radio" name="grind" value="ground"> Ground</label></fieldset><fieldset style="border:none;padding:0;margin:0"><legend style="font-weight:600;margin-bottom:8px">Size</legend><label style="display:flex;gap:8px;cursor:pointer"><input type="radio" name="size" value="100g" checked> 100g</label><label style="display:flex;gap:8px;cursor:pointer"><input type="radio" name="size" value="250g"> 250g</label><label style="display:flex;gap:8px;cursor:pointer"><input type="radio" name="size" value="1kg"> 1kg</label></fieldset><div style="padding:12px;background:#f0f0f0;border-radius:6px;font-weight:600">Price: <span id="price-display">KSh 0</span></div></div><div class="trace-modal__actions"><button type="button" id="options-cancel" style="padding:10px 16px;border:1px solid #ccc;background:#fff;cursor:pointer">Cancel</button><button type="button" id="options-add" style="padding:10px 16px;border:0;background:#1A1208;color:#fff;cursor:pointer">Add to Cart</button></div></div></div>
+<div id="options-modal" class="trace-modal" hidden><div class="trace-modal__panel"><div class="trace-modal__head"><h3 id="options-title">Select Options</h3><button class="trace-close" type="button" aria-label="Close options">×</button></div><p>Choose your preferred brew method and size:</p><div id="options-content"><fieldset class="opt-fieldset"><legend class="opt-legend">Brew Method</legend><div class="opt-grid">
+<div class="opt-card"><input type="radio" id="grind-whole" name="grind" value="whole" checked><label for="grind-whole"><span class="opt-name">Whole Bean</span></label></div>
+<div class="opt-card"><input type="radio" id="grind-frenchpress" name="grind" value="frenchpress"><label for="grind-frenchpress"><span class="opt-name">French Press</span><span class="opt-detail">Coarse</span></label></div>
+<div class="opt-card"><input type="radio" id="grind-pourover" name="grind" value="pourover"><label for="grind-pourover"><span class="opt-name">Pour-over / V60</span><span class="opt-detail">Medium</span></label></div>
+<div class="opt-card"><input type="radio" id="grind-mokapot" name="grind" value="mokapot"><label for="grind-mokapot"><span class="opt-name">Moka Pot</span><span class="opt-detail">Fine-medium</span></label></div>
+<div class="opt-card"><input type="radio" id="grind-espresso" name="grind" value="espresso"><label for="grind-espresso"><span class="opt-name">Espresso</span><span class="opt-detail">Fine</span></label></div>
+</div></fieldset><fieldset class="opt-fieldset"><legend class="opt-legend">Size</legend><div class="opt-grid opt-grid--size">
+<div class="opt-card"><input type="radio" id="size-100g" name="size" value="100g" checked><label for="size-100g"><span class="opt-name">100g</span></label></div>
+<div class="opt-card"><input type="radio" id="size-250g" name="size" value="250g"><label for="size-250g"><span class="opt-name">250g</span></label></div>
+<div class="opt-card"><input type="radio" id="size-1kg" name="size" value="1kg"><label for="size-1kg"><span class="opt-name">1kg</span></label></div>
+</div></fieldset><div class="opt-price-band">Price: <strong id="price-display">KSh 0</strong></div></div><div class="trace-modal__actions"><button type="button" id="options-cancel">Cancel</button><button type="button" id="options-add">Add to Cart</button></div></div></div>
 
 <script>
+const ROAST_DATE = "TODO_MIKE";   // format: 12 September 2026 — update after each roast
 const cartKey='imaniCoffeeCart';
 let cart=JSON.parse(localStorage.getItem(cartKey)||'[]');
 const cartDrawer=document.getElementById('cart-drawer'),cartBackdrop=document.getElementById('cart-backdrop'),cartItems=document.getElementById('cart-items'),cartCount=document.getElementById('cart-count'),cartTotal=document.getElementById('cart-total');
 const optionsModal=document.getElementById('options-modal');
 const formatPrice=value=>`KSh ${value.toLocaleString('en-KE')}`;
 let currentProduct=null;
+/* Brew method labels + price-tier mapping. Only "whole" and "ground" price tiers exist in product data,
+   so each ground brew method is priced at the existing "ground" tier (no new prices invented). */
+const BREW_LABELS={whole:'Whole Bean',frenchpress:'French Press (coarse)',pourover:'Pour-over / V60 (medium)',mokapot:'Moka Pot (fine-medium)',espresso:'Espresso (fine)'};
+const BREW_PRICE_TIER={whole:'whole',frenchpress:'ground',pourover:'ground',mokapot:'ground',espresso:'ground'};
 function renderCart(){const count=cart.reduce((sum,item)=>sum+item.quantity,0),total=cart.reduce((sum,item)=>sum+item.price*item.quantity,0);cartCount.textContent=count;cartTotal.textContent=formatPrice(total);cartItems.innerHTML=cart.length?cart.map((item,idx)=>`<div class="cart-item"><div><h3>${item.name}</h3><p>${item.origin}</p><p style="font-size:12px;color:#8a6d38">${item.grind} · ${item.size}</p><div class="cart-controls"><button type="button" data-action="decrease" data-id="${idx}" aria-label="Decrease ${item.name} quantity">−</button><span>${item.quantity}</span><button type="button" data-action="increase" data-id="${idx}" aria-label="Increase ${item.name} quantity">+</button><button class="cart-remove" type="button" data-action="remove" data-id="${idx}">Remove</button></div></div><span class="cart-price">${formatPrice(item.price*item.quantity)}</span></div>`).join(''):'<p class="cart-empty">Your cart is empty. Add a coffee to begin.</p>';localStorage.setItem(cartKey,JSON.stringify(cart));}
 function setCartOpen(open){cartDrawer.classList.toggle('open',open);cartBackdrop.classList.toggle('open',open);cartDrawer.setAttribute('aria-hidden',String(!open));document.querySelector('.cart-toggle').setAttribute('aria-expanded',String(open));}
 function closeOptionsModal(){optionsModal.hidden=true;}
-function updatePriceDisplay(){const grind=document.querySelector('input[name="grind"]:checked').value,size=document.querySelector('input[name="size"]:checked').value;if(currentProduct){const price=currentProduct.prices[grind][size];document.getElementById('price-display').textContent=formatPrice(price);}}
+function updatePriceDisplay(){const grind=document.querySelector('input[name="grind"]:checked').value,size=document.querySelector('input[name="size"]:checked').value;if(currentProduct){const price=currentProduct.prices[BREW_PRICE_TIER[grind]][size];document.getElementById('price-display').textContent=formatPrice(price);}}
 document.querySelectorAll('.coffee').forEach((card)=>{const button=card.querySelector('.plus');button.addEventListener('click',()=>{const productData=JSON.parse(card.getAttribute('data-product'));currentProduct=productData;document.getElementById('options-title').textContent=`Select Options - ${productData.name}`;document.querySelector('input[name="grind"]').checked=true;document.querySelector('input[name="size"]').checked=true;updatePriceDisplay();optionsModal.hidden=false;});});
 document.querySelectorAll('input[name="grind"],input[name="size"]').forEach(radio=>radio.addEventListener('change',updatePriceDisplay));
-document.getElementById('options-add').addEventListener('click',()=>{const grind=document.querySelector('input[name="grind"]:checked').value,size=document.querySelector('input[name="size"]:checked').value,price=currentProduct.prices[grind][size];const item={name:currentProduct.name,origin:currentProduct.origin,grind:grind.charAt(0).toUpperCase()+grind.slice(1),size,price,quantity:1};const existing=cart.find(p=>p.name===item.name&&p.grind===item.grind&&p.size===item.size);if(existing)existing.quantity+=1;else cart.push(item);renderCart();closeOptionsModal();setCartOpen(true);});
+document.getElementById('options-add').addEventListener('click',()=>{const grind=document.querySelector('input[name="grind"]:checked').value,size=document.querySelector('input[name="size"]:checked').value,price=currentProduct.prices[BREW_PRICE_TIER[grind]][size];const item={name:currentProduct.name,origin:currentProduct.origin,grind:BREW_LABELS[grind],size,price,quantity:1};const existing=cart.find(p=>p.name===item.name&&p.grind===item.grind&&p.size===item.size);if(existing)existing.quantity+=1;else cart.push(item);renderCart();closeOptionsModal();setCartOpen(true);});
 document.getElementById('options-cancel').addEventListener('click',closeOptionsModal);
 document.querySelector('.trace-close').addEventListener('click',closeOptionsModal);
 optionsModal.addEventListener('click',event=>{if(event.target===optionsModal)closeOptionsModal();});
-document.getElementById('checkout-btn').addEventListener('click',()=>{if(cart.length===0){alert('Your cart is empty');return;}let message='Hello! I would like to order the following from Imani Coffee:%0A%0A';cart.forEach((item,idx)=>{message+=`${idx+1}. ${item.name} (${item.grind} - ${item.size})%0A   Qty: ${item.quantity} x KSh ${item.price.toLocaleString('en-KE')} = KSh ${(item.price*item.quantity).toLocaleString('en-KE')}%0A`;});const total=cart.reduce((sum,item)=>sum+item.price*item.quantity,0);message+=`%0ATotal: KSh ${total.toLocaleString('en-KE')}%0A%0APlease confirm availability and arrange payment/delivery.`;const whatsappUrl=`https://wa.me/254704604260?text=${message}`;window.open(whatsappUrl,'_blank');});
+document.getElementById('checkout-btn').addEventListener('click',()=>{if(cart.length===0){alert('Your cart is empty');return;}openCheckout();});
 document.querySelector('.cart-toggle').addEventListener('click',()=>setCartOpen(true));document.querySelector('.cart-close').addEventListener('click',()=>setCartOpen(false));cartBackdrop.addEventListener('click',()=>setCartOpen(false));
 cartItems.addEventListener('click',event=>{const button=event.target.closest('button[data-action]');if(!button)return;const idx=Number(button.dataset.id);if(button.dataset.action==='increase')cart[idx].quantity+=1;if(button.dataset.action==='decrease')cart[idx].quantity-=1;if(button.dataset.action==='remove'||cart[idx].quantity<1)cart.splice(idx,1);renderCart();});
+
+/* --- CHECKOUT / M-PESA FLOW --- */
+(function(){
+  const modal=document.getElementById('checkout-modal');
+  const stepEls=modal.querySelectorAll('.checkout-step');
+  const stepIndicators=modal.querySelectorAll('[data-step-indicator]');
+  const summaryList=document.getElementById('checkout-summary-list');
+  const subtotalEl=document.getElementById('checkout-subtotal');
+  const mpesaFields=document.getElementById('mpesa-fields');
+  const cardFields=document.getElementById('card-fields');
+  const mpesaPhone=document.getElementById('mpesa-phone');
+  const mpesaPhoneError=document.getElementById('mpesa-phone-error');
+  const cardNumber=document.getElementById('card-number');
+  const cardExpiry=document.getElementById('card-expiry');
+  const cardCvc=document.getElementById('card-cvc');
+  const processingBlock=document.getElementById('checkout-processing');
+  const successBlock=document.getElementById('checkout-success');
+  const failBlock=document.getElementById('checkout-fail');
+  const processingTitle=document.getElementById('processing-title');
+  const processingMessage=document.getElementById('processing-message');
+  let paymentTimer=null;
+
+  window.openCheckout=function(){
+    summaryList.innerHTML=cart.map(item=>`<div class="checkout-summary-item"><div><span class="name">${item.name}</span><span class="meta">${item.grind} · ${item.size} · Qty ${item.quantity}</span></div><span>${formatPrice(item.price*item.quantity)}</span></div>`).join('');
+    const total=cart.reduce((sum,item)=>sum+item.price*item.quantity,0);
+    subtotalEl.textContent=formatPrice(total);
+    goToStep(1);
+    modal.hidden=false;
+    setCartOpen(false);
+  };
+  function closeCheckout(){modal.hidden=true;clearTimeout(paymentTimer);}
+  function goToStep(step){
+    stepEls.forEach(el=>el.classList.toggle('active',Number(el.dataset.step)===step));
+    stepIndicators.forEach(el=>el.classList.toggle('active',Number(el.dataset.stepIndicator)<=step));
+  }
+  document.querySelector('.checkout-close').addEventListener('click',closeCheckout);
+  modal.addEventListener('click',event=>{if(event.target===modal)closeCheckout();});
+  document.getElementById('to-payment-step').addEventListener('click',()=>goToStep(2));
+  document.getElementById('back-to-cart-step').addEventListener('click',()=>goToStep(1));
+
+  modal.querySelectorAll('input[name="pay-method"]').forEach(radio=>{
+    radio.addEventListener('change',()=>{
+      const isMpesa=radio.value==='mpesa'&&radio.checked;
+      if(radio.checked){
+        mpesaFields.hidden=radio.value!=='mpesa';
+        cardFields.hidden=radio.value!=='card';
+      }
+    });
+  });
+
+  function validateKenyanPhone(value){
+    const v=value.trim().replace(/\s+/g,'');
+    return /^(?:\+254|254|0)(7|1)\d{8}$/.test(v);
+  }
+  function normalizePhone(value){
+    let v=value.trim().replace(/\s+/g,'');
+    if(v.startsWith('0'))v='254'+v.slice(1);
+    if(v.startsWith('+'))v=v.slice(1);
+    return '+'+v.replace(/^\+?/,'');
+  }
+  function setFieldError(input,errorEl,show){
+    input.setAttribute('aria-invalid',String(show));
+    errorEl.classList.toggle('show',show);
+  }
+  mpesaPhone.addEventListener('input',()=>setFieldError(mpesaPhone,mpesaPhoneError,false));
+
+  function validateCard(){
+    let ok=true;
+    const digits=cardNumber.value.replace(/\s+/g,'');
+    const numOk=/^\d{16}$/.test(digits);
+    setFieldError(cardNumber,document.getElementById('card-number-error'),!numOk);
+    ok=ok&&numOk;
+    const expOk=/^(0[1-9]|1[0-2])\/\d{2}$/.test(cardExpiry.value.trim());
+    setFieldError(cardExpiry,document.getElementById('card-expiry-error'),!expOk);
+    ok=ok&&expOk;
+    const cvcOk=/^\d{3,4}$/.test(cardCvc.value.trim());
+    setFieldError(cardCvc,document.getElementById('card-cvc-error'),!cvcOk);
+    ok=ok&&cvcOk;
+    return ok;
+  }
+
+  document.getElementById('submit-payment').addEventListener('click',()=>{
+    const method=modal.querySelector('input[name="pay-method"]:checked').value;
+    failBlock.classList.remove('show');
+    if(method==='mpesa'){
+      const valid=validateKenyanPhone(mpesaPhone.value);
+      setFieldError(mpesaPhone,mpesaPhoneError,!valid);
+      if(!valid){mpesaPhone.focus();return;}
+      startMpesaFlow(normalizePhone(mpesaPhone.value));
+    }else{
+      if(!validateCard())return;
+      startCardFlow();
+    }
+  });
+
+  function startMpesaFlow(phone){
+    goToStep(3);
+    processingBlock.hidden=false;successBlock.hidden=true;
+    processingTitle.textContent='Check your phone';
+    processingMessage.textContent=`We've sent an M-Pesa PIN prompt to ${phone}. Enter your M-Pesa PIN on your phone to complete payment.`;
+    runPaymentSimulation();
+  }
+  function startCardFlow(){
+    goToStep(3);
+    processingBlock.hidden=false;successBlock.hidden=true;
+    processingTitle.textContent='Processing payment';
+    processingMessage.textContent='Please wait while we securely process your card payment.';
+    runPaymentSimulation();
+  }
+  function runPaymentSimulation(){
+    clearTimeout(paymentTimer);
+    paymentTimer=setTimeout(()=>{
+      processingBlock.hidden=true;
+      successBlock.hidden=false;
+      const orderId='IMANI-'+Math.floor(100000+Math.random()*900000);
+      document.getElementById('order-id-display').textContent=`Order ${orderId}`;
+      cart=[];renderCart();
+    },3200);
+  }
+  document.getElementById('cancel-payment').addEventListener('click',()=>{clearTimeout(paymentTimer);goToStep(2);});
+  document.getElementById('checkout-done').addEventListener('click',closeCheckout);
+})();
+
 const traceModal=document.getElementById('trace-modal'),traceForm=document.getElementById('trace-form'),traceNumber=document.getElementById('trace-number');function closeTraceModal(){traceModal.hidden=true;}document.getElementById('trace-coffee').addEventListener('click',()=>{traceModal.hidden=false;traceNumber.focus();});document.querySelectorAll('.trace-close').forEach(button=>button.addEventListener('click',closeTraceModal));traceModal.addEventListener('click',event=>{if(event.target===traceModal)closeTraceModal();});traceForm.addEventListener('submit',event=>{event.preventDefault();const bagNumber=traceNumber.value.trim();if(!bagNumber){traceNumber.focus();return;}const mapQuery=encodeURIComponent(`Imani Coffee Co Kikuyu Kenya coffee trace ${bagNumber}`);window.location.assign(`https://www.google.com/maps/search/?api=1&query=${mapQuery}`);});
-document.addEventListener('keydown',event=>{if(event.key==='Escape'){setCartOpen(false);closeOptionsModal();}});renderCart();
+document.addEventListener('keydown',event=>{if(event.key==='Escape'){setCartOpen(false);closeOptionsModal();const checkoutModal=document.getElementById('checkout-modal');if(checkoutModal&&!checkoutModal.hidden)checkoutModal.hidden=true;}});renderCart();
+if(ROAST_DATE&&ROAST_DATE!=='TODO_MIKE'){document.querySelectorAll('.roast-date').forEach(el=>{el.textContent=ROAST_DATE;});}else{document.querySelectorAll('.roast-info').forEach(el=>{const dateSpan=el.querySelector('.roast-date');if(dateSpan)dateSpan.previousSibling&&dateSpan.previousSibling.remove();if(dateSpan){const rest=dateSpan.nextSibling;if(rest)rest.textContent=rest.textContent.replace(/^\s*·\s*/,'');dateSpan.remove();}});}
 
 /* --- mobile nav --- */
 (function(){
