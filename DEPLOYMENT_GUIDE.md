@@ -1,4 +1,4 @@
-# 🎉 Imani Coffee Co. Website - Ready for Deployment
+# 🎉 Roots Coffee Co. Website - Ready for Deployment
 
 ## 📋 Website Status
 ✅ **COMPLETE & POLISHED** - Ready for production
@@ -11,7 +11,7 @@
 
 ### Option 2: Local File Access
 - **Primary File**: file:///c:/Users/njire/Desktop/AI%20MASTERCLASS/index.html
-- **Backup File**: file:///c:/Users/njire/Desktop/AI%20MASTERCLASS/Imani_Premium_Green_Landing_Page.html
+- **Backup File**: file:///c:/Users/njire/Desktop/AI%20MASTERCLASS/Roots_Premium_Green_Landing_Page.html
 
 ### Option 3: Deploy Live (Recommended)
 Choose one of these free hosting options:

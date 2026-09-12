@@ -1,7 +1,7 @@
-=== IMANI COFFEE CO. WEBSITE VALIDATION REPORT ===
+=== ROOTS COFFEE CO. WEBSITE VALIDATION REPORT ===
 
 ✓ STRUCTURE CHECK:
-- Main files: index.html (primary), Imani_Premium_Green_Landing_Page.html (backup)
+- Main files: index.html (primary), Roots_Premium_Green_Landing_Page.html (backup)
 - All files present and accessible
 
 ✓ KEY FEATURES IMPLEMENTED:

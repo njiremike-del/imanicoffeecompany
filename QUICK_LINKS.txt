@@ -1,14 +1,16 @@
 ╔════════════════════════════════════════════════════════════════════════════╗
-║                   IMANI COFFEE CO. - QUICK REFERENCE                       ║
+║                   ROOTS COFFEE CO. - QUICK REFERENCE                       ║
 ╚════════════════════════════════════════════════════════════════════════════╝
 
 🔗 LIVE WEBSITE LINKS:
 
-1. GitHub Pages (Immediate):
-   https://njiremike-del.github.io/imanicoffeecompany/
+1. Custom Domain (Primary):
+   https://rootscoffeecompany.com/
+   https://rootscoffeecompany.com/Roots_Landing_FINAL.html
 
-2. Custom Domain (After DNS setup):
-   https://getimanicoffee.com
+2. GitHub Pages (Fallback/Immediate):
+   https://njiremike-del.github.io/imanicoffeecompany/
+   https://njiremike-del.github.io/imanicoffeecompany/Roots_Landing_FINAL.html
 
 3. GitHub Repository:
    https://github.com/njiremike-del/imanicoffeecompany

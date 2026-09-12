@@ -1,8 +1,21 @@
-# 🚀 GitHub Pages Setup Guide - Imani Coffee
+# 🚀 GitHub Pages Setup Guide - Roots Coffee Co.
 
-## Your GitHub Pages URL Will Be:
+## Your Live Shareable URLs:
+
+### 1. Main Website (Custom Domain):
+```
+https://rootscoffeecompany.com/
+```
+
+### 2. Standalone Hardened Landing Page:
+```
+https://rootscoffeecompany.com/Roots_Landing_FINAL.html
+```
+
+### 3. GitHub Pages Fallback URLs (Active immediately upon deployment):
 ```
 https://njiremike-del.github.io/imanicoffeecompany/
+https://njiremike-del.github.io/imanicoffeecompany/Roots_Landing_FINAL.html
 ```
 
 ## ✅ Enable GitHub Pages (3 Steps)
@@ -19,29 +32,17 @@ https://njiremike-del.github.io/imanicoffeecompany/
 4. Folder: Select **/ (root)**
 5. Click **Save**
 
-### Step 3: Wait for Deployment
-- GitHub will build your site (usually < 1 minute)
-- You'll see a green checkmark when live
-- Visit: https://njiremike-del.github.io/imanicoffeecompany/
+### Step 3: Configure Custom Domain (`rootscoffeecompany.com`)
+1. Under "Custom domain", enter: **rootscoffeecompany.com**
+2. Click **Save** (a `CNAME` file is already created in the repository root)
+3. Check "Enforce HTTPS"
 
 ---
 
-## 🌐 Custom Domain Setup (Optional)
+## 🌐 DNS Configuration for `rootscoffeecompany.com`
 
-To use **getimanicoffee.com** instead:
+Point your domain's DNS to GitHub Pages at your domain registrar (GoDaddy, Namecheap, Cloudflare, etc.):
 
-### Step 1: Buy Domain
-- Register at: GoDaddy, Namecheap, Google Domains, etc.
-- Domain: getimanicoffee.com
-
-### Step 2: Update GitHub Pages Settings
-1. Go to Repository Settings → Pages
-2. Under "Custom domain", enter: **getimanicoffee.com**
-3. Check "Enforce HTTPS"
-4. Save
-
-### Step 3: Update Domain DNS
-Point your domain's DNS to GitHub:
 ```
 A Records (IPv4):
 185.199.108.153
@@ -49,22 +50,21 @@ A Records (IPv4):
 185.199.110.153
 185.199.111.153
 
-CNAME (www subdomain):
-njiremike-del.github.io
+CNAME Record (www subdomain):
+www.rootscoffeecompany.com → njiremike-del.github.io
 ```
-
-### Step 4: Verify
-- Wait 24-48 hours for DNS propagation
-- Your site will be live at: https://getimanicoffee.com
 
 ---
 
 ## 📋 Current Setup Status
 
-✅ Repository: imanicoffeecompany
-✅ Files ready: index.html + Imani_Premium_Green_Landing_Page.html
-✅ Branch: main
+✅ Repository: njiremike-del/imanicoffeecompany
+✅ CNAME file created: `rootscoffeecompany.com`
+✅ Standalone Hardened Landing Page: `Roots_Landing_FINAL.html`
+✅ Main Website: `index.html`
+✅ Branch: `main`
 ✅ Ready for GitHub Pages: YES
+
 
 ---
 

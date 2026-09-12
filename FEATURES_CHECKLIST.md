@@ -1,4 +1,4 @@
-# ✅ IMANI COFFEE - ALL FEATURES NOW LIVE
+# ✅ ROOTS COFFEE - ALL FEATURES NOW LIVE
 
 ## 🔗 LIVE WEBSITE:
 **https://njiremike-del.github.io/imanicoffeecompany/**
