@@ -2,19 +2,21 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Roots Coffee Co. — Premium Specialty Coffee from Kenya</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Imani Coffee Co. | Specialty Coffee Roasted at Origin in Kiambu, Kenya</title>
 <meta name="description" content="Specialty coffee roasted at origin in Kenya. Exceptional single-origin lots, sustainable practices, and direct trade partnerships. Shop seasonal releases and subscribe for early access.">
 <meta name="keywords" content="specialty coffee, Kenya coffee, single-origin, sustainable coffee, direct trade, Kikuyu, Kiambu, Nairobi">
-<meta property="og:title" content="Roots Coffee Co. — Premium Specialty Coffee from Kenya">
+<meta property="og:title" content="Imani Coffee Co. | Specialty Coffee Roasted at Origin in Kiambu, Kenya">
 <meta property="og:description" content="Specialty coffee roasted at origin. Exceptional single-origin lots, sustainable practices, and direct trade partnerships.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://rootscoffeecompany.com/">
-<meta property="og:image" content="https://i.postimg.cc/9DgdBRWh/Whats-App-Image-2026-08-28-at-13-42-24.jpg">
+<meta property="og:url" content="https://njiremike-del.github.io/imanicoffeecompany/">
+<meta property="og:image" content="https://njiremike-del.github.io/imanicoffeecompany/assets/og-image.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="theme-color" content="#0b2419">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Roots Coffee Co. — Premium Specialty Coffee from Kenya">
+<meta name="twitter:title" content="Imani Coffee Co. | Specialty Coffee Roasted at Origin in Kiambu, Kenya">
 <meta name="twitter:description" content="Specialty coffee roasted at origin. Exceptional single-origin lots, sustainable practices, and direct trade partnerships.">
-<link rel="canonical" href="https://rootscoffeecompany.com/">
+<link rel="canonical" href="https://njiremike-del.github.io/imanicoffeecompany/">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
@@ -350,15 +352,48 @@ footer{padding:48px 0;background:#0b1d15}
 	.quote-text{font-size:clamp(34px,10vw,52px)}
 	.footer-contact{align-items:flex-start;text-align:left}
 }
+
+/* === Imani fixes: logo, mobile, safe areas === */
+.nav-logo{filter:none!important;mix-blend-mode:normal!important;background:none!important;box-shadow:none!important;width:auto!important;height:64px!important;animation:none!important;position:static!important}
+.nav-logo-link{background:none!important;padding:0!important;border:0!important}
+html{-webkit-text-size-adjust:100%}
+body{overflow-x:hidden}
+img{max-width:100%;height:auto}
+input,select,textarea{font-size:16px!important}
+.btn,.plus,.cart-toggle,.cart-controls button,.checkout-close,.cart-close,.trace-close{min-height:44px;min-width:44px}
+.pay-fields select{width:100%;padding:12px;border:1px solid #d6cdbd;border-radius:8px;background:#fff}
+.checkout-panel{max-height:calc(100svh - 24px);overflow:auto;padding-bottom:calc(20px + env(safe-area-inset-bottom))}
+.cart-footer{padding-bottom:calc(18px + env(safe-area-inset-bottom))}
+@media(max-width:950px){.nav-logo{height:52px!important}}
+@media(max-width:640px){
+  .hero{min-height:100svh!important}
+  .hero h1{font-size:clamp(34px,10vw,46px)!important;line-height:1.05}
+  .hero .actions{flex-wrap:wrap;gap:10px}
+  .hero .actions .btn{flex:1 1 140px;justify-content:center}
+  .coffee-grid{grid-template-columns:1fr!important}
+  .cart-drawer{width:100%!important;max-width:100%!important}
+  .checkout-panel{width:100%!important;max-width:100%!important;border-radius:16px 16px 0 0;align-self:flex-end}
+  body{font-size:16px}
+}
+.wa-float{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:60;width:56px;height:56px;border-radius:50%;background:#25D366;display:none;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+@media(max-width:950px){.wa-float{display:flex}}
+.trace-modal__panel{max-height:calc(100svh - 32px);overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+.trace-modal__actions{position:sticky;bottom:-30px;background:var(--paper);padding:12px 0 4px;margin-bottom:-6px}
+@media(max-width:640px){.trace-modal{padding:0;place-items:end center}.trace-modal__panel{width:100%!important;border-radius:16px 16px 0 0;padding:22px 18px calc(10px + env(safe-area-inset-bottom))}.trace-modal__actions{bottom:calc(-10px - env(safe-area-inset-bottom))}.opt-grid{gap:8px}}
+@media(max-width:950px){.navlinks{display:none!important}.menu-toggle{display:inline-flex!important;align-items:center;justify-content:center}.navright{display:flex;align-items:center;gap:6px;justify-self:end}}
+@media(min-width:951px){.menu-toggle{display:none!important}}
+.cart-drawer:not(.open){box-shadow:none!important;visibility:hidden}
+body:has(.trace-modal:not([hidden])) .wa-float,body:has(.mobile-nav.open) .wa-float,body:has(.cart-drawer.open) .wa-float,body:has(.checkout-modal:not([hidden])) .wa-float{display:none}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","name":"Roots Coffee Co.","description":"Specialty coffee roasted at origin. Single-origin lots, sustainable practices, and direct trade partnerships.","url":"https://rootscoffeecompany.com/","email":"getimanicoffee@gmail.com","image":"https://i.postimg.cc/9DgdBRWh/Whats-App-Image-2026-08-28-at-13-42-24.jpg","address":{"@type":"PostalAddress","addressLocality":"Kikuyu","addressRegion":"Kiambu County","addressCountry":"KE"},"sameAs":["https://www.instagram.com/getimanicoffee?igsi=Mm10eTdoeGRzZWw=","https://x.com/Get_ImaniCoffee"]},{"@type":"ItemList","name":"Roots Coffee Co. Coffees","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Product","name":"Kenya AA","description":"Kenya · Kirinyaga. Blackcurrant · Citrus · Brown Sugar. Washed · SL28 · SL34.","offers":{"@type":"Offer","priceCurrency":"KES","price":"1250"}}},{"@type":"ListItem","position":2,"item":{"@type":"Product","name":"Kenya AB","description":"Kenya · Nyeri. Raisin · Caramel · Orange. Washed · SL28 · Ruiru 11.","offers":{"@type":"Offer","priceCurrency":"KES","price":"1150"}}},{"@type":"ListItem","position":3,"item":{"@type":"Product","name":"Meru","description":"Kenya · Meru. Blackcurrant · Citrus · Brown Sugar. Washed · SL28 · SL34.","offers":{"@type":"Offer","priceCurrency":"KES","price":"1250"}}},{"@type":"ListItem","position":4,"item":{"@type":"Product","name":"Meru Peaberry","description":"Kenya · Meru. Raisin · Caramel · Orange. Washed · Peaberry.","offers":{"@type":"Offer","priceCurrency":"KES","price":"1350"}}},{"@type":"ListItem","position":5,"item":{"@type":"Product","name":"Nyeri AA Fruit Infused","description":"Kenya · Nyeri. Berry · Tropical Fruit · Honey. Fruit Infused · AA.","offers":{"@type":"Offer","priceCurrency":"KES","price":"1450"}}}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","name":"Imani Coffee Co.","description":"Specialty coffee roasted at origin. Single-origin lots, sustainable practices, and direct trade partnerships.","url":"https://njiremike-del.github.io/imanicoffeecompany/","email":"getimanicoffee@gmail.com","image":"https://i.postimg.cc/9DgdBRWh/Whats-App-Image-2026-08-28-at-13-42-24.jpg","address":{"@type":"PostalAddress","addressLocality":"Kikuyu","addressRegion":"Kiambu County","addressCountry":"KE"},"sameAs":["https://www.instagram.com/getimanicoffee?igsi=Mm10eTdoeGRzZWw=","https://x.com/Get_ImaniCoffee"]},{"@type":"ItemList","name":"Imani Coffee Co. Coffees","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Product","name":"Kenya AA","description":"Kenya · Kirinyaga. Blackcurrant · Citrus · Brown Sugar. Washed · SL28 · SL34.","offers":{"@type":"Offer","priceCurrency":"KES","price":"1250"}}},{"@type":"ListItem","position":2,"item":{"@type":"Product","name":"Kenya AB","description":"Kenya · Nyeri. Raisin · Caramel · Orange. Washed · SL28 · Ruiru 11.","offers":{"@type":"Offer","priceCurrency":"KES","price":"1150"}}},{"@type":"ListItem","position":3,"item":{"@type":"Product","name":"Meru","description":"Kenya · Meru. Blackcurrant · Citrus · Brown Sugar. Washed · SL28 · SL34.","offers":{"@type":"Offer","priceCurrency":"KES","price":"1250"}}},{"@type":"ListItem","position":4,"item":{"@type":"Product","name":"Meru Peaberry","description":"Kenya · Meru. Raisin · Caramel · Orange. Washed · Peaberry.","offers":{"@type":"Offer","priceCurrency":"KES","price":"1350"}}},{"@type":"ListItem","position":5,"item":{"@type":"Product","name":"Nyeri AA Fruit Infused","description":"Kenya · Nyeri. Berry · Tropical Fruit · Honey. Fruit Infused · AA.","offers":{"@type":"Offer","priceCurrency":"KES","price":"1450"}}}]}]}
 </script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header><div class="container"><nav>
-<a href="#main" aria-label="Roots Coffee Co. — home" class="nav-logo-link"><img class="nav-logo" src="Roots_Logo_Transparent.png" alt="Roots Coffee Co."></a>
+<a href="#main" aria-label="Imani Coffee Co. home" class="nav-logo-link"><img class="nav-logo" src="assets/Imani_Logo_White_Transparent.png" alt="Imani Coffee Co." width="900" height="764"></a>
 <div class="navlinks" role="navigation" aria-label="Main navigation">
   <div class="nav-item nav-dropdown">
     <a href="#coffee" class="nav-dropdown-trigger" id="shop-dropdown-btn" aria-haspopup="true" aria-expanded="false">Shop <span class="dropdown-caret" aria-hidden="true">▾</span></a>
@@ -398,25 +433,25 @@ footer{padding:48px 0;background:#0b1d15}
 <section class="hero" id="main"><a id="home"></a><div class="container"><div class="hero-content">
 <h1>Specialty Coffee.<br>Roasted at Origin.</h1>
 <p class="hero-promise">We select rare lots that tell a story, those with character.</p>
-<div class="actions"><!-- NOTE: Shop Coffee currently scrolls to #coffee only. Do not build cart or checkout functionality in this pass. --><a class="btn gold" href="#coffee">Shop Coffee</a><a class="btn" href="#story">Our Story</a></div>
+<div class="actions"><a class="btn gold" href="#coffee">Shop Coffee</a><a class="btn" href="#story">Our Story</a></div>
 </div></div></section>
 
 <section class="section" id="coffee"><div class="container">
 <div class="section-head"><div class="num">01 / Our Coffees</div><div><h2>COFFEE BEANS.</h2><p class="lead">Seasonal lots selected for sweetness, clarity and distinctive origin.</p></div></div>
 <div class="coffee-grid">
-<article class="coffee" data-product='{"name":"Kenya AA","origin":"Kenya · Kirinyaga","prices":{"whole":{"100g":450,"250g":1250,"1kg":4200},"ground":{"100g":480,"250g":1300,"1kg":4400}}}'><div class="coffee-photo"><img src="https://i.postimg.cc/9DgdBRWh/Whats-App-Image-2026-08-28-at-13-42-24.jpg" alt="Kenya coffee"></div><div class="coffee-body"><div class="origin">Kenya · Kirinyaga</div><h3>Kenya AA</h3><p>Blackcurrant · Citrus · Brown Sugar<br>Washed · SL28 · SL34</p><p class="roast-info">Roasted to order · Best 7–21 days from roast</p><div class="coffee-bottom"><span>KSh 1,250 / 250g</span><button class="plus" type="button" aria-label="Add Kenya AA to cart">+</button></div></div></article>
-<article class="coffee" data-product='{"name":"Kenya AB","origin":"Kenya · Nyeri","prices":{"whole":{"100g":410,"250g":1150,"1kg":3900},"ground":{"100g":440,"250g":1200,"1kg":4100}}}'><div class="coffee-photo"><img src="https://i.postimg.cc/9DgdBRWH/Whats-App-Image-2026-08-28-at-13-42-25.jpg" alt="Coffee landscape"></div><div class="coffee-body"><div class="origin">Kenya · Nyeri</div><h3>Kenya AB</h3><p>Raisin · Caramel · Orange<br>Washed · SL28 · Ruiru 11</p><p class="roast-info">Roasted to order · Best 7–21 days from roast</p><div class="coffee-bottom"><span>KSh 1,150 / 250g</span><button class="plus" type="button" aria-label="Add Kenya AB to cart">+</button></div></div></article>
-<article class="coffee" data-product='{"name":"Meru","origin":"Kenya · Meru","prices":{"whole":{"100g":450,"250g":1250,"1kg":4200},"ground":{"100g":480,"250g":1300,"1kg":4400}}}'><div class="coffee-photo"><img src="https://i.postimg.cc/v42rvgGp/Whats-App-Image-2026-08-28-at-13-42-25-(1).jpg" alt="Meru coffee"></div><div class="coffee-body"><div class="origin">Kenya · Meru</div><h3>Meru</h3><p>Blackcurrant · Citrus · Brown Sugar<br>Washed · SL28 · SL34</p><p class="roast-info">Roasted to order · Best 7–21 days from roast</p><div class="coffee-bottom"><span>KSh 1,250 / 250g</span><button class="plus" type="button" aria-label="Add Meru to cart">+</button></div></div></article>
-<article class="coffee" data-product='{"name":"Meru Peaberry","origin":"Kenya · Meru","prices":{"whole":{"100g":485,"250g":1350,"1kg":4550},"ground":{"100g":515,"250g":1400,"1kg":4750}}}'><div class="coffee-photo"><img src="https://i.postimg.cc/Bj7TCLJk/Whats-App-Image-2026-08-28-at-13-42-25-(2).jpg" alt="Meru Peaberry coffee"></div><div class="coffee-body"><div class="origin">Kenya · Meru</div><h3>Meru Peaberry</h3><p>Raisin · Caramel · Orange<br>Washed · Peaberry</p><p class="roast-info">Roasted to order · Best 7–21 days from roast</p><div class="coffee-bottom"><span>KSh 1,350 / 250g</span><button class="plus" type="button" aria-label="Add Meru Peaberry to cart">+</button></div></div></article>
-<article class="coffee"><div class="coffee-photo"><img src="https://i.postimg.cc/9DgdBRWh/Whats-App-Image-2026-08-28-at-13-42-25.jpg" alt="Nyeri AA Fruit Infused coffee"></div><div class="coffee-body"><div class="origin">Kenya · Nyeri</div><h3>Nyeri AA Fruit Infused</h3><p>Berry · Tropical Fruit · Honey<br>Fruit Infused · AA</p><p class="roast-info">Roasted to order · Best 7–21 days from roast</p><div class="coffee-bottom"><span>KSh 1,450 / 250g</span><button class="plus" type="button" aria-label="Add Nyeri AA Fruit Infused to cart">+</button></div></div></article>
+<article class="coffee" data-product='{"name":"Kenya AA","origin":"Kenya · Kirinyaga","prices":{"whole":{"100g":450,"250g":1250,"1kg":4200},"ground":{"100g":480,"250g":1300,"1kg":4400}}}'><div class="coffee-photo"><img src="https://i.postimg.cc/9DgdBRWh/Whats-App-Image-2026-08-28-at-13-42-24.jpg" alt="Kenya coffee" loading="lazy"></div><div class="coffee-body"><div class="origin">Kenya · Kirinyaga</div><h3>Kenya AA</h3><p>Blackcurrant · Citrus · Brown Sugar<br>Washed · SL28 · SL34</p><p class="roast-info">Roasted to order · Best 7–21 days from roast</p><div class="coffee-bottom"><span>KSh 1,250 / 250g</span><button class="plus" type="button" aria-label="Add Kenya AA to cart">+</button></div></div></article>
+<article class="coffee" data-product='{"name":"Kenya AB","origin":"Kenya · Nyeri","prices":{"whole":{"100g":410,"250g":1150,"1kg":3900},"ground":{"100g":440,"250g":1200,"1kg":4100}}}'><div class="coffee-photo"><img src="https://i.postimg.cc/9DgdBRWh/Whats-App-Image-2026-08-28-at-13-42-25.jpg" alt="Coffee landscape" loading="lazy"></div><div class="coffee-body"><div class="origin">Kenya · Nyeri</div><h3>Kenya AB</h3><p>Raisin · Caramel · Orange<br>Washed · SL28 · Ruiru 11</p><p class="roast-info">Roasted to order · Best 7–21 days from roast</p><div class="coffee-bottom"><span>KSh 1,150 / 250g</span><button class="plus" type="button" aria-label="Add Kenya AB to cart">+</button></div></div></article>
+<article class="coffee" data-product='{"name":"Meru","origin":"Kenya · Meru","prices":{"whole":{"100g":450,"250g":1250,"1kg":4200},"ground":{"100g":480,"250g":1300,"1kg":4400}}}'><div class="coffee-photo"><img src="https://i.postimg.cc/v42rvgGp/Whats-App-Image-2026-08-28-at-13-42-25-(1).jpg" alt="Meru coffee" loading="lazy"></div><div class="coffee-body"><div class="origin">Kenya · Meru</div><h3>Meru</h3><p>Red Apple · Black Tea · Molasses<br>Washed · SL28 · Batian</p><p class="roast-info">Roasted to order · Best 7–21 days from roast</p><div class="coffee-bottom"><span>KSh 1,250 / 250g</span><button class="plus" type="button" aria-label="Add Meru to cart">+</button></div></div></article>
+<article class="coffee" data-product='{"name":"Meru Peaberry","origin":"Kenya · Meru","prices":{"whole":{"100g":485,"250g":1350,"1kg":4550},"ground":{"100g":515,"250g":1400,"1kg":4750}}}'><div class="coffee-photo"><img src="https://i.postimg.cc/Bj7TCLJk/Whats-App-Image-2026-08-28-at-13-42-25-(2).jpg" alt="Meru Peaberry coffee" loading="lazy"></div><div class="coffee-body"><div class="origin">Kenya · Meru</div><h3>Meru Peaberry</h3><p>Plum · Cocoa · Honey<br>Washed · Peaberry</p><p class="roast-info">Roasted to order · Best 7–21 days from roast</p><div class="coffee-bottom"><span>KSh 1,350 / 250g</span><button class="plus" type="button" aria-label="Add Meru Peaberry to cart">+</button></div></div></article>
+<article class="coffee" data-product='{"name":"Nyeri AA Fruit Infused","origin":"Kenya · Nyeri","prices":{"whole":{"100g":520,"250g":1450,"1kg":4900},"ground":{"100g":550,"250g":1500,"1kg":5100}}}'><div class="coffee-photo"><img src="https://i.postimg.cc/9DgdBRWh/Whats-App-Image-2026-08-28-at-13-42-25.jpg" alt="Nyeri AA Fruit Infused coffee" loading="lazy"></div><div class="coffee-body"><div class="origin">Kenya · Nyeri</div><h3>Nyeri AA Fruit Infused</h3><p>Berry · Tropical Fruit · Honey<br>Fruit Infused · AA</p><p class="roast-info">Roasted to order · Best 7–21 days from roast</p><div class="coffee-bottom"><span>KSh 1,450 / 250g</span><button class="plus" type="button" aria-label="Add Nyeri AA Fruit Infused to cart">+</button></div></div></article>
 </div>
 <details class="glossary">
 <summary>What do AA, washed and SL28 mean?</summary>
 <div class="glossary-body">
-<p><strong>AA, AB, PB</strong> — These are bean sizes, not quality scores. AA beans are the largest, AB slightly smaller, PB (peaberry) is a single round bean that forms when only one seed develops inside the cherry instead of two. A grade tells you the size of the bean and nothing about how it tastes. We grade our lots by cupping them.</p>
-<p><strong>Washed</strong> — The cherry is pulped, fermented and washed before drying. It is Kenya's traditional method and it is why Kenyan coffee tastes so clean and bright.</p>
-<p><strong>SL28 and SL34</strong> — Varieties selected in Kenya in the 1930s and still among the most prized in the world. SL28 is where the blackcurrant note comes from. SL34 brings more body.</p>
-<p><strong>Ruiru 11 and Batian</strong> — Disease-resistant varieties developed by Kenyan research institutions. They let farmers keep producing where leaf rust and berry disease would otherwise wipe out a crop.</p>
+<p><strong>AA, AB, PB:</strong> These are bean sizes, not quality scores. AA beans are the largest, AB slightly smaller, PB (peaberry) is a single round bean that forms when only one seed develops inside the cherry instead of two. A grade tells you the size of the bean and nothing about how it tastes. We grade our lots by cupping them.</p>
+<p><strong>Washed:</strong> The cherry is pulped, fermented and washed before drying. It is Kenya's traditional method and it is why Kenyan coffee tastes so clean and bright.</p>
+<p><strong>SL28 and SL34:</strong> Varieties selected in Kenya in the 1930s and still among the most prized in the world. SL28 is where the blackcurrant note comes from. SL34 brings more body.</p>
+<p><strong>Ruiru 11 and Batian:</strong> Disease-resistant varieties developed by Kenyan research institutions. They let farmers keep producing where leaf rust and berry disease would otherwise wipe out a crop.</p>
 </div>
 </details>
 </div></section>
@@ -487,32 +522,32 @@ footer{padding:48px 0;background:#0b1d15}
 
 <section class="section" id="story"><div class="container">
 <div class="section-head"><div class="num">04 / Our Story</div><div><h2>Small Roastery. Bigger Mission.</h2>
-<p class="lead">Roots is a micro-roastery in Kikuyu, Kiambu County, Kenya.</p>
+<p class="lead">Imani is a micro-roastery in Kikuyu, Kiambu County, Kenya.</p>
 <p class="lead">Built from a decade in the coffee industry; brewing, roasting and sourcing coffee across different countries. We have seen the world fall for Kenyan coffee.</p>
-<p class="lead">Priced at a premium at different destinations, with value added abroad. Roots was founded on a simple conviction: Kenyan coffee branding and value addition should happen at origin.</p>
-<p class="lead">Through craft learned across the specialty industry, we bring art and science to modulate our roast. Roasted in small batches to iterate profiles and amplify the hard work of the producers. Each coffee bean has a character; our mission is to bring out the best from every lot we choose.</p>
+<p class="lead">It sells at a premium abroad, where most of its value is added. Imani was founded on a simple conviction: Kenyan coffee branding and value addition should happen at origin.</p>
+<p class="lead">Through craft learned across the specialty industry, we bring art and science to shape every roast. We roast in small batches to refine profiles and amplify the hard work of the producers. Each coffee bean has a character; our mission is to bring out the best from every lot we choose.</p>
 <div class="story-close"><em>This is not a discovery story.<br>It is a homecoming.</em></div></div></div>
-<div class="story"><div><div class="story-main"><img src="https://res.cloudinary.com/u7elvwmv/image/upload/f_auto,q_auto/mike_in_dryingbed" alt="Coffee drying beds at origin"></div><div class="caption">From origin to cup · Kikuyu, Kiambu County</div></div>
-<div class="story-side"><img src="https://res.cloudinary.com/u7elvwmv/image/upload/f_auto,q_auto/mike_with_cherry" alt="Harvesting coffee cherries at a Kenyan farm"><img src="https://res.cloudinary.com/u7elvwmv/image/upload/f_auto,q_auto/mike_roasting" alt="Roasting coffee in Kikuyu, Kiambu County"></div></div>
+<div class="story"><div><div class="story-main"><img src="https://res.cloudinary.com/u7elvwmv/image/upload/f_auto,q_auto/mike_in_dryingbed" alt="Coffee drying beds at origin" loading="lazy"></div><div class="caption">From origin to cup · Kikuyu, Kiambu County</div></div>
+<div class="story-side"><img src="https://res.cloudinary.com/u7elvwmv/image/upload/f_auto,q_auto/mike_with_cherry" alt="Harvesting coffee cherries at a Kenyan farm" loading="lazy"><img src="https://res.cloudinary.com/u7elvwmv/image/upload/f_auto,q_auto/mike_roasting" alt="Roasting coffee in Kikuyu, Kiambu County" loading="lazy"></div></div>
 </div></section>
 
 <section class="section sustainability" id="sustainability"><div class="container">
-	<div class="section-head"><div class="num">05 / Sustainability</div><div><h2>COFFEE SHOULD LEAVE MORE BEHIND.</h2><p class="lead">We believe a coffee company should create value beyond the cup.</p><div class="sustainability-intro"><p>Kenya exports almost all of its coffee raw. Of roughly 940,000 bags leaving the country this season, about 900,000 go as unroasted green beans, and only 30,000 as roasted coffee. That's about 95% of our exports leaving as a raw commodity, and about 3% leaving as finished coffee.</p><p>Roots exists to change that. We roast at origin, keeping more value where the coffee grows. As Kenya works toward tripling national coffee output to 150,000 metric tonnes by 2028, our work supports a stronger local coffee economy through roasting, training and value addition.</p><p class="sustainability-sources"><span>USDA Foreign Agricultural Service, Kenya Coffee Annual Report 2026/27</span><span aria-hidden="true"> · </span><span>Kenya News Agency, 26 May 2025</span><span aria-hidden="true"> · </span><a href="https://mountkenyatimes.co.ke/coffee-revival-gains-momentum-as-kenya-targets-150000-tonnes-by-2028/" target="_blank" rel="noopener">Mt Kenya Times</a><span aria-hidden="true"> · </span><a href="https://www.the-star.co.ke/news/2026-03-31-kenya-banks-on-new-law-training-and-research-to-revive-her-coffee" target="_blank" rel="noopener">The Star</a><span aria-hidden="true"> · </span><a href="Roots_Sustainability_Action_Plan.pdf" target="_blank" rel="noopener">Full Sustainability Action Plan</a></p></div></div></div>
+	<div class="section-head"><div class="num">05 / Sustainability</div><div><h2>COFFEE SHOULD LEAVE MORE BEHIND.</h2><p class="lead">We believe a coffee company should create value beyond the cup.</p><div class="sustainability-intro"><p>Kenya exports almost all of its coffee raw. Of roughly 940,000 bags leaving the country this season, about 900,000 go as unroasted green beans, and only 30,000 as roasted coffee. That's about 95% of our exports leaving as a raw commodity, and about 3% leaving as finished coffee.</p><p>Imani exists to change that. We roast at origin, keeping more value where the coffee grows. As Kenya works toward tripling national coffee output to 150,000 metric tonnes by 2028, our work supports a stronger local coffee economy through roasting, training and value addition.</p><p class="sustainability-sources"><span>USDA Foreign Agricultural Service, Kenya Coffee Annual Report 2026/27</span><span aria-hidden="true"> · </span><span>Kenya News Agency, 26 May 2025</span><span aria-hidden="true"> · </span><a href="https://mountkenyatimes.co.ke/coffee-revival-gains-momentum-as-kenya-targets-150000-tonnes-by-2028/" target="_blank" rel="noopener">Mt Kenya Times</a><span aria-hidden="true"> · </span><a href="https://www.the-star.co.ke/news/2026-03-31-kenya-banks-on-new-law-training-and-research-to-revive-her-coffee" target="_blank" rel="noopener">The Star</a><span aria-hidden="true"> · </span><a href="assets/Imani_Sustainability_Action_Plan.pdf" target="_blank" rel="noopener">Full Sustainability Action Plan</a></p></div></div></div>
 
 	<p class="commitments-label">Our three commitments:</p><div class="sustain-grid">
 		<div class="sustain-card"><div class="icon">🤝</div><h4>PEOPLE</h4><b>BUILD KNOWLEDGE.</b><p>One free coffee training seat sponsored every month — open to farmers, producers and the public.</p></div>
-		<div class="sustain-card"><div class="icon">🌱</div><h4>PLANET</h4><b>PLANT WHAT WE ROAST.</b><p>KSh 5 from every Roots bag supports the Roots Tree Programme.</p></div>
+		<div class="sustain-card"><div class="icon">🌱</div><h4>PLANET</h4><b>PLANT WHAT WE ROAST.</b><p>KSh 5 from every Imani bag supports the Imani Tree Programme.</p></div>
 		<div class="sustain-card"><div class="icon">☕</div><h4>VALUE</h4><b>KEEP MORE VALUE AT ORIGIN.</b><p>Fair prices to producers. More coffee value kept in Kenya. A business built for the long term.</p></div>
 	</div>
 
 	<div class="sustain-tag">Small actions. Compounding impact.</div>
 
-	<div class="sustain-actions"><a class="btn primary" href="https://wa.me/254704604260?text=Hi%2C%20I%20want%20to%20adopt%20a%20tree" target="_blank" rel="noopener">Adopt a Tree</a><button class="btn ghost" id="trace-coffee" type="button">Trace your coffee</button><a class="btn ghost" href="Roots_Sustainability_Action_Plan.pdf" target="_blank" rel="noopener">Read our Sustainability Action Plan</a>
-	<div class="sustain-small">KSh 5 from every Roots bag goes directly to the Roots Tree Programme.</div></div>
+	<div class="sustain-actions"><a class="btn primary" href="https://wa.me/254704604260?text=Hi%2C%20I%20want%20to%20adopt%20a%20tree" target="_blank" rel="noopener">Adopt a Tree</a><button class="btn ghost" id="trace-coffee" type="button">Trace your coffee</button><a class="btn ghost" href="assets/Imani_Sustainability_Action_Plan.pdf" target="_blank" rel="noopener">Read our Sustainability Action Plan</a>
+	<div class="sustain-small">KSh 5 from every Imani bag goes directly to the Imani Tree Programme.</div></div>
 </div></section>
 
 <section class="section academy" id="academy" aria-labelledby="academy-heading"><div class="container">
-	<div class="section-head"><div class="num">06 / Academy</div><div><div class="eyebrow">COMING SOON</div><h2 id="academy-heading">Roots Academy</h2><p class="lead">Coffee knowledge, shared. Barista foundations, home brewing, cupping and roasting — taught at origin, in Kiambu. Open to café staff, home brewers, and the producers who grow what we roast.</p>
+	<div class="section-head"><div class="num">06 / Academy</div><div><div class="eyebrow">COMING SOON</div><h2 id="academy-heading">Imani Academy</h2><p class="lead">Coffee knowledge, shared. Barista foundations, home brewing, cupping and roasting — taught at origin, in Kiambu. Open to café staff, home brewers, and the producers who grow what we roast.</p>
 	<ul class="academy-list">
 		<li>Barista Foundations</li>
 		<li>Home Brewing &amp; Cupping</li>
@@ -557,11 +592,11 @@ footer{padding:48px 0;background:#0b1d15}
 <details><summary>Can I collect instead of paying delivery?</summary><div class="faq-body"><p>Yes — see "Find us on map" below and arrange with us on WhatsApp to collect.</p></div></details>
 <details><summary>How fresh is the coffee?</summary><div class="faq-body"><p>We roast to order in small batches. Your bag is roasted after you order it, not pulled off a shelf.</p></div></details>
 <details><summary>What if I do not own a grinder?</summary><div class="faq-body"><p>Tell us your brew method at checkout and we grind it for you. Ground coffee is best used within two weeks.</p></div></details>
-<details><summary>Do you sell green coffee?</summary><div class="faq-body"><p>Yes. We source and sell green coffee to roasters, with lot information and samples on request. Message us with the grades and volumes you are looking for.</p></div></details>
+
 </div>
 </div></section>
 
-<footer id="contact"><div class="container"><div class="foot"><div><strong>ROOTS COFFEE CO.</strong><br><span>Roasted at origin. Rooted in character. · Kikuyu, Kiambu County, Kenya</span></div><div class="footer-contact"><div class="footer-socials"><a href="https://www.instagram.com/getimanicoffee?igsi=Mm10eTdoeGRzZWw=" target="_blank" rel="noopener" aria-label="Follow Roots Coffee on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg><span>Instagram</span></a><a href="https://x.com/Get_ImaniCoffee" target="_blank" rel="noopener" aria-label="Follow Roots Coffee on X"><svg class="x-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-6.4L6.47 22H3.36l7.24-8.28L2.8 2h6.4l4.42 5.84L18.9 2Zm-1.1 17.8h1.73L8.3 4.07H6.44L17.8 19.8Z"></path></svg><span>X</span></a></div><a class="footer-email" href="mailto:getimanicoffee@gmail.com">getimanicoffee@gmail.com</a><span>© 2026 Roots Coffee Co.</span></div></div><a class="btn footer-map" href="https://maps.app.goo.gl/su8LmxajzhurJp2w7?g_st=ac" target="_blank" rel="noopener">Find us on map</a></div></footer>
+<footer id="contact"><div class="container"><div class="foot"><div><strong>IMANI COFFEE CO.</strong><br><span>Roasted at origin. Rooted in character. · Kikuyu, Kiambu County, Kenya</span></div><div class="footer-contact"><div class="footer-socials"><a href="https://www.instagram.com/getimanicoffee?igsi=Mm10eTdoeGRzZWw=" target="_blank" rel="noopener" aria-label="Follow Imani Coffee on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg><span>Instagram</span></a><a href="https://x.com/Get_ImaniCoffee" target="_blank" rel="noopener" aria-label="Follow Imani Coffee on X"><svg class="x-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-6.4L6.47 22H3.36l7.24-8.28L2.8 2h6.4l4.42 5.84L18.9 2Zm-1.1 17.8h1.73L8.3 4.07H6.44L17.8 19.8Z"></path></svg><span>X</span></a></div><a class="footer-email" href="mailto:getimanicoffee@gmail.com">getimanicoffee@gmail.com</a><span>© 2026 Imani Coffee Co.</span></div></div><a class="btn footer-map" href="https://maps.app.goo.gl/su8LmxajzhurJp2w7?g_st=ac" target="_blank" rel="noopener">Find us on map</a></div></footer>
 
 <div class="cart-backdrop" id="cart-backdrop"></div><aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart" aria-hidden="true"><div class="cart-head"><h2>Your Cart</h2><button class="cart-close" type="button" aria-label="Close cart">&times;</button></div><div class="cart-items" id="cart-items"></div><div class="cart-footer"><div class="cart-total"><span>Subtotal</span><strong id="cart-total">KSh 0</strong></div><p class="cart-note">Taxes and delivery calculated at checkout.</p><button id="checkout-btn" type="button" class="btn primary" style="width:100%;justify-content:center;margin-top:10px">Checkout</button></div></aside>
 
@@ -573,60 +608,37 @@ footer{padding:48px 0;background:#0b1d15}
 <div class="checkout-step active" data-step="1">
   <div class="checkout-summary-list" id="checkout-summary-list"></div>
   <div class="checkout-subtotal"><span>Subtotal</span><strong id="checkout-subtotal">KSh 0</strong></div>
-  <div class="checkout-actions"><button type="button" class="btn primary" id="to-payment-step" style="width:100%;justify-content:center">Continue to Payment</button></div>
+  <div class="checkout-actions"><button type="button" class="btn primary" id="to-payment-step" style="width:100%;justify-content:center">Continue</button></div>
 </div>
 
 <div class="checkout-step" data-step="2">
-  <p class="lead" style="font-size:13px;margin:0 0 16px">Choose how you'd like to pay. M-Pesa Express sends a PIN prompt straight to your phone.</p>
-  <div class="pay-methods" role="radiogroup" aria-label="Payment method">
-    <label class="pay-method"><input type="radio" name="pay-method" value="mpesa" checked><span class="pay-method-radio"></span><span class="pay-method-body"><b>M-Pesa Express (STK Push)<span class="pay-method-badge">Recommended</span></b><p>Pay instantly with the M-Pesa PIN prompt on your phone.</p></span></label>
-    <label class="pay-method"><input type="radio" name="pay-method" value="card"><span class="pay-method-radio"></span><span class="pay-method-body"><b>Credit / Debit Card</b><p>Visa, Mastercard — pay securely online.</p></span></label>
-  </div>
-
-  <form id="mpesa-fields" class="pay-fields">
-    <div class="field-group">
-      <label for="mpesa-phone">M-Pesa phone number</label>
-      <input id="mpesa-phone" name="mpesa-phone" type="tel" inputmode="tel" placeholder="07XX XXX XXX or +2547XX XXX XXX" autocomplete="tel" required aria-describedby="mpesa-phone-error">
-      <p class="field-error" id="mpesa-phone-error">Enter a valid Kenyan number, e.g. 0712345678 or +254712345678.</p>
-    </div>
+  <p class="lead" style="font-size:15px;margin:0 0 16px">Tell us where to deliver. Your order goes to us on WhatsApp and we confirm with M-Pesa payment details.</p>
+  <form id="order-fields" class="pay-fields" novalidate>
+    <div class="field-group"><label for="order-name">Your name</label><input id="order-name" name="name" type="text" autocomplete="name" required><p class="field-error" id="order-name-error">Please enter your name.</p></div>
+    <div class="field-group"><label for="mpesa-phone">Phone number</label><input id="mpesa-phone" name="phone" type="tel" inputmode="tel" placeholder="0712 345 678" autocomplete="tel" required aria-describedby="mpesa-phone-error"><p class="field-error" id="mpesa-phone-error">Enter a valid Kenyan number, e.g. 0712345678.</p></div>
+    <div class="field-group"><label for="order-area">Delivery</label><select id="order-area" name="area"><option>Door to door: Nairobi</option><option>Door to door: Kiambu</option><option>Pickup Mtaani agent (countrywide)</option></select></div>
+    <div class="field-group"><label for="order-location">Area / estate or Pickup Mtaani agent</label><input id="order-location" name="location" type="text" placeholder="e.g. Kilimani, or Kikuyu town agent"></div>
   </form>
-
-  <form id="card-fields" class="pay-fields" hidden>
-    <div class="field-group"><label for="card-number">Card number</label><input id="card-number" name="card-number" type="text" inputmode="numeric" autocomplete="cc-number" placeholder="1234 1234 1234 1234" required aria-describedby="card-number-error"><p class="field-error" id="card-number-error">Enter a valid 16-digit card number.</p></div>
-    <div class="card-row">
-      <div class="field-group"><label for="card-expiry">Expiry</label><input id="card-expiry" name="card-expiry" type="text" autocomplete="cc-exp" placeholder="MM/YY" required aria-describedby="card-expiry-error"><p class="field-error" id="card-expiry-error">Enter a valid expiry date.</p></div>
-      <div class="field-group"><label for="card-cvc">CVC</label><input id="card-cvc" name="card-cvc" type="text" inputmode="numeric" autocomplete="cc-csc" placeholder="123" required aria-describedby="card-cvc-error"><p class="field-error" id="card-cvc-error">Enter a valid 3-digit CVC.</p></div>
-    </div>
-  </form>
-
   <div class="checkout-actions">
     <button type="button" class="btn ghost btn-back" id="back-to-cart-step">Back</button>
-    <button type="button" class="btn primary" id="submit-payment" style="justify-content:center">Pay Now</button>
+    <button type="button" class="btn gold" id="submit-payment" style="justify-content:center">Send order on WhatsApp</button>
   </div>
 </div>
 
 <div class="checkout-step" data-step="3">
-  <div class="checkout-processing" id="checkout-processing">
-    <div class="spinner" role="status" aria-live="polite"></div>
-    <h4 id="processing-title">Check your phone</h4>
-    <p id="processing-message">We've sent an M-Pesa PIN prompt to your phone. Enter your M-Pesa PIN to complete payment.</p>
-    <button type="button" class="btn ghost" id="cancel-payment">Cancel payment</button>
-  </div>
-  <div class="checkout-success" id="checkout-success" hidden>
+  <div class="checkout-success" id="checkout-success">
     <div class="success-icon" aria-hidden="true">✓</div>
-    <h4>Payment received</h4>
-    <p>Thank you! Your order has been confirmed.</p>
-    <p>A confirmation will be sent to your phone shortly.</p>
+    <h4>Order sent</h4>
+    <p>Thank you. We will confirm on WhatsApp with M-Pesa payment details and your roast date.</p>
     <span class="checkout-order-id" id="order-id-display"></span>
     <div class="checkout-actions" style="margin-top:24px"><button type="button" class="btn primary" id="checkout-done" style="width:100%;justify-content:center">Done</button></div>
   </div>
-  <div class="checkout-fail" id="checkout-fail" role="alert"></div>
 </div>
 
 </div>
 </div>
 
-<div class="trace-modal" id="trace-modal" hidden><form class="trace-modal__panel" id="trace-form"><div class="trace-modal__head"><h3>Trace your coffee</h3><button class="trace-close" type="button" aria-label="Close trace form">&times;</button></div><p>Enter the trace number printed on your coffee bag to find it on the map.</p><label for="trace-number">Coffee bag trace number</label><input id="trace-number" name="trace-number" type="text" autocomplete="off" required><div class="trace-modal__actions"><button class="btn ghost trace-close" type="button">Cancel</button><button class="btn primary" type="submit">Open map</button></div></form></div>
+<div class="trace-modal" id="trace-modal" hidden><form class="trace-modal__panel" id="trace-form"><div class="trace-modal__head"><h3>Trace your coffee</h3><button class="trace-close" type="button" aria-label="Close trace form">&times;</button></div><p>Enter the trace number printed on your bag. We will reply on WhatsApp with the farm, lot and roast date.</p><label for="trace-number">Coffee bag trace number</label><input id="trace-number" name="trace-number" type="text" autocomplete="off" required><div class="trace-modal__actions"><button class="btn ghost trace-close" type="button">Cancel</button><button class="btn primary" type="submit">Open map</button></div></form></div>
 
 <div id="options-modal" class="trace-modal" hidden><div class="trace-modal__panel"><div class="trace-modal__head"><h3 id="options-title">Select Options</h3><button class="trace-close" type="button" aria-label="Close options">×</button></div><p>Choose your preferred brew method and size:</p><div id="options-content"><fieldset class="opt-fieldset"><legend class="opt-legend">Brew Method</legend><div class="opt-grid">
 <div class="opt-card"><input type="radio" id="grind-whole" name="grind" value="whole" checked><label for="grind-whole"><span class="opt-name">Whole Bean</span></label></div>
@@ -641,7 +653,7 @@ footer{padding:48px 0;background:#0b1d15}
 </div></fieldset><div class="opt-price-band">Price: <strong id="price-display">KSh 0</strong></div></div><div class="trace-modal__actions"><button type="button" id="options-cancel">Cancel</button><button type="button" id="options-add">Add to Cart</button></div></div></div>
 
 <script>
-const cartKey='rootsCoffeeCart';
+const cartKey='imaniCoffeeCart';
 let cart=JSON.parse(localStorage.getItem(cartKey)||'[]');
 const cartDrawer=document.getElementById('cart-drawer'),cartBackdrop=document.getElementById('cart-backdrop'),cartItems=document.getElementById('cart-items'),cartCount=document.getElementById('cart-count'),cartTotal=document.getElementById('cart-total');
 const optionsModal=document.getElementById('options-modal');
@@ -665,129 +677,52 @@ document.getElementById('checkout-btn').addEventListener('click',()=>{if(cart.le
 document.querySelector('.cart-toggle').addEventListener('click',()=>setCartOpen(true));document.querySelector('.cart-close').addEventListener('click',()=>setCartOpen(false));cartBackdrop.addEventListener('click',()=>setCartOpen(false));
 cartItems.addEventListener('click',event=>{const button=event.target.closest('button[data-action]');if(!button)return;const idx=Number(button.dataset.id);if(button.dataset.action==='increase')cart[idx].quantity+=1;if(button.dataset.action==='decrease')cart[idx].quantity-=1;if(button.dataset.action==='remove'||cart[idx].quantity<1)cart.splice(idx,1);renderCart();});
 
-/* --- CHECKOUT / M-PESA FLOW --- */
+/* --- CHECKOUT: WhatsApp order ---
+   No online payment yet. When an M-Pesa Daraja (STK Push) backend exists,
+   call it from sendOrder() instead of opening WhatsApp. Never show "paid" without a real callback. */
 (function(){
   const modal=document.getElementById('checkout-modal');
   const stepEls=modal.querySelectorAll('.checkout-step');
   const stepIndicators=modal.querySelectorAll('[data-step-indicator]');
   const summaryList=document.getElementById('checkout-summary-list');
   const subtotalEl=document.getElementById('checkout-subtotal');
-  const mpesaFields=document.getElementById('mpesa-fields');
-  const cardFields=document.getElementById('card-fields');
-  const mpesaPhone=document.getElementById('mpesa-phone');
-  const mpesaPhoneError=document.getElementById('mpesa-phone-error');
-  const cardNumber=document.getElementById('card-number');
-  const cardExpiry=document.getElementById('card-expiry');
-  const cardCvc=document.getElementById('card-cvc');
-  const processingBlock=document.getElementById('checkout-processing');
-  const successBlock=document.getElementById('checkout-success');
-  const failBlock=document.getElementById('checkout-fail');
-  const processingTitle=document.getElementById('processing-title');
-  const processingMessage=document.getElementById('processing-message');
-  let paymentTimer=null;
-
+  const nameEl=document.getElementById('order-name'),phoneEl=document.getElementById('mpesa-phone');
+  const areaEl=document.getElementById('order-area'),locEl=document.getElementById('order-location');
+  const total=()=>cart.reduce((s,i)=>s+i.price*i.quantity,0);
   window.openCheckout=function(){
     summaryList.innerHTML=cart.map(item=>`<div class="checkout-summary-item"><div><span class="name">${item.name}</span><span class="meta">${item.grind} · ${item.size} · Qty ${item.quantity}</span></div><span>${formatPrice(item.price*item.quantity)}</span></div>`).join('');
-    const total=cart.reduce((sum,item)=>sum+item.price*item.quantity,0);
-    subtotalEl.textContent=formatPrice(total);
-    goToStep(1);
-    modal.hidden=false;
-    setCartOpen(false);
+    subtotalEl.textContent=formatPrice(total());
+    goToStep(1);modal.hidden=false;setCartOpen(false);document.body.style.overflow='hidden';
   };
-  function closeCheckout(){modal.hidden=true;clearTimeout(paymentTimer);}
+  function closeCheckout(){modal.hidden=true;document.body.style.overflow='';}
+  window.closeCheckout=closeCheckout;
   function goToStep(step){
     stepEls.forEach(el=>el.classList.toggle('active',Number(el.dataset.step)===step));
     stepIndicators.forEach(el=>el.classList.toggle('active',Number(el.dataset.stepIndicator)<=step));
   }
+  const validPhone=v=>/^(?:\+254|254|0)(7|1)\d{8}$/.test(v.trim().replace(/\s+/g,''));
+  function setErr(input,id,show){input.setAttribute('aria-invalid',String(show));document.getElementById(id).classList.toggle('show',show);}
+  nameEl.addEventListener('input',()=>setErr(nameEl,'order-name-error',false));
+  phoneEl.addEventListener('input',()=>setErr(phoneEl,'mpesa-phone-error',false));
   document.querySelector('.checkout-close').addEventListener('click',closeCheckout);
-  modal.addEventListener('click',event=>{if(event.target===modal)closeCheckout();});
-  document.getElementById('to-payment-step').addEventListener('click',()=>goToStep(2));
+  modal.addEventListener('click',e=>{if(e.target===modal)closeCheckout();});
+  document.getElementById('to-payment-step').addEventListener('click',()=>{goToStep(2);nameEl.focus();});
   document.getElementById('back-to-cart-step').addEventListener('click',()=>goToStep(1));
-
-  modal.querySelectorAll('input[name="pay-method"]').forEach(radio=>{
-    radio.addEventListener('change',()=>{
-      const isMpesa=radio.value==='mpesa'&&radio.checked;
-      if(radio.checked){
-        mpesaFields.hidden=radio.value!=='mpesa';
-        cardFields.hidden=radio.value!=='card';
-      }
-    });
-  });
-
-  function validateKenyanPhone(value){
-    const v=value.trim().replace(/\s+/g,'');
-    return /^(?:\+254|254|0)(7|1)\d{8}$/.test(v);
-  }
-  function normalizePhone(value){
-    let v=value.trim().replace(/\s+/g,'');
-    if(v.startsWith('0'))v='254'+v.slice(1);
-    if(v.startsWith('+'))v=v.slice(1);
-    return '+'+v.replace(/^\+?/,'');
-  }
-  function setFieldError(input,errorEl,show){
-    input.setAttribute('aria-invalid',String(show));
-    errorEl.classList.toggle('show',show);
-  }
-  mpesaPhone.addEventListener('input',()=>setFieldError(mpesaPhone,mpesaPhoneError,false));
-
-  function validateCard(){
-    let ok=true;
-    const digits=cardNumber.value.replace(/\s+/g,'');
-    const numOk=/^\d{16}$/.test(digits);
-    setFieldError(cardNumber,document.getElementById('card-number-error'),!numOk);
-    ok=ok&&numOk;
-    const expOk=/^(0[1-9]|1[0-2])\/\d{2}$/.test(cardExpiry.value.trim());
-    setFieldError(cardExpiry,document.getElementById('card-expiry-error'),!expOk);
-    ok=ok&&expOk;
-    const cvcOk=/^\d{3,4}$/.test(cardCvc.value.trim());
-    setFieldError(cardCvc,document.getElementById('card-cvc-error'),!cvcOk);
-    ok=ok&&cvcOk;
-    return ok;
-  }
-
   document.getElementById('submit-payment').addEventListener('click',()=>{
-    const method=modal.querySelector('input[name="pay-method"]:checked').value;
-    failBlock.classList.remove('show');
-    if(method==='mpesa'){
-      const valid=validateKenyanPhone(mpesaPhone.value);
-      setFieldError(mpesaPhone,mpesaPhoneError,!valid);
-      if(!valid){mpesaPhone.focus();return;}
-      startMpesaFlow(normalizePhone(mpesaPhone.value));
-    }else{
-      if(!validateCard())return;
-      startCardFlow();
-    }
+    const okName=nameEl.value.trim().length>1,okPhone=validPhone(phoneEl.value);
+    setErr(nameEl,'order-name-error',!okName);setErr(phoneEl,'mpesa-phone-error',!okPhone);
+    if(!okName){nameEl.focus();return;} if(!okPhone){phoneEl.focus();return;}
+    const orderId='IMANI-'+Math.floor(100000+Math.random()*900000);
+    const lines=cart.map(i=>`• ${i.name} | ${i.grind} | ${i.size} x${i.quantity} = ${formatPrice(i.price*i.quantity)}`).join('\n');
+    const msg=`Hi Imani, new order ${orderId}\n\n${lines}\n\nSubtotal: ${formatPrice(total())}\nDelivery: ${areaEl.value}${locEl.value.trim()?' ('+locEl.value.trim()+')':''}\nName: ${nameEl.value.trim()}\nPhone: ${phoneEl.value.trim()}`;
+    window.open('https://wa.me/254704604260?text='+encodeURIComponent(msg),'_blank','noopener');
+    document.getElementById('order-id-display').textContent=`Order ${orderId}`;
+    goToStep(3);cart=[];renderCart();
   });
-
-  function startMpesaFlow(phone){
-    goToStep(3);
-    processingBlock.hidden=false;successBlock.hidden=true;
-    processingTitle.textContent='Check your phone';
-    processingMessage.textContent=`We've sent an M-Pesa PIN prompt to ${phone}. Enter your M-Pesa PIN on your phone to complete payment.`;
-    runPaymentSimulation();
-  }
-  function startCardFlow(){
-    goToStep(3);
-    processingBlock.hidden=false;successBlock.hidden=true;
-    processingTitle.textContent='Processing payment';
-    processingMessage.textContent='Please wait while we securely process your card payment.';
-    runPaymentSimulation();
-  }
-  function runPaymentSimulation(){
-    clearTimeout(paymentTimer);
-    paymentTimer=setTimeout(()=>{
-      processingBlock.hidden=true;
-      successBlock.hidden=false;
-      const orderId='ROOTS-'+Math.floor(100000+Math.random()*900000);
-      document.getElementById('order-id-display').textContent=`Order ${orderId}`;
-      cart=[];renderCart();
-    },3200);
-  }
-  document.getElementById('cancel-payment').addEventListener('click',()=>{clearTimeout(paymentTimer);goToStep(2);});
   document.getElementById('checkout-done').addEventListener('click',closeCheckout);
 })();
 
-const traceModal=document.getElementById('trace-modal'),traceForm=document.getElementById('trace-form'),traceNumber=document.getElementById('trace-number');function closeTraceModal(){traceModal.hidden=true;}document.getElementById('trace-coffee').addEventListener('click',()=>{traceModal.hidden=false;traceNumber.focus();});document.querySelectorAll('.trace-close').forEach(button=>button.addEventListener('click',closeTraceModal));traceModal.addEventListener('click',event=>{if(event.target===traceModal)closeTraceModal();});traceForm.addEventListener('submit',event=>{event.preventDefault();const bagNumber=traceNumber.value.trim();if(!bagNumber){traceNumber.focus();return;}const mapQuery=encodeURIComponent(`Roots Coffee Co Kikuyu Kenya coffee trace ${bagNumber}`);window.location.assign(`https://www.google.com/maps/search/?api=1&query=${mapQuery}`);});
+const traceModal=document.getElementById('trace-modal'),traceForm=document.getElementById('trace-form'),traceNumber=document.getElementById('trace-number');function closeTraceModal(){traceModal.hidden=true;}document.getElementById('trace-coffee').addEventListener('click',()=>{traceModal.hidden=false;traceNumber.focus();});document.querySelectorAll('.trace-close').forEach(button=>button.addEventListener('click',closeTraceModal));traceModal.addEventListener('click',event=>{if(event.target===traceModal)closeTraceModal();});traceForm.addEventListener('submit',event=>{event.preventDefault();const bagNumber=traceNumber.value.trim();if(!bagNumber){traceNumber.focus();return;}const msg=encodeURIComponent(`Hi Imani, please trace my coffee. Bag number: ${bagNumber}`);window.open(`https://wa.me/254704604260?text=${msg}`,'_blank','noopener');traceModal.hidden=true;});
 document.addEventListener('keydown',event=>{if(event.key==='Escape'){setCartOpen(false);closeOptionsModal();const checkoutModal=document.getElementById('checkout-modal');if(checkoutModal&&!checkoutModal.hidden)checkoutModal.hidden=true;}});renderCart();
 
 /* --- Shop Dropdown Accessibility & Keyboard Support --- */
@@ -843,4 +778,5 @@ document.addEventListener('keydown',event=>{if(event.key==='Escape'){setCartOpen
   document.addEventListener('keydown',function(e){if(e.key==='Escape') close();});
 })();
 </script>
+<a class="wa-float" href="https://wa.me/254704604260?text=Hi%20Imani%2C%20I%27d%20like%20to%20order%20coffee" target="_blank" rel="noopener" aria-label="Order on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.2.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg></a>
 </body></html><!-- Force rebuild -->
