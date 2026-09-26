@@ -19,8 +19,10 @@
 <link rel="canonical" href="https://njiremike-del.github.io/imanicoffeecompany/">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
 :root{--green:#2D5A1B;--deep:#1A1208;--forest:#10291f;--cream:#F9F5EE;--paper:#FFFFFF;--gold:#C8A97A;--gold-hover:#B8996A;--ink:#1A1208;--secondary:#5A4A3A;--muted:#9A8A7A;--line:#E8E2D8;--border-dark:#C8A97A30;--btn-primary-bg:#1A1208;--btn-primary-text:#FFFFFF;--btn-ghost-border:#1A1208;--btn-ghost-text:#1A1208;--max:1320px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif}a{color:inherit;text-decoration:none}img{width:100%;height:100%;object-fit:cover;display:block}
 .skip-link{position:absolute;left:-9999px;top:0;background:var(--gold);color:var(--deep);padding:14px 22px;z-index:200;font-weight:600;font-size:14px;border-radius:0 0 6px 0}
@@ -99,7 +101,7 @@ h1,h2,h3{font-family:"Playfair Display",serif;font-weight:500}h1{font-size:clamp
 .opt-card input:checked+label::after{content:'✓';position:absolute;top:10px;right:12px;width:18px;height:18px;border-radius:50%;background:var(--gold);color:var(--deep);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
 .opt-card input:focus-visible+label{outline:2px solid var(--gold);outline-offset:2px}
 .opt-grid--size .opt-card label{align-items:center;text-align:center}
-.opt-price-band{margin-top:26px;padding:16px 18px;background:var(--deep);border-radius:8px;display:flex;align-items:center;justify-content:space-between}
+.opt-price-band{margin-top:26px;padding:16px 18px;background:var(--deep);border-radius:8px;display:flex;align-items:center;justify-content:space-between;color:#f8f4ec}
 .opt-price-band span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#cbb98a}
 .opt-price-band strong{font-family:"Playfair Display",serif;font-size:24px;color:#fff;font-weight:600}
 #options-modal .trace-modal__actions{margin-top:24px}
@@ -239,8 +241,6 @@ body.mnav-open{overflow:hidden}
 @media(min-width:951px){.mobile-nav,.mnav-backdrop{display:none}}
 
 @media(max-width:950px){.navright #cart-count{display:inline}}
-</style>
-<style>
 /* Brand polish and responsive layout refinements */
 :root{--max:1180px;--paper:#fbfaf7;--cream:#f1eee7;--ink:#1b211c;--forest:#10291f;--green:#315d3b;--gold:#c7a267;--line:#dedbd2;--muted:#697269}
 body{background:var(--paper);color:var(--ink);line-height:1.5}
@@ -385,6 +385,86 @@ input,select,textarea{font-size:16px!important}
 @media(min-width:951px){.menu-toggle{display:none!important}}
 .cart-drawer:not(.open){box-shadow:none!important;visibility:hidden}
 body:has(.trace-modal:not([hidden])) .wa-float,body:has(.mobile-nav.open) .wa-float,body:has(.cart-drawer.open) .wa-float,body:has(.checkout-modal:not([hidden])) .wa-float{display:none}
+
+/* Seamless responsive experience */
+:root{--section-space:clamp(68px,8vw,108px)}
+body{font-size:16px;line-height:1.6;text-rendering:optimizeLegibility}
+main{overflow:clip}
+.container{display:block;width:100%}
+.container>*{grid-column:auto}
+.section{padding:var(--section-space) 0}
+.section-head{grid-template-columns:minmax(150px,200px) minmax(0,1fr);gap:clamp(28px,5vw,60px)}
+.section-head h2{font-size:clamp(38px,5vw,64px);line-height:1.04}
+.lead{font-size:clamp(16px,1.6vw,18px)}
+.coffee-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:24px}
+.coffee{grid-column:span 2;display:flex;min-width:0;flex-direction:column}
+.coffee:nth-child(4){grid-column:2 / span 2}
+.coffee:nth-child(5){grid-column:4 / span 2}
+.coffee-photo{height:auto;aspect-ratio:4 / 5;overflow:hidden;background:#ece8df}
+.coffee-photo img,.story-main img,.story-side img{width:100%;height:100%;object-fit:cover}
+.coffee-body{display:flex;flex:1;flex-direction:column}
+.coffee-bottom{margin-top:auto}
+.coffee p{font-size:14px}
+.coffee p.roast-info,.origin,.num,.field-group label{font-size:12px}
+.plus,.menu-toggle,.mnav-close,.cart-close,.checkout-close,.trace-close,.cart-controls button{min-width:44px;min-height:44px}
+.plus{width:44px;height:44px;font-size:20px}
+.menu-toggle{font-size:26px}
+.mnav-close,.cart-close,.checkout-close,.trace-close{display:inline-grid;place-items:center;padding:0}
+.story-main,.story-side{overflow:hidden}
+.story-main{height:auto;aspect-ratio:5 / 4}
+.story-side{grid-template-rows:repeat(2,minmax(0,1fr))}
+.story-side img{min-height:0}
+.cart-drawer,.mobile-nav{overscroll-behavior:contain}
+.cart-controls button{width:44px;height:44px}
+.cart-remove{min-width:54px!important;min-height:44px}
+.cart-note{font-size:13px}
+.trace-modal__actions .btn{font-size:12px}
+.footer-socials a,.footer-email,.footer-map{min-height:44px}
+.footer-socials a{padding:8px 0}
+
+@media(max-width:1080px){
+  nav{grid-template-columns:90px minmax(0,1fr) auto}
+  .navlinks{display:none!important}
+  .menu-toggle{display:inline-flex!important;align-items:center;justify-content:center}
+  .navright{display:flex;align-items:center;gap:8px;justify-self:end}
+}
+@media(min-width:1081px){.menu-toggle{display:none!important}.mobile-nav,.mnav-backdrop{display:none}}
+@media(max-width:820px){
+  .coffee-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .coffee,.coffee:nth-child(4),.coffee:nth-child(5){grid-column:auto}
+  .story{grid-template-columns:1fr}
+  .story-side{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none;aspect-ratio:2 / 1}
+}
+@media(max-width:640px){
+  .container{padding-inline:20px}
+  nav{grid-template-columns:minmax(72px,1fr) auto;height:72px;gap:12px}
+  .nav-logo{height:50px!important;max-width:105px}
+  .navright{grid-column:2}
+  .cart-toggle{font-size:12px}
+  .hero{min-height:100svh;background-position:62% center}
+  .hero-content{padding-top:120px}
+  .hero-copy{font-size:17px}
+  .section-head{display:block;margin-bottom:34px}
+  .section-head .num{margin-bottom:14px}
+  .section-head h2{font-size:clamp(34px,11vw,46px)}
+  .coffee-grid{grid-template-columns:1fr;gap:22px}
+  .coffee,.coffee:nth-child(4),.coffee:nth-child(5){grid-column:auto}
+  .coffee-photo{aspect-ratio:4 / 5}
+  .coffee-body{padding:22px 20px}
+  .story-main{aspect-ratio:4 / 5}
+  .story-side{grid-template-columns:1fr;grid-template-rows:repeat(2,minmax(0,1fr));aspect-ratio:auto}
+  .story-side img{aspect-ratio:4 / 3}
+  .mobile-nav{width:min(340px,calc(100% - 56px));padding:78px 24px calc(28px + env(safe-area-inset-bottom))}
+  .mobile-nav a{min-height:52px;display:flex;align-items:center;padding:10px 0}
+  .mnav-close{top:18px;right:18px}
+  .cart-drawer{padding:22px 20px calc(16px + env(safe-area-inset-bottom))}
+  .trace-modal__actions{display:grid;grid-template-columns:1fr 1fr}
+  .trace-modal__actions .btn{width:100%}
+  .checkout-actions{flex-wrap:wrap}
+  .checkout-actions .btn{min-width:120px}
+  .foot{gap:24px}
+  .footer-contact{width:100%}
+}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","name":"Imani Coffee Co.","description":"Specialty coffee roasted at origin. Single-origin lots, sustainable practices, and direct trade partnerships.","url":"https://njiremike-del.github.io/imanicoffeecompany/","email":"getimanicoffee@gmail.com","image":"https://i.postimg.cc/9DgdBRWh/Whats-App-Image-2026-08-28-at-13-42-24.jpg","address":{"@type":"PostalAddress","addressLocality":"Kikuyu","addressRegion":"Kiambu County","addressCountry":"KE"},"sameAs":["https://www.instagram.com/getimanicoffee?igsi=Mm10eTdoeGRzZWw=","https://x.com/Get_ImaniCoffee"]},{"@type":"ItemList","name":"Imani Coffee Co. Coffees","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Product","name":"Kenya AA","description":"Kenya · Kirinyaga. Blackcurrant · Citrus · Brown Sugar. Washed · SL28 · SL34.","offers":{"@type":"Offer","priceCurrency":"KES","price":"1250"}}},{"@type":"ListItem","position":2,"item":{"@type":"Product","name":"Kenya AB","description":"Kenya · Nyeri. Raisin · Caramel · Orange. Washed · SL28 · Ruiru 11.","offers":{"@type":"Offer","priceCurrency":"KES","price":"1150"}}},{"@type":"ListItem","position":3,"item":{"@type":"Product","name":"Meru","description":"Kenya · Meru. Blackcurrant · Citrus · Brown Sugar. Washed · SL28 · SL34.","offers":{"@type":"Offer","priceCurrency":"KES","price":"1250"}}},{"@type":"ListItem","position":4,"item":{"@type":"Product","name":"Meru Peaberry","description":"Kenya · Meru. Raisin · Caramel · Orange. Washed · Peaberry.","offers":{"@type":"Offer","priceCurrency":"KES","price":"1350"}}},{"@type":"ListItem","position":5,"item":{"@type":"Product","name":"Nyeri AA Fruit Infused","description":"Kenya · Nyeri. Berry · Tropical Fruit · Honey. Fruit Infused · AA.","offers":{"@type":"Offer","priceCurrency":"KES","price":"1450"}}}]}]}
@@ -411,7 +491,7 @@ body:has(.trace-modal:not([hidden])) .wa-float,body:has(.mobile-nav.open) .wa-fl
 <div class="navright"><button class="cart-toggle" type="button" aria-controls="cart-drawer" aria-expanded="false">Cart (<span id="cart-count">0</span>)</button><button class="menu-toggle" id="menu-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Open menu">☰</button></div>
 </nav></div></header>
 <div class="mnav-backdrop" id="mnav-backdrop"></div>
-<div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation" aria-hidden="true">
+<div class="mobile-nav" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation" aria-hidden="true" inert>
   <button class="mnav-close" id="mnav-close" type="button" aria-label="Close menu">&times;</button>
   <div class="mnav-group">
     <a href="#coffee" class="mnav-parent">Shop</a>
@@ -439,11 +519,11 @@ body:has(.trace-modal:not([hidden])) .wa-float,body:has(.mobile-nav.open) .wa-fl
 <section class="section" id="coffee"><div class="container">
 <div class="section-head"><div class="num">01 / Our Coffees</div><div><h2>COFFEE BEANS.</h2><p class="lead">Seasonal lots selected for sweetness, clarity and distinctive origin.</p></div></div>
 <div class="coffee-grid">
-<article class="coffee" data-product='{"name":"Kenya AA","origin":"Kenya · Kirinyaga","prices":{"whole":{"100g":450,"250g":1250,"1kg":4200},"ground":{"100g":480,"250g":1300,"1kg":4400}}}'><div class="coffee-photo"><img src="https://i.postimg.cc/9DgdBRWh/Whats-App-Image-2026-08-28-at-13-42-24.jpg" alt="Kenya coffee" loading="lazy"></div><div class="coffee-body"><div class="origin">Kenya · Kirinyaga</div><h3>Kenya AA</h3><p>Blackcurrant · Citrus · Brown Sugar<br>Washed · SL28 · SL34</p><p class="roast-info">Roasted to order · Best 7–21 days from roast</p><div class="coffee-bottom"><span>KSh 1,250 / 250g</span><button class="plus" type="button" aria-label="Add Kenya AA to cart">+</button></div></div></article>
-<article class="coffee" data-product='{"name":"Kenya AB","origin":"Kenya · Nyeri","prices":{"whole":{"100g":410,"250g":1150,"1kg":3900},"ground":{"100g":440,"250g":1200,"1kg":4100}}}'><div class="coffee-photo"><img src="https://i.postimg.cc/9DgdBRWh/Whats-App-Image-2026-08-28-at-13-42-25.jpg" alt="Coffee landscape" loading="lazy"></div><div class="coffee-body"><div class="origin">Kenya · Nyeri</div><h3>Kenya AB</h3><p>Raisin · Caramel · Orange<br>Washed · SL28 · Ruiru 11</p><p class="roast-info">Roasted to order · Best 7–21 days from roast</p><div class="coffee-bottom"><span>KSh 1,150 / 250g</span><button class="plus" type="button" aria-label="Add Kenya AB to cart">+</button></div></div></article>
-<article class="coffee" data-product='{"name":"Meru","origin":"Kenya · Meru","prices":{"whole":{"100g":450,"250g":1250,"1kg":4200},"ground":{"100g":480,"250g":1300,"1kg":4400}}}'><div class="coffee-photo"><img src="https://i.postimg.cc/v42rvgGp/Whats-App-Image-2026-08-28-at-13-42-25-(1).jpg" alt="Meru coffee" loading="lazy"></div><div class="coffee-body"><div class="origin">Kenya · Meru</div><h3>Meru</h3><p>Red Apple · Black Tea · Molasses<br>Washed · SL28 · Batian</p><p class="roast-info">Roasted to order · Best 7–21 days from roast</p><div class="coffee-bottom"><span>KSh 1,250 / 250g</span><button class="plus" type="button" aria-label="Add Meru to cart">+</button></div></div></article>
-<article class="coffee" data-product='{"name":"Meru Peaberry","origin":"Kenya · Meru","prices":{"whole":{"100g":485,"250g":1350,"1kg":4550},"ground":{"100g":515,"250g":1400,"1kg":4750}}}'><div class="coffee-photo"><img src="https://i.postimg.cc/Bj7TCLJk/Whats-App-Image-2026-08-28-at-13-42-25-(2).jpg" alt="Meru Peaberry coffee" loading="lazy"></div><div class="coffee-body"><div class="origin">Kenya · Meru</div><h3>Meru Peaberry</h3><p>Plum · Cocoa · Honey<br>Washed · Peaberry</p><p class="roast-info">Roasted to order · Best 7–21 days from roast</p><div class="coffee-bottom"><span>KSh 1,350 / 250g</span><button class="plus" type="button" aria-label="Add Meru Peaberry to cart">+</button></div></div></article>
-<article class="coffee" data-product='{"name":"Nyeri AA Fruit Infused","origin":"Kenya · Nyeri","prices":{"whole":{"100g":520,"250g":1450,"1kg":4900},"ground":{"100g":550,"250g":1500,"1kg":5100}}}'><div class="coffee-photo"><img src="https://i.postimg.cc/9DgdBRWh/Whats-App-Image-2026-08-28-at-13-42-25.jpg" alt="Nyeri AA Fruit Infused coffee" loading="lazy"></div><div class="coffee-body"><div class="origin">Kenya · Nyeri</div><h3>Nyeri AA Fruit Infused</h3><p>Berry · Tropical Fruit · Honey<br>Fruit Infused · AA</p><p class="roast-info">Roasted to order · Best 7–21 days from roast</p><div class="coffee-bottom"><span>KSh 1,450 / 250g</span><button class="plus" type="button" aria-label="Add Nyeri AA Fruit Infused to cart">+</button></div></div></article>
+<article class="coffee" data-product='{"name":"Kenya AA","origin":"Kenya · Kirinyaga","prices":{"whole":{"100g":450,"250g":1250,"1kg":4200},"ground":{"100g":480,"250g":1300,"1kg":4400}}}'><div class="coffee-photo"><img src="https://i.postimg.cc/9DgdBRWh/Whats-App-Image-2026-08-28-at-13-42-24.jpg" alt="Kenya AA coffee" width="800" height="1000" loading="lazy"></div><div class="coffee-body"><div class="origin">Kenya · Kirinyaga</div><h3>Kenya AA</h3><p>Blackcurrant · Citrus · Brown Sugar<br>Washed · SL28 · SL34</p><p class="roast-info">Roasted to order · Best 7–21 days from roast</p><div class="coffee-bottom"><span>KSh 1,250 / 250g</span><button class="plus" type="button" aria-label="Add Kenya AA to cart">+</button></div></div></article>
+<article class="coffee" data-product='{"name":"Kenya AB","origin":"Kenya · Nyeri","prices":{"whole":{"100g":410,"250g":1150,"1kg":3900},"ground":{"100g":440,"250g":1200,"1kg":4100}}}'><div class="coffee-photo"><img src="https://i.postimg.cc/9DgdBRWh/Whats-App-Image-2026-08-28-at-13-42-25.jpg" alt="Kenya AB coffee" width="800" height="1000" loading="lazy"></div><div class="coffee-body"><div class="origin">Kenya · Nyeri</div><h3>Kenya AB</h3><p>Raisin · Caramel · Orange<br>Washed · SL28 · Ruiru 11</p><p class="roast-info">Roasted to order · Best 7–21 days from roast</p><div class="coffee-bottom"><span>KSh 1,150 / 250g</span><button class="plus" type="button" aria-label="Add Kenya AB to cart">+</button></div></div></article>
+<article class="coffee" data-product='{"name":"Meru","origin":"Kenya · Meru","prices":{"whole":{"100g":450,"250g":1250,"1kg":4200},"ground":{"100g":480,"250g":1300,"1kg":4400}}}'><div class="coffee-photo"><img src="https://i.postimg.cc/v42rvgGp/Whats-App-Image-2026-08-28-at-13-42-25-(1).jpg" alt="Meru coffee" width="800" height="1000" loading="lazy"></div><div class="coffee-body"><div class="origin">Kenya · Meru</div><h3>Meru</h3><p>Red Apple · Black Tea · Molasses<br>Washed · SL28 · Batian</p><p class="roast-info">Roasted to order · Best 7–21 days from roast</p><div class="coffee-bottom"><span>KSh 1,250 / 250g</span><button class="plus" type="button" aria-label="Add Meru to cart">+</button></div></div></article>
+<article class="coffee" data-product='{"name":"Meru Peaberry","origin":"Kenya · Meru","prices":{"whole":{"100g":485,"250g":1350,"1kg":4550},"ground":{"100g":515,"250g":1400,"1kg":4750}}}'><div class="coffee-photo"><img src="https://i.postimg.cc/Bj7TCLJk/Whats-App-Image-2026-08-28-at-13-42-25-(2).jpg" alt="Meru Peaberry coffee" width="800" height="1000" loading="lazy"></div><div class="coffee-body"><div class="origin">Kenya · Meru</div><h3>Meru Peaberry</h3><p>Plum · Cocoa · Honey<br>Washed · Peaberry</p><p class="roast-info">Roasted to order · Best 7–21 days from roast</p><div class="coffee-bottom"><span>KSh 1,350 / 250g</span><button class="plus" type="button" aria-label="Add Meru Peaberry to cart">+</button></div></div></article>
+<article class="coffee" data-product='{"name":"Nyeri AA Fruit Infused","origin":"Kenya · Nyeri","prices":{"whole":{"100g":520,"250g":1450,"1kg":4900},"ground":{"100g":550,"250g":1500,"1kg":5100}}}'><div class="coffee-photo"><img src="https://i.postimg.cc/9DgdBRWh/Whats-App-Image-2026-08-28-at-13-42-25.jpg" alt="Nyeri AA Fruit Infused coffee" width="800" height="1000" loading="lazy"></div><div class="coffee-body"><div class="origin">Kenya · Nyeri</div><h3>Nyeri AA Fruit Infused</h3><p>Berry · Tropical Fruit · Honey<br>Fruit Infused · AA</p><p class="roast-info">Roasted to order · Best 7–21 days from roast</p><div class="coffee-bottom"><span>KSh 1,450 / 250g</span><button class="plus" type="button" aria-label="Add Nyeri AA Fruit Infused to cart">+</button></div></div></article>
 </div>
 <details class="glossary">
 <summary>What do AA, washed and SL28 mean?</summary>
@@ -524,8 +604,8 @@ body:has(.trace-modal:not([hidden])) .wa-float,body:has(.mobile-nav.open) .wa-fl
 <div class="section-head"><div class="num">04 / Our Story</div><div><h2>Our Story</h2>
 <p class="lead">Imani is a micro roastery in Kiambu, Kenya. We exist to find exceptional coffee and to iterate on it with an artisanal approach that is the result of many years spent in the specialty coffee industry across the world. We have seen the world fall for Kenyan coffee, and we believe Kenyan coffee's story of excellence should be told by a Kenyan first.</p>
 <p class="lead">We aim to promote local coffee consumption, with the belief that value should remain at origin, and we believe that by offering competitive prices for the quality we deliver in our products and services, specialty coffee will become accessible to Kenyans.</p></div></div>
-<div class="story"><div><div class="story-main"><img src="https://res.cloudinary.com/u7elvwmv/image/upload/f_auto,q_auto/mike_in_dryingbed" alt="Coffee drying beds at origin" loading="lazy"></div><div class="caption">From origin to cup · Kikuyu, Kiambu County</div></div>
-<div class="story-side"><img src="https://res.cloudinary.com/u7elvwmv/image/upload/f_auto,q_auto/mike_with_cherry" alt="Harvesting coffee cherries at a Kenyan farm" loading="lazy"><img src="https://res.cloudinary.com/u7elvwmv/image/upload/f_auto,q_auto/mike_roasting" alt="Roasting coffee in Kikuyu, Kiambu County" loading="lazy"></div></div>
+<div class="story"><div><div class="story-main"><img src="https://res.cloudinary.com/u7elvwmv/image/upload/f_auto,q_auto/mike_in_dryingbed" alt="Coffee drying beds at origin" width="1200" height="960" loading="lazy"></div><div class="caption">From origin to cup · Kikuyu, Kiambu County</div></div>
+<div class="story-side"><img src="https://res.cloudinary.com/u7elvwmv/image/upload/f_auto,q_auto/mike_with_cherry" alt="Harvesting coffee cherries at a Kenyan farm" width="800" height="600" loading="lazy"><img src="https://res.cloudinary.com/u7elvwmv/image/upload/f_auto,q_auto/mike_roasting" alt="Roasting coffee in Kikuyu, Kiambu County" width="800" height="600" loading="lazy"></div></div>
 </div></section>
 
 <section class="section sustainability" id="sustainability"><div class="container">
@@ -595,7 +675,7 @@ body:has(.trace-modal:not([hidden])) .wa-float,body:has(.mobile-nav.open) .wa-fl
 
 <footer id="contact"><div class="container"><div class="foot"><div><strong>IMANI COFFEE CO.</strong><br><span>Roasted at origin. Rooted in character. · Kikuyu, Kiambu County, Kenya</span></div><div class="footer-contact"><div class="footer-socials"><a href="https://www.instagram.com/getimanicoffee?igsi=Mm10eTdoeGRzZWw=" target="_blank" rel="noopener" aria-label="Follow Imani Coffee on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg><span>Instagram</span></a><a href="https://x.com/Get_ImaniCoffee" target="_blank" rel="noopener" aria-label="Follow Imani Coffee on X"><svg class="x-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-6.4L6.47 22H3.36l7.24-8.28L2.8 2h6.4l4.42 5.84L18.9 2Zm-1.1 17.8h1.73L8.3 4.07H6.44L17.8 19.8Z"></path></svg><span>X</span></a></div><a class="footer-email" href="mailto:getimanicoffee@gmail.com">getimanicoffee@gmail.com</a><span>© 2026 Imani Coffee Co.</span></div></div><a class="btn footer-map" href="https://maps.app.goo.gl/su8LmxajzhurJp2w7?g_st=ac" target="_blank" rel="noopener">Find us on map</a></div></footer>
 
-<div class="cart-backdrop" id="cart-backdrop"></div><aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart" aria-hidden="true"><div class="cart-head"><h2>Your Cart</h2><button class="cart-close" type="button" aria-label="Close cart">&times;</button></div><div class="cart-items" id="cart-items"></div><div class="cart-footer"><div class="cart-total"><span>Subtotal</span><strong id="cart-total">KSh 0</strong></div><p class="cart-note">Taxes and delivery calculated at checkout.</p><button id="checkout-btn" type="button" class="btn primary" style="width:100%;justify-content:center;margin-top:10px">Checkout</button></div></aside>
+<div class="cart-backdrop" id="cart-backdrop"></div><aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping cart" aria-hidden="true" inert><div class="cart-head"><h2>Your Cart</h2><button class="cart-close" type="button" aria-label="Close cart">&times;</button></div><div class="cart-items" id="cart-items"></div><div class="cart-footer"><div class="cart-total"><span>Subtotal</span><strong id="cart-total">KSh 0</strong></div><p class="cart-note">Delivery is confirmed on WhatsApp.</p><button id="checkout-btn" type="button" class="btn primary" style="width:100%;justify-content:center;margin-top:10px">Checkout</button></div></aside>
 
 <div class="checkout-modal" id="checkout-modal" hidden role="dialog" aria-modal="true" aria-labelledby="checkout-title">
 <div class="checkout-panel">
@@ -635,17 +715,17 @@ body:has(.trace-modal:not([hidden])) .wa-float,body:has(.mobile-nav.open) .wa-fl
 </div>
 </div>
 
-<div class="trace-modal" id="trace-modal" hidden><form class="trace-modal__panel" id="trace-form"><div class="trace-modal__head"><h3>Trace your coffee</h3><button class="trace-close" type="button" aria-label="Close trace form">&times;</button></div><p>Enter the trace number printed on your bag. We will reply on WhatsApp with the farm, lot and roast date.</p><label for="trace-number">Coffee bag trace number</label><input id="trace-number" name="trace-number" type="text" autocomplete="off" required><div class="trace-modal__actions"><button class="btn ghost trace-close" type="button">Cancel</button><button class="btn primary" type="submit">Open map</button></div></form></div>
+<div class="trace-modal" id="trace-modal" hidden role="dialog" aria-modal="true" aria-labelledby="trace-title"><form class="trace-modal__panel" id="trace-form"><div class="trace-modal__head"><h3 id="trace-title">Trace your coffee</h3><button class="trace-close" type="button" aria-label="Close trace form">&times;</button></div><p>Enter the trace number printed on your bag. We will reply on WhatsApp with the farm, lot and roast date.</p><label for="trace-number">Coffee bag trace number</label><input id="trace-number" name="trace-number" type="text" autocomplete="off" required><div class="trace-modal__actions"><button class="btn ghost trace-close" type="button">Cancel</button><button class="btn primary" type="submit">Ask on WhatsApp</button></div></form></div>
 
-<div id="options-modal" class="trace-modal" hidden><div class="trace-modal__panel"><div class="trace-modal__head"><h3 id="options-title">Select Options</h3><button class="trace-close" type="button" aria-label="Close options">×</button></div><p>Choose your preferred brew method and size:</p><div id="options-content"><fieldset class="opt-fieldset"><legend class="opt-legend">Brew Method</legend><div class="opt-grid">
+<div id="options-modal" class="trace-modal" hidden role="dialog" aria-modal="true" aria-labelledby="options-title"><div class="trace-modal__panel"><div class="trace-modal__head"><h3 id="options-title">Select Options</h3><button class="trace-close" type="button" aria-label="Close options">×</button></div><p>Choose your preferred brew method and size:</p><div id="options-content"><fieldset class="opt-fieldset"><legend class="opt-legend">Brew Method</legend><div class="opt-grid">
 <div class="opt-card"><input type="radio" id="grind-whole" name="grind" value="whole" checked><label for="grind-whole"><span class="opt-name">Whole Bean</span></label></div>
 <div class="opt-card"><input type="radio" id="grind-frenchpress" name="grind" value="frenchpress"><label for="grind-frenchpress"><span class="opt-name">French Press</span><span class="opt-detail">Coarse</span></label></div>
 <div class="opt-card"><input type="radio" id="grind-pourover" name="grind" value="pourover"><label for="grind-pourover"><span class="opt-name">Pour-over / V60</span><span class="opt-detail">Medium</span></label></div>
 <div class="opt-card"><input type="radio" id="grind-mokapot" name="grind" value="mokapot"><label for="grind-mokapot"><span class="opt-name">Moka Pot</span><span class="opt-detail">Fine-medium</span></label></div>
 <div class="opt-card"><input type="radio" id="grind-espresso" name="grind" value="espresso"><label for="grind-espresso"><span class="opt-name">Espresso</span><span class="opt-detail">Fine</span></label></div>
 </div></fieldset><fieldset class="opt-fieldset"><legend class="opt-legend">Size</legend><div class="opt-grid opt-grid--size">
-<div class="opt-card"><input type="radio" id="size-100g" name="size" value="100g" checked><label for="size-100g"><span class="opt-name">100g</span></label></div>
-<div class="opt-card"><input type="radio" id="size-250g" name="size" value="250g"><label for="size-250g"><span class="opt-name">250g</span></label></div>
+<div class="opt-card"><input type="radio" id="size-100g" name="size" value="100g"><label for="size-100g"><span class="opt-name">100g</span></label></div>
+<div class="opt-card"><input type="radio" id="size-250g" name="size" value="250g" checked><label for="size-250g"><span class="opt-name">250g</span></label></div>
 <div class="opt-card"><input type="radio" id="size-1kg" name="size" value="1kg"><label for="size-1kg"><span class="opt-name">1kg</span></label></div>
 </div></fieldset><div class="opt-price-band">Price: <strong id="price-display">KSh 0</strong></div></div><div class="trace-modal__actions"><button type="button" id="options-cancel">Cancel</button><button type="button" id="options-add">Add to Cart</button></div></div></div>
 
@@ -656,21 +736,27 @@ const cartDrawer=document.getElementById('cart-drawer'),cartBackdrop=document.ge
 const optionsModal=document.getElementById('options-modal');
 const formatPrice=value=>`KSh ${value.toLocaleString('en-KE')}`;
 let currentProduct=null;
+let lastFocusedElement=null;
+const focusableSelector='a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])';
+function lockPage(){document.body.style.overflow='hidden';}
+function unlockPage(){if(!document.querySelector('.cart-drawer.open,.mobile-nav.open,.trace-modal:not([hidden]),.checkout-modal:not([hidden])'))document.body.style.overflow='';}
+function focusFirst(container){requestAnimationFrame(()=>container.querySelector(focusableSelector)?.focus());}
+function restoreFocus(){lastFocusedElement?.focus?.();lastFocusedElement=null;}
 /* Brew method labels + price-tier mapping. Only "whole" and "ground" price tiers exist in product data,
    so each ground brew method is priced at the existing "ground" tier (no new prices invented). */
 const BREW_LABELS={whole:'Whole Bean',frenchpress:'French Press (coarse)',pourover:'Pour-over / V60 (medium)',mokapot:'Moka Pot (fine-medium)',espresso:'Espresso (fine)'};
 const BREW_PRICE_TIER={whole:'whole',frenchpress:'ground',pourover:'ground',mokapot:'ground',espresso:'ground'};
 function renderCart(){const count=cart.reduce((sum,item)=>sum+item.quantity,0),total=cart.reduce((sum,item)=>sum+item.price*item.quantity,0);cartCount.textContent=count;cartTotal.textContent=formatPrice(total);cartItems.innerHTML=cart.length?cart.map((item,idx)=>`<div class="cart-item"><div><h3>${item.name}</h3><p>${item.origin}</p><p style="font-size:12px;color:#8a6d38">${item.grind} · ${item.size}</p><div class="cart-controls"><button type="button" data-action="decrease" data-id="${idx}" aria-label="Decrease ${item.name} quantity">−</button><span>${item.quantity}</span><button type="button" data-action="increase" data-id="${idx}" aria-label="Increase ${item.name} quantity">+</button><button class="cart-remove" type="button" data-action="remove" data-id="${idx}">Remove</button></div></div><span class="cart-price">${formatPrice(item.price*item.quantity)}</span></div>`).join(''):'<p class="cart-empty">Your cart is empty. Add a coffee to begin.</p>';localStorage.setItem(cartKey,JSON.stringify(cart));}
-function setCartOpen(open){cartDrawer.classList.toggle('open',open);cartBackdrop.classList.toggle('open',open);cartDrawer.setAttribute('aria-hidden',String(!open));document.querySelector('.cart-toggle').setAttribute('aria-expanded',String(open));}
-function closeOptionsModal(){optionsModal.hidden=true;}
+function setCartOpen(open){if(open)lastFocusedElement=document.activeElement;cartDrawer.classList.toggle('open',open);cartBackdrop.classList.toggle('open',open);cartDrawer.setAttribute('aria-hidden',String(!open));cartDrawer.inert=!open;document.querySelector('.cart-toggle').setAttribute('aria-expanded',String(open));if(open){lockPage();focusFirst(cartDrawer);}else{unlockPage();restoreFocus();}}
+function closeOptionsModal(){optionsModal.hidden=true;unlockPage();restoreFocus();}
 function updatePriceDisplay(){const grind=document.querySelector('input[name="grind"]:checked').value,size=document.querySelector('input[name="size"]:checked').value;if(currentProduct){const price=currentProduct.prices[BREW_PRICE_TIER[grind]][size];document.getElementById('price-display').textContent=formatPrice(price);}}
-document.querySelectorAll('.coffee').forEach((card)=>{const button=card.querySelector('.plus');button.addEventListener('click',()=>{const productData=JSON.parse(card.getAttribute('data-product'));currentProduct=productData;document.getElementById('options-title').textContent=`Select Options - ${productData.name}`;document.querySelector('input[name="grind"]').checked=true;document.querySelector('input[name="size"]').checked=true;updatePriceDisplay();optionsModal.hidden=false;});});
+document.querySelectorAll('.coffee').forEach((card)=>{const button=card.querySelector('.plus');button.addEventListener('click',()=>{const productData=JSON.parse(card.getAttribute('data-product'));currentProduct=productData;document.getElementById('options-title').textContent=`Select Options - ${productData.name}`;document.getElementById('grind-whole').checked=true;document.getElementById('size-250g').checked=true;updatePriceDisplay();lastFocusedElement=button;optionsModal.hidden=false;lockPage();focusFirst(optionsModal);});});
 document.querySelectorAll('input[name="grind"],input[name="size"]').forEach(radio=>radio.addEventListener('change',updatePriceDisplay));
 document.getElementById('options-add').addEventListener('click',()=>{const grind=document.querySelector('input[name="grind"]:checked').value,size=document.querySelector('input[name="size"]:checked').value,price=currentProduct.prices[BREW_PRICE_TIER[grind]][size];const item={name:currentProduct.name,origin:currentProduct.origin,grind:BREW_LABELS[grind],size,price,quantity:1};const existing=cart.find(p=>p.name===item.name&&p.grind===item.grind&&p.size===item.size);if(existing)existing.quantity+=1;else cart.push(item);renderCart();closeOptionsModal();setCartOpen(true);});
 document.getElementById('options-cancel').addEventListener('click',closeOptionsModal);
-document.querySelector('.trace-close').addEventListener('click',closeOptionsModal);
+optionsModal.querySelector('.trace-close').addEventListener('click',closeOptionsModal);
 optionsModal.addEventListener('click',event=>{if(event.target===optionsModal)closeOptionsModal();});
-document.getElementById('checkout-btn').addEventListener('click',()=>{if(cart.length===0){alert('Your cart is empty');return;}openCheckout();});
+document.getElementById('checkout-btn').addEventListener('click',()=>{if(cart.length===0){cartItems.innerHTML='<p class="cart-empty" role="status">Your cart is empty. Add a coffee before checkout.</p>';return;}openCheckout();});
 document.querySelector('.cart-toggle').addEventListener('click',()=>setCartOpen(true));document.querySelector('.cart-close').addEventListener('click',()=>setCartOpen(false));cartBackdrop.addEventListener('click',()=>setCartOpen(false));
 cartItems.addEventListener('click',event=>{const button=event.target.closest('button[data-action]');if(!button)return;const idx=Number(button.dataset.id);if(button.dataset.action==='increase')cart[idx].quantity+=1;if(button.dataset.action==='decrease')cart[idx].quantity-=1;if(button.dataset.action==='remove'||cart[idx].quantity<1)cart.splice(idx,1);renderCart();});
 
@@ -689,9 +775,9 @@ cartItems.addEventListener('click',event=>{const button=event.target.closest('bu
   window.openCheckout=function(){
     summaryList.innerHTML=cart.map(item=>`<div class="checkout-summary-item"><div><span class="name">${item.name}</span><span class="meta">${item.grind} · ${item.size} · Qty ${item.quantity}</span></div><span>${formatPrice(item.price*item.quantity)}</span></div>`).join('');
     subtotalEl.textContent=formatPrice(total());
-    goToStep(1);modal.hidden=false;setCartOpen(false);document.body.style.overflow='hidden';
+    goToStep(1);setCartOpen(false);lastFocusedElement=document.querySelector('.cart-toggle');modal.hidden=false;lockPage();focusFirst(modal);
   };
-  function closeCheckout(){modal.hidden=true;document.body.style.overflow='';}
+  function closeCheckout(){modal.hidden=true;unlockPage();restoreFocus();}
   window.closeCheckout=closeCheckout;
   function goToStep(step){
     stepEls.forEach(el=>el.classList.toggle('active',Number(el.dataset.step)===step));
@@ -719,8 +805,8 @@ cartItems.addEventListener('click',event=>{const button=event.target.closest('bu
   document.getElementById('checkout-done').addEventListener('click',closeCheckout);
 })();
 
-const traceModal=document.getElementById('trace-modal'),traceForm=document.getElementById('trace-form'),traceNumber=document.getElementById('trace-number');function closeTraceModal(){traceModal.hidden=true;}document.getElementById('trace-coffee').addEventListener('click',()=>{traceModal.hidden=false;traceNumber.focus();});document.querySelectorAll('.trace-close').forEach(button=>button.addEventListener('click',closeTraceModal));traceModal.addEventListener('click',event=>{if(event.target===traceModal)closeTraceModal();});traceForm.addEventListener('submit',event=>{event.preventDefault();const bagNumber=traceNumber.value.trim();if(!bagNumber){traceNumber.focus();return;}const msg=encodeURIComponent(`Hi Imani, please trace my coffee. Bag number: ${bagNumber}`);window.open(`https://wa.me/254704604260?text=${msg}`,'_blank','noopener');traceModal.hidden=true;});
-document.addEventListener('keydown',event=>{if(event.key==='Escape'){setCartOpen(false);closeOptionsModal();const checkoutModal=document.getElementById('checkout-modal');if(checkoutModal&&!checkoutModal.hidden)checkoutModal.hidden=true;}});renderCart();
+const traceModal=document.getElementById('trace-modal'),traceForm=document.getElementById('trace-form'),traceNumber=document.getElementById('trace-number');function closeTraceModal(){traceModal.hidden=true;unlockPage();restoreFocus();}document.getElementById('trace-coffee').addEventListener('click',event=>{lastFocusedElement=event.currentTarget;traceModal.hidden=false;lockPage();traceNumber.focus();});traceModal.querySelectorAll('.trace-close').forEach(button=>button.addEventListener('click',closeTraceModal));traceModal.addEventListener('click',event=>{if(event.target===traceModal)closeTraceModal();});traceForm.addEventListener('submit',event=>{event.preventDefault();const bagNumber=traceNumber.value.trim();if(!bagNumber){traceNumber.focus();return;}const msg=encodeURIComponent(`Hi Imani, please trace my coffee. Bag number: ${bagNumber}`);window.open(`https://wa.me/254704604260?text=${msg}`,'_blank','noopener');closeTraceModal();});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'){if(!document.getElementById('checkout-modal').hidden)closeCheckout();else if(!optionsModal.hidden)closeOptionsModal();else if(!traceModal.hidden)closeTraceModal();else if(cartDrawer.classList.contains('open'))setCartOpen(false);}if(event.key==='Tab'){const active=document.querySelector('.checkout-modal:not([hidden]),.trace-modal:not([hidden]),.cart-drawer.open,.mobile-nav.open');if(!active)return;const controls=[...active.querySelectorAll(focusableSelector)].filter(el=>!el.hidden&&el.getClientRects().length);if(!controls.length)return;const first=controls[0],last=controls[controls.length-1];if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}}});renderCart();
 
 /* --- Shop Dropdown Accessibility & Keyboard Support --- */
 (function(){
@@ -762,12 +848,12 @@ document.addEventListener('keydown',event=>{if(event.key==='Escape'){setCartOpen
       b=document.getElementById('mnav-backdrop'),
       c=document.getElementById('mnav-close');
   if(!t||!n||!b) return;
-  function open(){n.classList.add('open');b.classList.add('open');
+  function open(){lastFocusedElement=document.activeElement;n.inert=false;n.classList.add('open');b.classList.add('open');
     n.setAttribute('aria-hidden','false');t.setAttribute('aria-expanded','true');
-    document.body.classList.add('mnav-open');}
+    document.body.classList.add('mnav-open');lockPage();focusFirst(n);}
   function close(){n.classList.remove('open');b.classList.remove('open');
     n.setAttribute('aria-hidden','true');t.setAttribute('aria-expanded','false');
-    document.body.classList.remove('mnav-open');}
+    n.inert=true;document.body.classList.remove('mnav-open');unlockPage();restoreFocus();}
   t.addEventListener('click',open);
   b.addEventListener('click',close);
   if(c) c.addEventListener('click',close);
